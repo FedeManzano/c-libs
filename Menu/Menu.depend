@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1722526811 source:c:\users\feder\onedrive\escritorio\test\menu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<menu.h>
+	<selection.h>
+	<date.h>
+
+1722527199 source:c:\users\feder\onedrive\escritorio\test\menu\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"./menu.h"
+
+1722331133 c:\users\feder\onedrive\escritorio\test\menu\menu.h
+
