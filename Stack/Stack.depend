@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1723030111 source:c:\users\feder\onedrive\escritorio\libs\stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1723030254 c:\users\feder\onedrive\escritorio\libs\stack\stack.h
+
+1723030250 source:c:\users\feder\onedrive\escritorio\libs\stack\stack.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<string.h>
+
