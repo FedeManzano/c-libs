@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1722553434 source:c:\users\feder\onedrive\escritorio\test\date\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./date.h"
+	"test_date.h"
+
+1722692044 c:\users\feder\onedrive\escritorio\test\date\date.h
+
+1722692266 source:c:\users\feder\onedrive\escritorio\test\date\date.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"./date.h"
+
+1722692150 source:c:\users\feder\onedrive\escritorio\test\date\test_date.c
+	<stdio.h>
+	<stdlib.h>
+	"./date.h"
+	<it.h>
+
+1722545928 c:\users\feder\onedrive\escritorio\test\date\test_date.h
+	<pointerFn.h>
+

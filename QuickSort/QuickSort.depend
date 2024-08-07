@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1722548854 source:c:\users\feder\onedrive\escritorio\test\quicksort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<date.h>
+	"./quicksort.h"
+	"./test_quicksort.h"
+
+1722356317 source:c:\users\feder\onedrive\escritorio\test\quicksort\quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./quicksort.h"
+
+1723025064 c:\users\feder\onedrive\escritorio\test\quicksort\quicksort.h
+
+1722358433 c:\users\feder\onedrive\escritorio\test\quicksort\test_quicksort.h
+	<pointerFn.h>
+
+1722358545 source:c:\users\feder\onedrive\escritorio\test\quicksort\test_quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<it.h>
+	"./quicksort.h"
+
