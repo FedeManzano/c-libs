@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1723040945 source:c:\users\feder\onedrive\escritorio\libs\queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+
+1723044492 source:c:\users\feder\onedrive\escritorio\libs\queue\queue.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+	<string.h>
+
+1723044332 c:\users\feder\onedrive\escritorio\libs\queue\queue.h
+
