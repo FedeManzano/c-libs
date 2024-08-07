@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1722336808 source:c:\users\feder\onedrive\escritorio\test\selectionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<selection.h>
+	<time.h>
+	"./testSelection.h"
+
+1722299676 source:c:\users\feder\onedrive\escritorio\test\selectionsort\selection.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./selection.h"
+
+1722299684 c:\users\feder\onedrive\escritorio\test\selectionsort\selection.h
+	"./pointerFn.h"
+
+1722298091 c:\users\feder\onedrive\escritorio\test\selectionsort\pointerfn.h
+
+1722335596 c:\users\feder\onedrive\escritorio\test\selectionsort\testselection.h
+
+1722336749 source:c:\users\feder\onedrive\escritorio\test\selectionsort\testselection.c
+	<stdio.h>
+	<stdlib.h>
+	<selection.h>
+	<time.h>
+	<it.h>
+
