@@ -15,7 +15,7 @@ int main()
     int d;
     top_queue(&q,&d,sizeof(int));
     printf("Primer: %d\n", d);
-    clear_queue(&q);
+    //clear_queue(&q);
     while(!is_empty_queue(&q)){
         pop_queue(&q,&d,sizeof(int));
         printf("%d ", d);

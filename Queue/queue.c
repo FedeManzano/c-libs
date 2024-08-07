@@ -87,6 +87,7 @@ void clear_queue(t_queue *q)
         q->first = e->next;
         if(!q->first)
             q->last = NULL;
+        free(e->info);
         free(e);
     }
 }

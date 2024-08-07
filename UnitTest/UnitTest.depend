@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1722306935 source:c:\users\feder\onedrive\escritorio\test\unittest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+
+1722306223 c:\users\feder\onedrive\escritorio\test\unittest\it.h
+	<pointerFn.h>
+	<string.h>
+
+1722306517 source:c:\users\feder\onedrive\escritorio\test\unittest\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
