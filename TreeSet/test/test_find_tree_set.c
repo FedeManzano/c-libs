@@ -82,7 +82,6 @@ void test_archArbol(){
 
     init_tree_set(&t);
 
-    t_index in;
-    file_binary_to_tree_set(&t,&arch,&in,sizeof(t_index),sizeof(int),comp_index,read_info);
+    file_binary_to_tree_set(&t,&arch,sizeof(t_index),sizeof(int),comp_index,read_info);
     show_graph_tree_set(&t,&t,dibujar_index,comp_i);
 }

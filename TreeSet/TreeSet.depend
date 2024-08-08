@@ -5,14 +5,14 @@
 	"tree_set.h"
 	"test/test_tree_set.h"
 
-1723151280 source:c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.c
+1723156566 source:c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"tree_set.h"
 	<string.h>
 	<list_g.h>
 
-1723151193 c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.h
+1723156426 c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.h
 	"./libs/list_g.h"
 
 1723151933 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\comp_info_tree_set.c
@@ -49,7 +49,7 @@
 	"comp_info_tree_set.h"
 	<it.h>
 
-1723151718 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_find_tree_set.c
+1723156443 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_find_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"

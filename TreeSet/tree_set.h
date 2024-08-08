@@ -39,6 +39,9 @@
 #define _NULL_INFO          -9
 #define _ERROR_SIZE         -8
 
+
+#define _NULL_FILE          -3
+
 #define _NO_FIND_ELE        0
 #define _EMPTY_TREE         0
 #define _FULL_TREE          0
@@ -46,32 +49,42 @@
 #define _OK                 1
 
 /** \brief
- *
- * \param X
- * \return #define _IS_TREE_LEAF(X)(!(X)->l&&
- *
+ *  Establece si un nodo es hoja o no lo es
+ * \param X t_tree_set * Puntero al árbol
+ * \return #define _IS_TREE_LEAF(X)(!(X)->l&& Verdadero si es hoja falso si no lo es.
  */
 #define _IS_TREE_LEAF(X)(!(X)->l && !(X)->r)
 
 
 
 /** \brief
- */
+* Permite comparar dos valores de la info cargada en el árbol. A partir
+* de esta función el árbol queda ordenado.
+*/
 typedef int (*t_comp)(const void *, const void *);
 
 
 /** \brief
+*   Permite pintar los nodos del arbo para generar el gráfico.
  */
 typedef void (*t_gra)(const void *,const int lev);
 
 
+/** \brief
+* Carga la info del arbol con la información del archivo
+ */
 typedef void (*t_read)(const void *info_arch,const void *info_arbol,const void *nro_reg);
 
 
 /** \brief
+* Sirve para mostrar un nodo del arbol cuando estamos recorriendolo.
  */
 typedef void (*t_show)(const void *);
 
+
+/**
+Estructura de árbol
+*/
 typedef struct s_tree_set {
     struct s_tree_set *l;
     struct s_tree_set *r;
@@ -84,9 +97,6 @@ typedef t_node_tree_set * t_tree_set;
 /** \brief
  *  Inicializa el arbol asingando NULL al puntero del arbol
  * \param Puntero al arbol
- * \param
- * \return
- *
  */
 void init_tree_set (t_tree_set *t);
 
@@ -95,7 +105,6 @@ void init_tree_set (t_tree_set *t);
  *  Informa si el arbol está vacío o no.
  * \param t const t_tree_set* Puntero al arbol
  * \return int != si está vacío, 0 no está vacío
- *
  */
 int is_empty_tree_set(const t_tree_set *t);
 
@@ -121,40 +130,153 @@ int count_tree_set(const t_tree_set *t);
 
 
 /** \brief
- *
- * \param t t_tree_set*
- * \return int
+ * Calcula la altura del árbol.
+ * \param t t_tree_set* Puntero al árbol
+ * \return int Altura del árbol
  *
  */
 int height_tree_set(t_tree_set *t);
 
 
 /** \brief
- *
- * \param t t_tree_set*
- * \return int
+ * Cácula la cantidad de niveles del árbol.
+ * \param t t_tree_set* Puntero al árbol
+ * \return int Niveles del árbol.
  *
  */
 int level_tree_set(t_tree_set *t);
 
 
 /** \brief
- *
+ * Calcula la cantidad de hojas que tiene el árbol.
  * \param t t_tree_set*
  * \return int
- *
  */
 int count_leaf_tree_set(t_tree_set *t);
+
+
+/** \brief
+ *  Devuelve el nivel en el que se encuetra la info pasada por parámetro.
+ * \param t t_tree_set* Puntero al árbol.
+ * \param info void* Info que se desea averiguar el nivel.
+ * \param comp t_comp Puntero a la función de comparación
+ * \return int Nivel de la info.
+ *
+ */
 int level_info_tree_set(t_tree_set *t,void *info, t_comp comp);
+
+
+
+/** \brief
+ *  Borra un nodo del árbol.
+ * \param t t_tree_set* Puntero al árbol
+ * \param info const void* info que se desea eliminar
+ * \param size size_t Tamaño en bytes del tipo de dato almacenado en el árbol
+ * \param comp t_comp Puntero a la función de comparación
+ * \return int Si pudo eliminarlo OK.
+ *
+ */
 int delete_tree_set(t_tree_set *t, const void *info,size_t size, t_comp comp);
+
+/** \brief
+ * Poda el arbol cortandole las hojas.
+ * \param Puntero al árbol
+ */
 void delete_left_tree_set(t_tree_set *t);
+
+
+
+/** \brief
+ * Busca por clave información dentro del árbol.
+ * \param t t_tree_set* Puntero al árbol
+ * \param info const void* info que se desea encontrar
+ * \param size size_t Tamaño en bytes del tipo de dato almacenado en el árbol
+ * \param comp t_comp Puntero a la función de comparación
+ * \return int Si pudo encontrarlo OK.
+ */
 int find_tree_set(t_tree_set *t, void *info, size_t size, t_comp comp);
+
+
+
+/** \brief
+ * Elimina todo el árbol y libera la memoria asignada.
+ * \param t t_tree_set*
+ * \return void
+ */
 void clear_tree_set(t_tree_set *t);
+
+
+/** \brief
+ *  Recorre el arbol (In Order) y muestra sus nodos.
+ * \param a t_tree_set* Puntero al árbol
+ * \param show t_show Puntero a función para mostrar los nodos.
+ * \return void
+ */
 void in_order_tree_set(t_tree_set *a, t_show show);
+
+
+/** \brief
+ *  Recorre el arbol (Pre Order) y muestra sus nodos.
+ * \param a t_tree_set* Puntero al árbol
+ * \param show t_show Puntero a función para mostrar los nodos.
+ * \return void
+ */
 void pre_order_tree_set(t_tree_set *t, t_show show);
+
+
+/** \brief
+ *  Recorre el arbol (Post Order) y muestra sus nodos.
+ * \param a t_tree_set* Puntero al árbol
+ * \param show t_show Puntero a función para mostrar los nodos.
+ * \return void
+ */
 void post_order_tree_set(t_tree_set *t, t_show show);
+
+
+
+/** \brief
+ * Permite genera un grafico esquemático del árbol por pantalla.
+ * Se apolla en la función dib que muestra el nodo del árbol en función
+ * al nivel de la info que se pretenda mostrar.
+ *
+ * ejemplo de función dib:
+ *
+ *       void dibujar(const void  *info, const int niv) {
+ *           int * in = (int *)info; // La info va a depender de que haya guardado en el árbol
+ *           int i;
+ *           for(i = 0; i < niv; i ++)
+ *               printf("      ");
+ *           printf("[ %02d ]\n ", *in);
+ *       }
+ *
+ * \param t t_tree_set* Puntero al árbol
+ * \param aux t_tree_set* Puntero a un árbol auxiliar (El mismo árbol)
+ * \param dib t_gra (Función para pintar el nodo en función a su nivel dentro del árbol)
+ * \param comp t_comp Puntero a  la función de comparación.
+ * \return void
+ *
+ */
 void show_graph_tree_set(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp);
+
+
+/** \brief
+ * Muestra un nivel completo dentro del árbol.
+ * \param t t_tree_set* Puntero al árbol
+ * \param level int Nivel que sedea mostrar
+ * \param show t_show Puntero a función para mostrar el nodo
+ * \return void
+ *
+ */
 void show_level_tree_set(t_tree_set *t, int level, t_show show);
+
+
+/** \brief
+ *  Mostrar las hojas del árbol
+ * \param t t_tree_set*
+ * \param show t_show
+ * \return void
+ *
+ */
 void show_leaf_tree_set(t_tree_set *t, t_show show);
 
 
@@ -192,13 +314,17 @@ void show_leaf_tree_set(t_tree_set *t, t_show show);
  * \return void
  *
  */
-void file_binary_to_tree_set(t_tree_set *t, FILE **fi,void *info_tree, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
+void file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
 
 
-/** Funciones para pruebas */
+/// Funciones para pruebas
+/// Solo pueden ser utilizadas si disponemos de la lista doble
+/// Agregada en este proyecto.
+/// @see /libs/list_gg.c
+///////////////////////////////////////////////////////////////////
 void to_array_in_order(t_tree_set *t, void *arr, size_t size);
 void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
 void to_array_post_order(t_tree_set *t, void *arr, size_t size);
-
+///////////////////////////////////////////////////////////////////
 
 #endif // TREE_SET_H_INCLUDED
