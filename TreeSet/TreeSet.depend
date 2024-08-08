@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1723119629 source:c:\users\feder\onedrive\escritorio\libs\treeset\main.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_set.h"
+	"test/test_tree_set.h"
+
+1723122655 source:c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_set.h"
+	<string.h>
+	<list_g.h>
+
+1723122655 c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.h
+	"./libs/list_g.h"
+
+1723117663 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\comp_info_tree_set.c
+	"comp_info_tree_set.h"
+
+1723117689 c:\users\feder\onedrive\escritorio\libs\treeset\test\comp_info_tree_set.h
+	<stdio.h>
+	<stdlib.h>
+
+1723122655 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_is_empty_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	<it.h>
+
+1723119619 c:\users\feder\onedrive\escritorio\libs\treeset\test\test_tree_set.h
+
+1723002534 c:\users\feder\onedrive\escritorio\libs\treeset\libs\list_g.h
+
+1723024381 source:c:\users\feder\onedrive\escritorio\libs\treeset\libs\list_gg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list_g.h"
+
