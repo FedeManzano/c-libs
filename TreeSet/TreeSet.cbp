@@ -45,6 +45,9 @@
 		<Unit filename="test/test_add_tree_ser.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_find_tree_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_is_empty_tree_set.c">
 			<Option compilerVar="CC" />
 		</Unit>

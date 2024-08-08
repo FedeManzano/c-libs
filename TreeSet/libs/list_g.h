@@ -307,7 +307,7 @@ int to_array_list(t_list *l, void *arr, int tam);
 
 /** \brief
  *  Devuelve el index que tiene el elemento pasado por parámetro
-    en la lista.
+ *  en la lista.
  * \param l t_list* Puntero a la lista
  * \param info const void* info que se quiere conocer su index
  * \param tam const int Tamaño del dato que se guarda en la lista

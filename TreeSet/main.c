@@ -13,7 +13,8 @@ int main()
     test_AgregarElementos_UnSoloElementoPorRepetidos_Resultado_Pass();
     test_AgregarElementos_InfoNulaMenosNueve_Resultado_Pass ();
     test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass ();
-
-
+    test_BuscarEnArbol_BusquedaExitosa_ArregloDeInd_ResultadoPass();
+    test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass();
+    test_archArbol();
     return 0;
 }
