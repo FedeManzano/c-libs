@@ -34,6 +34,8 @@ int is_empty_tree_set(const t_tree_set *t);
 
 int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp);
 
+
+int count_tree_set(const t_tree_set *t);
 int height_tree_set(t_tree_set *t);
 int level_info_tree_set(t_tree_set *t,void *info, t_comp comp);
 int delete_tree_set(t_tree_set *t, const void *info,size_t size, t_comp comp);

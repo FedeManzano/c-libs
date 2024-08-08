@@ -62,7 +62,6 @@ int height_tree_set(t_tree_set *t)
     return l >= r ? l : r;
 }
 
-
 int level_info_tree_set_rec(t_tree_set *t,void *info, t_comp comp, int level)
 {
     if(!t)
@@ -77,8 +76,6 @@ int level_info_tree_set_rec(t_tree_set *t,void *info, t_comp comp, int level)
     return level_info_tree_set_rec(&(*t)->l,info,comp,level + 1) +
            level_info_tree_set_rec(&(*t)->r,info,comp,level + 1);
 }
-
-
 
 int level_info_tree_set(t_tree_set *t,void *info, t_comp comp)
 {
@@ -273,14 +270,10 @@ void to_array_pre_order(t_tree_set *t, void *arr, size_t size)
     to_array_list(&l,arr,sizeof(int));
 }
 
-
-
 void to_array_post_order_rec(t_tree_set *t, t_list *l, size_t size)
 {
     if(!*t)
         return;
-
-
     to_array_post_order_rec(&(*t)->l,l,size);
     to_array_post_order_rec(&(*t)->r,l,size);
     add_list(l,(*t)->info,size);
@@ -300,3 +293,15 @@ void to_array_post_order(t_tree_set *t, void *arr, size_t size)
     to_array_post_order_rec(t,&l,sizeof(int));
     to_array_list(&l,arr,sizeof(int));
 }
+
+
+int count_tree_set(const t_tree_set *t)
+{
+    if(!t)
+        return _NULL_TREE;
+    if(!*t)
+        return _EMPTY_TREE;
+    return 1 + count_tree_set(&(*t)->l) + count_tree_set(&(*t)->r);
+}
+
+

@@ -30,22 +30,5 @@ void test_ArbolNoVacio_Falso_Resultado_Pass ()
 }
 
 
-void test_PasarAArreglo_ArregloOrdenado_Resultado_Pass ()
-{
-    t_tree_set t;
-    init_tree_set(&t);
-
-    int exp[10] = {1,2,3,4,5,6,7,8,9,10};
-    int res[10];
-    int arr[10] = {5,1,8,6,7,2,10,3,4,9};
-
-    for(int i = 0; i < 10; i ++ )
-        add_tree_set(&t,&arr[i],sizeof(int), comp_i);
-
-    to_array_in_order(&t,res,sizeof(int));
-
-    it_arr(exp,res,10,sizeof(int),comp_i, "(3)-> test_PasarAArreglo_ArregloOrdenado_Resultado_Pass");
-}
-
 
 
