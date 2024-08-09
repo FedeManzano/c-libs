@@ -6,7 +6,7 @@
 #include <it.h>
 
 
-void test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass()
+void test_ContarHojas_HojasDistintoCero_Resultado_Pass()
 {
     t_tree_set t;
     init_tree_set(&t);
@@ -17,23 +17,22 @@ void test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass()
         if(!is_full_tree_set(&t))
             add_tree_set(&t,&arr[i],sizeof(int),comp_i);
 
-    int exp = 5;
-    int res = height_tree_set(&t);
+    int exp = 4;
+    int res = count_leaf_tree_set(&t);
 
-    it(&exp,&res,sizeof(int),comp_i,"(11)-> test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass");
+    it(&exp,&res,sizeof(int),comp_i,"(15)-> test_ContarHojas_HojasDistintoCero_Resultado_Pass");
     clear_tree_set(&t);
 }
 
 
-
-void test_AlturaDelArbol_ArbolNulo_Resultado_Pass()
+void test_ContarHojas_ArbolNulo_Resultado_Pass()
 {
     t_tree_set t;
     init_tree_set(&t);
-    int exp = -10;
-    int res = height_tree_set(NULL);
 
-    it(&exp,&res,sizeof(int),comp_i,"(12)-> test_AlturaDelArbol_ArbolNulo_Resultado_Pass");
+    int exp = -10;
+    int res = count_leaf_tree_set(NULL);
+
+    it(&exp,&res,sizeof(int),comp_i,"(16)-> test_ContarHojas_HojasCero_Resultado_Pass");
     clear_tree_set(&t);
 }
-

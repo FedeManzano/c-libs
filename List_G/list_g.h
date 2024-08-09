@@ -128,7 +128,7 @@ int len_list(t_list *l);
             FULL_MEMORY -> 2 Está llena la memoria.
  *
  */
-int add_first_list(t_list *l, const void *info, const int tam);
+int add_first_list(t_list *l, const void *info, const size_t tam);
 
 /** \brief
  * Guarda el elemento al final de la lista. (Permite duplicados)
@@ -142,7 +142,7 @@ int add_first_list(t_list *l, const void *info, const int tam);
             FULL_MEMORY -> 2 Está llena la memoria.
  *
  */
-int add_list(t_list *l, const void *info, const int tam);
+int add_list(t_list *l, const void *info, const size_t tam);
 
 /** \brief
  * Guarda el elemento en orden en la lista. (No permite duplicados)
@@ -156,7 +156,7 @@ int add_list(t_list *l, const void *info, const int tam);
             FULL_MEMORY -> 2 Está llena la memoria.
  *
  */
-int add_list_o(t_list *l, const void *info,const int tam, t_comp comp);
+int add_list_o(t_list *l, const void *info,const size_t tam, t_comp comp);
 
 /** \brief
  * Guarda el elemento en orden en la lista. (No permite duplicados),
@@ -171,7 +171,7 @@ int add_list_o(t_list *l, const void *info,const int tam, t_comp comp);
             FULL_MEMORY -> 2 Está llena la memoria.
  *
  */
-int try_add_list_o(t_list *l,const void *info,const int tam, t_comp comp);
+int try_add_list_o(t_list *l,const void *info,const size_t tam, t_comp comp);
 
 
 
@@ -184,7 +184,7 @@ int try_add_list_o(t_list *l,const void *info,const int tam, t_comp comp);
  * \return int 1 si fue exitosa la busqueda 0 si no lo fue.
  *
  */
-int get_key_list(t_list *l, void *info,const int tam, t_comp comp);
+int get_key_list(t_list *l, void *info,const size_t tam, t_comp comp);
 
 /** \brief
  * Busca por clave a un elemento dentro de la lista empezando la busqueda desde el
@@ -196,7 +196,7 @@ int get_key_list(t_list *l, void *info,const int tam, t_comp comp);
  * \return int 1 si fue exitosa la busqueda 0 si no lo fue.
  *
  */
-int get_key_last_list(t_list *l, void *info,const int tam, t_comp comp);
+int get_key_last_list(t_list *l, void *info,const size_t tam, t_comp comp);
 
 
 /** \brief
@@ -208,7 +208,7 @@ int get_key_last_list(t_list *l, void *info,const int tam, t_comp comp);
  * \return void * con la info del elemento de index pasado por parámetro.
  *
  */
-void * get_info_list(t_list *l,void *info,const int tam,const int index);
+void * get_info_list(t_list *l,void *info,const size_t tam,const int index);
 
 
 /** \brief
@@ -221,7 +221,7 @@ void * get_info_list(t_list *l,void *info,const int tam,const int index);
  * \param comp t_comp Puntero a la función de comparación
  * \return int Si pudo eliminar OK sino ELE_NO_FIND
  */
-int delete_list(t_list *l, void *info,const int tam, t_comp comp);
+int delete_list(t_list *l, void *info,const size_t tam, t_comp comp);
 
 /** \brief
  *  Elimina un elemento o más elementos de la lista dependiendo
@@ -233,7 +233,7 @@ int delete_list(t_list *l, void *info,const int tam, t_comp comp);
  * \param comp t_comp Puntero a la función de comparación
  * \return int Si pudo eliminar OK sino ELE_NO_FIND
  */
-int delete_all_list(t_list *l, void *info,const int tam, t_comp comp);
+int delete_all_list(t_list *l, void *info,const size_t tam, t_comp comp);
 
 
 /** \brief
@@ -243,7 +243,7 @@ int delete_all_list(t_list *l, void *info,const int tam, t_comp comp);
  * \param comp t_comp puntero a función de comparación
  * \return void
  */
-void sort_list(t_list *l,const int tam, t_comp comp);
+void sort_list(t_list *l,const size_t tam, t_comp comp);
 
 
 /** \brief
@@ -270,7 +270,7 @@ void sort_link_list(t_list *l, t_comp comp);
           de la lista.
  * \return int Si lo pudo insertar o no.
  */
-int insert_list(t_list *l,const void * info,const int tam, const int index);
+int insert_list(t_list *l,const void * info,const size_t tam, const int index);
 
 /** \brief
  *  Inserta un rango de elementos en la lista.
@@ -283,7 +283,7 @@ int insert_list(t_list *l,const void * info,const int tam, const int index);
           de la lista.
  * \return int Si lo pudo insertar o no.
  */
-int insert_range_list(t_list *l,const void * arr,const int ce,const int tam, int index);
+int insert_range_list(t_list *l,const void * arr,const int ce,const size_t tam, int index);
 
 /** \brief
  * Vaciar la lista eliminando todos los nodos contenidos.
@@ -301,7 +301,7 @@ void clear_list(t_list *l);
  * \param tam int Tamaño de la info dentro de la lista.
  * \return int Si pudo cargar el arreglo o no pudo hacerlo.
  */
-int to_array_list(t_list *l, void *arr, int tam);
+int to_array_list(t_list *l, void *arr,const size_t tam);
 
 
 

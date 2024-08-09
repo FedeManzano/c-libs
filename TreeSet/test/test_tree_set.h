@@ -15,5 +15,12 @@ void test_CantidadNodosArbol_ArbolVacio_Resultado_Pass ();
 void test_CantidadNodosArbol_ArbolNulo_Resultado_Pass();
 void test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass();
 void test_AlturaDelArbol_ArbolNulo_Resultado_Pass();
+void test_NivelArbol_NievelDistintaDeCero_Resultado_Pass();
+void test_NivelDelArbol_ArbolNulo_Resultado_Pass();
+void test_ContarHojas_HojasDistintoCero_Resultado_Pass();
+void test_ContarHojas_ArbolNulo_Resultado_Pass();
+
+
+
 
 #endif // TEST_TREE_SET_H_INCLUDED

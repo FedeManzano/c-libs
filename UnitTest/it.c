@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "./it.h"
 
-void it_arr(const void * expected, const void * result, const int ce, const int tam, t_comp comp, char * nameTest){
+void it_arr(const void * expected, const void * result, const unsigned long ce, const size_t tam, t_comp comp, char * nameTest){
     if(!expected || !result || ce <= 0 || tam <= 0 || !nameTest)
     {
         message(nameTest," FAIL (Arguments Error)");
@@ -19,7 +19,7 @@ void it_arr(const void * expected, const void * result, const int ce, const int 
 }
 
 
-void it(const void *expected, const void *result, const int tam, t_comp comp, char * nameTest){
+void it(const void *expected, const void *result, const size_t tam, t_comp comp, char * nameTest){
     if(comp(expected,result) != 0){
         message(nameTest," FAIL [expected != result]");
         return;

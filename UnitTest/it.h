@@ -52,7 +52,7 @@
 
     @see pointerFn.h
 */
-void it_arr(const void * expected, const void * result, const int ce, const int tam, t_comp comp, char * nameTest);
+void it_arr(const void * expected, const void * result, const unsigned long ce, const size_t tam, t_comp comp, char * nameTest);
 
 
 /**
@@ -63,7 +63,7 @@ void it_arr(const void * expected, const void * result, const int ce, const int 
 
     @see pointerFn.h
 */
-void it(const void *expected, const void *result, const int tam, t_comp comp, char * nameTest);
+void it(const void *expected, const void *result, const size_t tam, t_comp comp, char * nameTest);
 
 
 /**

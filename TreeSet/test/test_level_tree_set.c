@@ -6,7 +6,8 @@
 #include <it.h>
 
 
-void test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass()
+
+void test_NivelArbol_NievelDistintaDeCero_Resultado_Pass()
 {
     t_tree_set t;
     init_tree_set(&t);
@@ -17,23 +18,24 @@ void test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass()
         if(!is_full_tree_set(&t))
             add_tree_set(&t,&arr[i],sizeof(int),comp_i);
 
-    int exp = 5;
-    int res = height_tree_set(&t);
+    int exp = 4;
+    int res = level_tree_set(&t);
 
-    it(&exp,&res,sizeof(int),comp_i,"(11)-> test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass");
+    it(&exp,&res,sizeof(int),comp_i,"(13)-> test_NivelArbol_NievelDistintaDeCero_Resultado_Pass");
     clear_tree_set(&t);
 }
 
 
-
-void test_AlturaDelArbol_ArbolNulo_Resultado_Pass()
+void test_NivelDelArbol_ArbolNulo_Resultado_Pass()
 {
     t_tree_set t;
     init_tree_set(&t);
-    int exp = -10;
-    int res = height_tree_set(NULL);
 
-    it(&exp,&res,sizeof(int),comp_i,"(12)-> test_AlturaDelArbol_ArbolNulo_Resultado_Pass");
-    clear_tree_set(&t);
+
+    int exp = -10;
+    int res = level_tree_set(NULL);
+
+    it(&exp,&res,sizeof(int),comp_i,"(14)-> test_NivelDelArbol_ArbolNulo_Resultado_Pass");
 }
+
 

@@ -90,3 +90,88 @@
 	"../test_list_g.h"
 	"../comp_func.h"
 
+1723196155 source:c:\users\feder\onedrive\escritorio\libs\list_g\list_gg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list_g.h"
+
+1723196193 c:\users\feder\onedrive\escritorio\libs\list_g\list_g.h
+
+1723024606 source:c:\users\feder\onedrive\escritorio\libs\list_g\main.c
+	<stdio.h>
+	<stdlib.h>
+	"test_list_g.h"
+
+1723006412 c:\users\feder\onedrive\escritorio\libs\list_g\test_list_g.h
+
+1723006526 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\comp_func.c
+	"../comp_func.h"
+
+1723006526 c:\users\feder\onedrive\escritorio\libs\list_g\comp_func.h
+
+1722961755 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_add_first_list.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1722941448 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_add_list.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1722939837 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_add_list_o.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1722938985 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_add_try_list.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1722951224 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_inded_of_list.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1722961735 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_insert_list.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1722920490 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_list_empty.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723023385 source:c:\users\feder\onedrive\escritorio\libs\list_g\test\test_sort_list.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+	<time.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+

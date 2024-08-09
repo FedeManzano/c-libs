@@ -13,3 +13,17 @@
 	<stdlib.h>
 	"./it.h"
 
+1722306935 source:c:\users\feder\onedrive\escritorio\libs\unittest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<it.h>
+
+1723197887 source:c:\users\feder\onedrive\escritorio\libs\unittest\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723197870 c:\users\feder\onedrive\escritorio\libs\unittest\it.h
+	"./pointerFn.h"
+	<string.h>
+

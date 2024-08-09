@@ -27,6 +27,7 @@ void test_ArbolNoVacio_Falso_Resultado_Pass ()
     int exp = 0;
     int res = is_empty_tree_set(&t) > 0 ? 1: 0;
     it(&exp,&res,sizeof(int),comp_i, "(2)-> test_ArbolNoVacio_Falso_Resultado_Pass");
+    clear_tree_set(&t);
 }
 
 

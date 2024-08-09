@@ -30,6 +30,7 @@ void test_BuscarEnArbol_BusquedaExitosa_ArregloDeInd_ResultadoPass()
     find_tree_set(&t,&res,sizeof(t_ind),comp_ind);
 
     it(exp.dni,res.dni,sizeof(exp.dni),comp_s,"(7)-> test_BuscarEnArbol_BusquedaExitosa_ArregloDeInd_ResultadoPass");
+    clear_tree_set(&t);
 }
 
 void crearArchPrueba() {
@@ -68,5 +69,6 @@ void test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass()
 
 
     it(&exp,&res,sizeof(int),comp_i,"(8)-> test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass");
+    clear_tree_set(&t);
 }
 

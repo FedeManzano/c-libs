@@ -69,7 +69,8 @@ int height_tree_set(t_tree_set *t)
 
 int level_tree_set(t_tree_set *t)
 {
-    return height_tree_set(t) - 1;
+    int h = height_tree_set(t);
+    return h > 0 ? h - 1 : h;
 }
 
 void show_level_tree_set(t_tree_set *t, int level, t_show show)

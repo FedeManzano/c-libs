@@ -52,6 +52,7 @@ void test_AgregarElementos_InfoNulaMenosNueve_Resultado_Pass ()
     int exp = -9;
 
     it(&exp,&res,sizeof(int),comp_i, "(5)-> test_AgregarElementos_InfoNulaMenosNueve_Resultado_Pass");
+    clear_tree_set(&t);
 }
 
 
@@ -64,6 +65,7 @@ void test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass ()
     int exp = -8;
 
     it(&exp,&res,sizeof(int),comp_i, "(6)-> test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass");
+    clear_tree_set(&t);
 }
 
 

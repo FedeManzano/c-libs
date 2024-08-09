@@ -23,4 +23,8 @@ int comp_s(const void *e1, const void *e2);
 int comp_index(const void *e1, const void *e2);
 void read_info(const void *info, const void *ia,const void *nro);
 void dibujar_index(const void  *info, const int niv);
+
+
+
+
 #endif // COMP_INFO_TREE_SET_H_INCLUDED

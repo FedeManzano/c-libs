@@ -20,6 +20,11 @@ int main()
     test_CantidadNodosArbol_ArbolNulo_Resultado_Pass();
     test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass();
     test_AlturaDelArbol_ArbolNulo_Resultado_Pass();
+    test_NivelArbol_NievelDistintaDeCero_Resultado_Pass();
+    test_NivelDelArbol_ArbolNulo_Resultado_Pass();
+    test_ContarHojas_HojasDistintoCero_Resultado_Pass();
+    test_ContarHojas_ArbolNulo_Resultado_Pass();
+
 
     return 0;
 }

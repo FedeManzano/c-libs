@@ -21,7 +21,7 @@ void test_CantidadNodosArbol_ArbolDiezNodos_Resultado_Pass ()
     int res = count_tree_set(&t);
 
     it(&exp,&res,sizeof(int),comp_i,"(9)-> test_CantidadNodosArbol_ArbolDiezNodos_Resultado_Pass");
-
+    clear_tree_set(&t);
 }
 
 void test_CantidadNodosArbol_ArbolVacio_Resultado_Pass ()
@@ -33,7 +33,7 @@ void test_CantidadNodosArbol_ArbolVacio_Resultado_Pass ()
     int res = count_tree_set(&t);
 
     it(&exp,&res,sizeof(int),comp_i,"(10)-> test_CantidadNodosArbol_ArbolVacio_Resultado_Pass");
-
+    clear_tree_set(&t);
 }
 
 void test_CantidadNodosArbol_ArbolNulo_Resultado_Pass ()
@@ -45,6 +45,6 @@ void test_CantidadNodosArbol_ArbolNulo_Resultado_Pass ()
     int res = count_tree_set(NULL);
 
     it(&exp,&res,sizeof(int),comp_i,"(11)-> test_CantidadNodosArbol_ArbolNulo_Resultado_Pass");
-
+    clear_tree_set(&t);
 }
 

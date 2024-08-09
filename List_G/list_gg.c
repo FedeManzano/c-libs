@@ -19,7 +19,7 @@ int is_full_list(const t_list * l)
     return !malloc(sizeof(t_node_list));
 }
 
-int add_list_o(t_list *l,const void *info,const int tam, t_comp comp)
+int add_list_o(t_list *l,const void *info,const size_t tam, t_comp comp)
 {
     if(!l)
         return LIST_NULL;
@@ -78,7 +78,7 @@ int add_list_o(t_list *l,const void *info,const int tam, t_comp comp)
     return OK;
 }
 
-int try_add_list_o(t_list *l,const void *info,const int tam, t_comp comp)
+int try_add_list_o(t_list *l,const void *info,const size_t tam, t_comp comp)
 {
     if(!l)
         return LIST_NULL;
@@ -139,7 +139,7 @@ int try_add_list_o(t_list *l,const void *info,const int tam, t_comp comp)
     return OK;
 }
 
-int add_first_list(t_list *l, const void *info, const int tam)
+int add_first_list(t_list *l, const void *info, const size_t tam)
 {
     if(!l)
         return LIST_NULL;
@@ -162,7 +162,7 @@ int add_first_list(t_list *l, const void *info, const int tam)
     return OK;
 }
 
-int add_list(t_list *l, const void *info, const int tam)
+int add_list(t_list *l, const void *info, const size_t tam)
 {
     if(!l)
         return LIST_NULL;
@@ -194,7 +194,7 @@ int add_list(t_list *l, const void *info, const int tam)
     return 1;
 }
 
-int get_key_list(t_list *l, void *info,const int tam, t_comp comp)
+int get_key_list(t_list *l, void *info,const size_t tam, t_comp comp)
 {
     if(!l)
         return LIST_NULL;
@@ -227,7 +227,7 @@ int get_key_list(t_list *l, void *info,const int tam, t_comp comp)
     return ELE_NO_FIND;
 }
 
-int get_key_last_list(t_list *l, void *info,const int tam, t_comp comp)
+int get_key_last_list(t_list *l, void *info,const size_t tam, t_comp comp)
 {
     if(!l)
         return LIST_NULL;
@@ -269,7 +269,7 @@ int len_list(t_list *l)
     return len;
 }
 
-void * get_info_list(t_list *l,void *info,const int tam,const int index)
+void * get_info_list(t_list *l,void *info,const size_t tam,const int index)
 {
     if(!l || !*l )
         return NULL;
@@ -291,7 +291,7 @@ void * get_info_list(t_list *l,void *info,const int tam,const int index)
     return info;
 }
 
-int delete_list(t_list *l, void *info,const int tam, t_comp comp)
+int delete_list(t_list *l, void *info,const size_t tam, t_comp comp)
 {
     if(!l)
         return LIST_NULL;
@@ -333,7 +333,7 @@ int delete_list(t_list *l, void *info,const int tam, t_comp comp)
     return ELE_NO_FIND;
 }
 
-int delete_all_list(t_list *l, void *info,const int tam, t_comp comp)
+int delete_all_list(t_list *l, void *info,const size_t tam, t_comp comp)
 {
     while(delete_list(l,info,tam,comp));
     return !get_key_list(l,info,tam,comp) ? OK : ELE_NO_FIND;
@@ -351,7 +351,7 @@ t_node_list * minor_list(t_list *l, const int tam,t_comp comp)
     return min;
 }
 
-void sort_list(t_list *l,const int tam, t_comp comp)
+void sort_list(t_list *l,const size_t tam, t_comp comp)
 {
     if(!l)
         return;
@@ -426,7 +426,7 @@ void sort_link_list(t_list *l, t_comp comp){
     }
 }
 
-int insert_list(t_list *l,const void * info,const int tam, const int index)
+int insert_list(t_list *l,const void * info,const size_t tam, const int index)
 {
     if(!l)
         return LIST_NULL;
@@ -485,7 +485,7 @@ int insert_list(t_list *l,const void * info,const int tam, const int index)
     return OK;
 }
 
-int insert_range_list(t_list *l,const void * arr,const int ce,const int tam, int index)
+int insert_range_list(t_list *l,const void * arr,const int ce,const size_t tam, int index)
 {
     if(!l)
         return LIST_NULL;
@@ -523,7 +523,7 @@ void clear_list(t_list *l)
     *l = NULL;
 }
 
-int to_array_list(t_list *l, void *arr, int tam)
+int to_array_list(t_list *l, void *arr,const size_t tam)
 {
     if(!l)
         return LIST_NULL;
