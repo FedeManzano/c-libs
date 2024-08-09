@@ -70,18 +70,3 @@ void test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass()
     it(&exp,&res,sizeof(int),comp_i,"(8)-> test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass");
 }
 
-void test_archArbol(){
-    crearArchPrueba();
-
-    FILE *arch = fopen("prueba.dat", "rb");
-
-	if(!arch)
-		return ;
-
-    t_tree_set t;
-
-    init_tree_set(&t);
-
-    file_binary_to_tree_set(&t,&arch,sizeof(t_index),sizeof(int),comp_index,read_info);
-    show_graph_tree_set(&t,&t,dibujar_index,comp_i);
-}

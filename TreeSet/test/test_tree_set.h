@@ -10,6 +10,10 @@ void test_AgregarElementos_InfoNulaMenosNueve_Resultado_Pass ();
 void test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass ();
 void test_BuscarEnArbol_BusquedaExitosa_ArregloDeInd_ResultadoPass();
 void test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass();
-void test_archArbol();
+void test_CantidadNodosArbol_ArbolDiezNodos_Resultado_Pass();
+void test_CantidadNodosArbol_ArbolVacio_Resultado_Pass ();
+void test_CantidadNodosArbol_ArbolNulo_Resultado_Pass();
+void test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass();
+void test_AlturaDelArbol_ArbolNulo_Resultado_Pass();
 
 #endif // TEST_TREE_SET_H_INCLUDED

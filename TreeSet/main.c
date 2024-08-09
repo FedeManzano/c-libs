@@ -15,6 +15,11 @@ int main()
     test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass ();
     test_BuscarEnArbol_BusquedaExitosa_ArregloDeInd_ResultadoPass();
     test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass();
-    test_archArbol();
+    test_CantidadNodosArbol_ArbolDiezNodos_Resultado_Pass();
+    test_CantidadNodosArbol_ArbolVacio_Resultado_Pass ();
+    test_CantidadNodosArbol_ArbolNulo_Resultado_Pass();
+    test_AlturaDelArbol_AlturaDistintaDeCero_Resultado_Pass();
+    test_AlturaDelArbol_ArbolNulo_Resultado_Pass();
+
     return 0;
 }

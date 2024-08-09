@@ -4,6 +4,7 @@
 
     void init_tree_set (t_tree_set *t);
     int is_empty_tree_set(const t_tree_set *t);
+    int is_full_tree_set(const int t_tree_set *)
     int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp);
     int count_tree_set(const t_tree_set *t);
     int height_tree_set(t_tree_set *t);
@@ -13,6 +14,7 @@
     int delete_tree_set(t_tree_set *t, const void *info,size_t size, t_comp comp);
     void delete_left_tree_set(t_tree_set *t);
     int find_tree_set(t_tree_set *t, void *info, size_t size, t_comp comp);
+    void file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
     void clear_tree_set(t_tree_set *t);
     void in_order_tree_set(t_tree_set *a, t_show show);
     void pre_order_tree_set(t_tree_set *t, t_show show);
@@ -107,6 +109,14 @@ void init_tree_set (t_tree_set *t);
  * \return int != si está vacío, 0 no está vacío
  */
 int is_empty_tree_set(const t_tree_set *t);
+
+/** \brief
+ *
+ * \param * const intt_tree_set
+ * \return int
+ *
+ */
+int is_full_tree_set(const t_tree_set *);
 
 
 /** \brief
@@ -314,7 +324,7 @@ void show_leaf_tree_set(t_tree_set *t, t_show show);
  * \return void
  *
  */
-void file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
+int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
 
 
 /// Funciones para pruebas

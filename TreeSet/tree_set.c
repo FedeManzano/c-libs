@@ -15,6 +15,11 @@ int is_empty_tree_set(const t_tree_set *t)
     return *t == NULL;
 }
 
+int is_full_tree_set(const t_tree_set *t)
+{
+    return !malloc(sizeof(t_node_list));
+}
+
 int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp)
 {
     if(!t)
@@ -404,9 +409,10 @@ int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,con
     void *info_tree = malloc(size_tree);
 
     if(!info || !info_tree)
-        return;
+        return _FULL_TREE;
 
     file_binary_to_tree_set_rec(t,fi,info_tree,info,size_tree,size_arch,0,size_a,comp,read);
     free(info);
     free(info_tree);
+    return _OK;
 }
