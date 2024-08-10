@@ -12,7 +12,7 @@
 	<string.h>
 	<list_g.h>
 
-1723194105 c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.h
+1723254753 c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.h
 	"./libs/list_g.h"
 
 1723151933 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\comp_info_tree_set.c
@@ -82,6 +82,14 @@
 	<it.h>
 
 1723198855 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_count_left_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	<it.h>
+
+1723199758 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_level_info_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"

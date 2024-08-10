@@ -19,7 +19,7 @@
     void in_order_tree_set(t_tree_set *a, t_show show);
     void pre_order_tree_set(t_tree_set *t, t_show show);
     void post_order_tree_set(t_tree_set *t, t_show show);
-    void show_graph_tree_set(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp);
+    void show_graph_tree_set(t_tree_set *t, t_gra dib, t_comp comp);
     void show_level_tree_set(t_tree_set *t, int level, t_show show);
     void show_leaf_tree_set(t_tree_set *t, t_show show);
 
@@ -259,13 +259,12 @@ void post_order_tree_set(t_tree_set *t, t_show show);
  *       }
  *
  * \param t t_tree_set* Puntero al árbol
- * \param aux t_tree_set* Puntero a un árbol auxiliar (El mismo árbol)
  * \param dib t_gra (Función para pintar el nodo en función a su nivel dentro del árbol)
  * \param comp t_comp Puntero a  la función de comparación.
  * \return void
  *
  */
-void show_graph_tree_set(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp);
+void show_graph_tree_set(t_tree_set *t,t_gra dib, t_comp comp);
 
 
 /** \brief
@@ -291,7 +290,7 @@ void show_leaf_tree_set(t_tree_set *t, t_show show);
 
 
 /** \brief
- * Esta función genera un indice de un archivo binario.
+ * Esta función genera un indice de un archivo binario ORDENADO por clave.
  * Obtiene uno por uno los registros de un archivo binario y guarda. En la información
  * del árbol {nroRegistro, info} el nro de registro y la información del registro.
  *

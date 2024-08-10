@@ -144,16 +144,21 @@ void post_order_tree_set(t_tree_set *t, t_show show)
     show((*t)->info);
 }
 
-void show_graph_tree_set(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp)
+void show_graph_tree_set_rec(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp)
 {
     if(!t)
         return;
 
     if(!*t)
         return;
-    show_graph_tree_set(&(*t)->r, aux,dib, comp);
+    show_graph_tree_set_rec(&(*t)->r, aux,dib, comp);
     dib( (*t)->info, level_info_tree_set( aux,(*t)->info,comp ) );
-    show_graph_tree_set( &(*t)->l, aux,dib, comp );
+    show_graph_tree_set_rec( &(*t)->l, aux,dib, comp );
+}
+
+void show_graph_tree_set(t_tree_set *t,t_gra dib, t_comp comp)
+{
+    show_graph_tree_set_rec(t,t,dib,comp);
 }
 
 t_node_tree_set ** find_node_tree_set(t_tree_set *t, const void *info, t_comp comp)
