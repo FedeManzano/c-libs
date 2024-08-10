@@ -242,7 +242,8 @@ int get_key_last_list(t_list *l, void *info,const size_t tam, t_comp comp)
         bus = bus->next;
     while(bus && comp(bus->info,info))
         bus = bus->back;
-    if(bus && !comp(bus->info,info)){
+    if(bus && !comp(bus->info,info))
+    {
         memcpy(info,bus->info,tam);
         return OK;
     }
@@ -381,48 +382,57 @@ void sort_list(t_list *l,const size_t tam, t_comp comp)
 
 }
 
-
-t_node_list * first_list(t_list *l){
+t_node_list * first_list(t_list *l)
+{
     return *l;
 }
 
-void sort_link_list(t_list *l, t_comp comp){
+void sort_selection_list(t_list *l,const size_t tam, t_comp comp)
+{
     if(!l)
         return;
     if(!*l)
         return;
+    t_node_list *act = *l;
+    t_node_list *min = *l;
 
-    int change = 1;
-
-    while(*l && (*l)->back)
-        l = &(*l)->back;
-
-    t_node_list *ant = *l;
-    t_node_list *sig;
-
-    while(change)
+    while(act)
     {
-        sig = ant->next;
-        change = 0;
-        while(sig){
+        min = minor_list(l,tam,comp);
 
-            if(comp(ant->info, sig->info) > 0)
+        if(act != min)
+        {
+            if(act->next != min)
             {
-                ant->next = sig->next;
-                if(sig->next)
-                    sig->next->back = ant;
-                if(ant->back)
-                    ant->back->next = sig;
-                sig->back = ant->back;
-                ant->back = sig;
-                sig->next = ant;
-                change = 1;
+                if(act->back)
+                    act->back->next = min;
+                if(act->next)
+                    act->next->back = min;
+                if(min->next)
+                    min->next->back = act;
+                if(min->back)
+                    min->back->next = act;
+                t_node_list *aux = min->next;
+                min->next = act->next;
+                act->next = aux;
+                aux = act->back;
+                act->back = min->back;
+                min->back = aux;
             }
-            ant = sig;
-            sig = sig->next;
+            else
+            {
+                act->next = min->next;
+                if(min->next)
+                    min->next->back = act;
+                if(act->back)
+                    act->back->next = min;
+                min->back = act->back;
+                act->back = min;
+                min->next = act;
+            }
         }
-        while(ant && ant->back)
-            ant = ant->back;
+        act = min->next;
+        l = &min->next;
     }
 }
 
@@ -496,7 +506,8 @@ int insert_range_list(t_list *l,const void * arr,const int ce,const size_t tam, 
 
     int nro = 0;
     int res;
-    for(int i = 0; i < ce; i++){
+    for(int i = 0; i < ce; i++)
+    {
         res = insert_list(l,arr + nro * tam,tam,index);
         index ++;
         nro ++;

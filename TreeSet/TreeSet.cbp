@@ -45,6 +45,9 @@
 		<Unit filename="test/test_add_tree_ser.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_count_left_tree_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_count_tree_set.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -55,6 +58,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/test_is_empty_tree_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/test_level_info_tree_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/test_level_tree_set.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/test_tree_set.h" />

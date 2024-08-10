@@ -255,7 +255,8 @@ void sort_list(t_list *l,const size_t tam, t_comp comp);
  * \param comp t_comp puntero a función de comparación
  * \return void
  */
-void sort_link_list(t_list *l, t_comp comp);
+void sort_selection_list(t_list *l,const size_t tam, t_comp comp);
+
 
 
 /** \brief

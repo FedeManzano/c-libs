@@ -41,7 +41,7 @@ int main()
     test_InsertRangeList_InsertaUnRangoDe5Elementos_Resultado_Pass();
     test_InsertRangeList_InsertaUnRangoDe2Elementos_Resultado_Pass();
     test_SortLinkList_OrdenarListaMoviendoEnlaces_ResultadoPass();
-    test_SortLinkList_ClientesVsEnteros_ResultadoPass();
+    ///test_SortLinkList_ClientesVsEnteros_ResultadoPass();
     test_SortLinkList_Productos_ResultadoPass();
 
     return 0;

@@ -171,7 +171,6 @@ int count_leaf_tree_set(t_tree_set *t);
  * \param info void* Info que se desea averiguar el nivel.
  * \param comp t_comp Puntero a la función de comparación
  * \return int Nivel de la info.
- *
  */
 int level_info_tree_set(t_tree_set *t,void *info, t_comp comp);
 

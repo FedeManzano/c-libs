@@ -11,108 +11,67 @@ void test_SortLinkList_OrdenarListaMoviendoEnlaces_ResultadoPass(){
     t_list l;
     init_list(&l);
 
-    int arr[10] = {5,10,8,2,4,6,9,3,7,1};
-    int exp[10] = {1,2,3,4,5,6,7,8,9,10};
-    int res[10];
+    int exp[10000];
+    int res[10000];
 
 
-    insert_range_list(&l,arr,10,sizeof(int),0);
+    for(int i = 0; i < 10000; i++){
+        exp[i] = i + 1;
+        res[i] = 10000 - i;
+    }
 
-    sort_link_list(&l,comp_in);
+    insert_range_list(&l,res,10000,sizeof(int),0);
+
+    long ti = clock();
+    sort_selection_list(&l,sizeof(int),comp_in);
+    long tf = clock();
+
 
     to_array_list(&l,res,sizeof(int));
 
-
-
-
-    it_arr(exp,res,10,sizeof(int),comp_in, "(34)-> test_SortLinkList_OrdenarListaMoviendoEnlaces_ResultadoPass");
-
-    for(int i = 0; i < 10; i ++)
+    for(int i = 0; i < 10000; i++)
         printf("%d ", res[i]);
+
+
+    it_arr(exp,res,10000,sizeof(int),comp_in,"(34)-> test_SortLinkList_OrdenarListaMoviendoEnlaces_ResultadoPass");
     clear_list(&l);
+    printf("Tiempo En ordenar: %ld",tf-ti);
+
 }
 
 
 void test_SortLinkList_ClientesVsEnteros_ResultadoPass(){
+    t_list l;
+    init_list(&l);
 
-    printf("\n\ntest(35) - > Prueba de estres 20000 elementos\n");
-    printf("Ordenar una estructura compleja y una simple\n");
-    printf("El objetivo es que tarden lo mismo\n");
-
-
-
-    t_list listaCliente;
-    init_list(&listaCliente);
-
-    t_list listaEntero;
-    init_list(&listaEntero);
-
-    int arr[10000];
-    t_producto clientes[10000];
-
-
-
-    for(int i = 0; i < 10000; i ++){
-        arr[i] = 10000 - i;
-    }
-    t_producto a;
-
-    for(int i = 0; i < 10000; i ++){
-        a.cod = 10000 - i;
-        strcpy(a.nombre,"Nombre");
-        strcpy(a.nombre,"Categoria");
-        a.tipo = 'C';
-        a.precio = 100;
-        a.stock = 10;
-        clientes[i] = a;
-    }
-
-
-    insert_range_list(&listaEntero,arr,10000,sizeof(int),0);
-    insert_range_list(&listaCliente,clientes,10000,sizeof(t_producto),0);
-
-    long i = clock();
-    sort_link_list(&listaEntero,comp_in);
-    long f = clock();
-
-
-    long ic = clock();
-    sort_link_list(&listaCliente,comp_p);
-    long fc = clock();
-
-    printf("\n20000 Elementos Enteros: %ld vs Clientes: %ld" ,f-i,fc-ic);
 }
 
 
 void test_SortLinkList_Productos_ResultadoPass(){
-
-    printf("\n\ntest(35) - > Prueba de estres 20000 elementos\n");
-    printf("Ordenar una estructura compleja\n");
-    printf("El objetivo es que tarden lo mismo\n");
-
     t_list l;
     init_list(&l);
-    t_producto productos[10000];
 
-    t_producto a;
+    t_producto exp[5000];
+    t_producto p1;
 
-    for(int i = 0; i < 10000; i ++){
-        a.cod = 10000 - i;
-        strcpy(a.nombre,"Nombre");
-        strcpy(a.nombre,"Categoria");
-        a.tipo = 'C';
-        a.precio = 100;
-        a.stock = 10;
-        productos[i] = a;
+    for(int i = 0; i < 5000; i++){
+
+        p1.cod = 5000 - i;
+        strcpy(p1.nombre,"Nombre");
+        strcpy(p1.cat,"Cat");
+        p1.stock = 10;
+        p1.precio = 2700.22;
+
+        exp[i] = p1;
     }
 
+    insert_range_list(&l,exp,5000,sizeof(t_producto),0);
 
-    insert_range_list(&l,productos,10000,sizeof(t_producto),0);
+    long ti = clock();
+    sort_selection_list(&l,sizeof(t_producto),comp_p);
+    long tf = clock();
 
 
-    long ic = clock();
-    sort_link_list(&l,comp_p);
-    long fc = clock();
-
-    printf("\nProductos Tiempo: %ld" ,fc-ic);
+    clear_list(&l);
+    printf("\n(35) -> test_SortLinkList_10000Productos_ResultadoPass -> Tiempo En ordenar: %ld",tf-ti);
 }

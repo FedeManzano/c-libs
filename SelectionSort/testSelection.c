@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <selection.h>
+#include "selection_sort.h"
 #include <time.h>
 #include <it.h>
 

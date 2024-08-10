@@ -8,8 +8,8 @@ typedef struct{
 
 typedef struct {
     int cod;
-    char nombre[50];
-    char cat[50];
+    char nombre[170];
+    char cat[170];
     char tipo;
     float precio;
     int stock;

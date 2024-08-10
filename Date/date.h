@@ -41,7 +41,7 @@
 
     printf(date_to_string(&f1,dd_MM_yyyy)); -> 4/1/1987
 
-    @author Federico Manzano.
+    @author Federico Manzano (https://github.com/FedeManzano)
 */
 
 #ifndef DATE_H_INCLUDED
@@ -56,7 +56,7 @@
 
 
 /** ERROR cuando se produce una fecha erronea o retorne un *date NULL*/
-#define DATE_ERROR           -10
+#define DATE_ERROR     -10
 
 /** La operación terminó correctamente */
 #define OK              1

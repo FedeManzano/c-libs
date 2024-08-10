@@ -26,3 +26,21 @@
 	<time.h>
 	<it.h>
 
+1722336808 source:c:\users\feder\onedrive\escritorio\libs\selectionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<selection.h>
+	<time.h>
+	"./testSelection.h"
+
+1722335596 c:\users\feder\onedrive\escritorio\libs\selectionsort\testselection.h
+
+1723202382 source:c:\users\feder\onedrive\escritorio\libs\selectionsort\testselection.c
+	<stdio.h>
+	<stdlib.h>
+	"selection_sort.h"
+	<time.h>
+	<it.h>
+
+1723202287 c:\users\feder\onedrive\escritorio\libs\selectionsort\selection_sort.h
+
