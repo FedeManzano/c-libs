@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include "../libs/date.h"
 #include "../libs/menu.h"
+#include "pba_fechas.h"
+
 
 
 void mostrar_module_date()
 {
     char opciones [TAM_MENU][TAM_MENU] =
     {
-        "ABCDEFGHIJKLS",
+        "ABCDEFGHIJKS",
         "Agregar Fecha (dd/mm/aaaa)",
         "Agregar Fecha (dd/mm/aaaa hh:mm:ss)",
         "Diferencia En Dias",
@@ -26,13 +28,21 @@ void mostrar_module_date()
     t_menu menu;
     init_menu(&menu, opciones,"TDA Fechas");
 
+    t_date fechas[100];
+    int ce = 0;
+
     char op;
 
     do{
 
         op = get_option(&menu);
 
+        switch(op){
+            case 'A': pba_agregar_fecha(fechas, &ce);
+                break;
+        }
 
-    }while(op == 's' || op == 'S');
+
+    }while(op != 's' && op != 'S');
 
 }

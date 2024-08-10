@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="date_module/date_module.h" />
+		<Unit filename="date_module/pba_fechas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="date_module/pba_fechas.h" />
 		<Unit filename="init_app/init_app.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -75,6 +79,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="utils/utils.h" />
+		<Unit filename="utils/utils_all.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="utils/utils_date.c">
 			<Option compilerVar="CC" />
 		</Unit>

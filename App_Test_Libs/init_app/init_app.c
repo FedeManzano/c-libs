@@ -35,5 +35,5 @@ void init_app()
         }
 
     }
-    while(op == 'S' || op == 's');
+    while(op != 'S' && op != 's');
 }
