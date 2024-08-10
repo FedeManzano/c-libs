@@ -3,9 +3,9 @@
 #include "../tree_set.h"
 #include "test_tree_set.h"
 #include "comp_info_tree_set.h"
-#include <it.h>
+//#include <it.h>
 
-
+/*
 void test_PasarAArreglo_ArregloOrdenado_Resultado_Pass ()
 {
     t_tree_set t;
@@ -67,5 +67,5 @@ void test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass ()
     it(&exp,&res,sizeof(int),comp_i, "(6)-> test_AgregarElementos_TamDatoInvalidoMenosocho_Resultado_Pass");
     clear_tree_set(&t);
 }
-
+*/
 

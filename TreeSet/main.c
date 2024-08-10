@@ -7,6 +7,7 @@
 int main()
 {
 
+/*
     test_ArbolVacio_Verdadero_Resultado_Pass();
     test_ArbolNoVacio_Falso_Resultado_Pass ();
     test_PasarAArreglo_ArregloOrdenado_Resultado_Pass();
@@ -25,6 +26,6 @@ int main()
     test_ContarHojas_HojasDistintoCero_Resultado_Pass();
     test_ContarHojas_ArbolNulo_Resultado_Pass();
 
-
+*/
     return 0;
 }

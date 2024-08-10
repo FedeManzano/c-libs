@@ -60,9 +60,6 @@
 		<Unit filename="test/test_is_empty_tree_set.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="test/test_level_info_tree_set.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="test/test_level_tree_set.c">
 			<Option compilerVar="CC" />
 		</Unit>

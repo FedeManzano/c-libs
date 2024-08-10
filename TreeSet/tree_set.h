@@ -330,9 +330,9 @@ int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,con
 /// Agregada en este proyecto.
 /// @see /libs/list_gg.c
 ///////////////////////////////////////////////////////////////////
-void to_array_in_order(t_tree_set *t, void *arr, size_t size);
-void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
-void to_array_post_order(t_tree_set *t, void *arr, size_t size);
+//void to_array_in_order(t_tree_set *t, void *arr, size_t size);
+//void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
+//void to_array_post_order(t_tree_set *t, void *arr, size_t size);
 ///////////////////////////////////////////////////////////////////
 
 #endif // TREE_SET_H_INCLUDED

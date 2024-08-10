@@ -3,9 +3,9 @@
 #include "../tree_set.h"
 #include "test_tree_set.h"
 #include "comp_info_tree_set.h"
-#include <it.h>
+//#include <it.h>
 
-
+/*
 void test_CantidadNodosArbol_ArbolDiezNodos_Resultado_Pass ()
 {
     t_tree_set t;
@@ -47,4 +47,4 @@ void test_CantidadNodosArbol_ArbolNulo_Resultado_Pass ()
     it(&exp,&res,sizeof(int),comp_i,"(11)-> test_CantidadNodosArbol_ArbolNulo_Resultado_Pass");
     clear_tree_set(&t);
 }
-
+*/

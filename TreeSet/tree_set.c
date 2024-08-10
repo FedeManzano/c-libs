@@ -244,7 +244,7 @@ int find_tree_set(t_tree_set *t, void *info, size_t size, t_comp comp)
     return _NO_FIND_ELE;
 }
 
-void to_array_in_order_rec(t_tree_set *t, t_list *l, size_t size)
+/*void to_array_in_order_rec(t_tree_set *t, t_list *l, size_t size)
 {
     if(!*t)
         return;
@@ -317,6 +317,8 @@ void to_array_post_order(t_tree_set *t, void *arr, size_t size)
     to_array_post_order_rec(t,&l,sizeof(int));
     to_array_list(&l,arr,sizeof(int));
 }
+*/
+
 
 int count_tree_set(const t_tree_set *t)
 {

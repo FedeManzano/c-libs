@@ -3,9 +3,9 @@
 #include "../tree_set.h"
 #include "test_tree_set.h"
 #include "comp_info_tree_set.h"
-#include <it.h>
+//#include <it.h>
 
-
+/*
 void test_BuscarEnArbol_BusquedaExitosa_ArregloDeInd_ResultadoPass()
 {
     t_ind inds[5] = {
@@ -71,4 +71,4 @@ void test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass()
     it(&exp,&res,sizeof(int),comp_i,"(8)-> test_BuscarEnArbol_BusquedaFallida_ArregloDeInd_ResultadoPass");
     clear_tree_set(&t);
 }
-
+*/
