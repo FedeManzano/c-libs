@@ -4,20 +4,29 @@
 #include <ctype.h>
 #include "./menu.h"
 
-void init_menu(t_menu * menu,char options[TAM][TAM],char decorator){
-
+void init_menu(t_menu * menu,char options[TAM_MENU][TAM_MENU], const char*title){
+    if(title){
+       menu->title = (char *) malloc(sizeof(char)*100);
+       strcpy(menu->title, title);
+    }
+    menu->decorator = '>';
     menu->cant = strlen(options[0]) + 1;
-    menu->decorator = decorator;
+
     for(int i = 0; i < menu->cant ; i ++){
         strcpy(menu->options[i],options[i]);
     }
 }
 
-
 void show_menu(t_menu * menu){
 
     system("cls");
-    printf("\n\t\t\tMenu de opciones\n\n");
+    if(menu->title){
+        printf("\n\t\t\t%s\n\n", menu->title);
+    }else{
+        printf("\n\t\t\tMenu de Opciones\n\n");
+    }
+
+
     for(int i = 0; i< menu->cant - 1; i ++ ){
         printf("\t\t[ %c ] %c %s\n", menu->options[0][i], menu->decorator ,menu->options[i + 1]);
     }

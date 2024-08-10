@@ -1,3 +1,4 @@
+
 /**
     TDA Menú.
 
@@ -53,45 +54,43 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 
+// Tamaño máximo del menú
+#define TAM_MENU 100
 
-#define TAM 50
-
-
+/**
+    TDA Menu personalizado para aplicaciones en lenguaje c.
+    @author Federico Manzano
+*/
 typedef struct {
-    char options[TAM][TAM];
+    // opciones del menú seteadas por el usuarion con el
+    // método init_munu
+    char options[TAM_MENU][TAM_MENU];
+
+    // Cantidad del menú
     int cant;
+
+    // Separador de opciones y descripciones
     char decorator;
+
+    // Título del menú
+    char * title;
 } t_menu;
 
+/**
+    Inicializar el menú y le permite conf al usuario
+    el título y las opciones del menú
+*/
+void init_menu(t_menu * menu, char options[TAM_MENU][TAM_MENU], const char *title);
 
-/** \brief
- *  Inicializar el menú con los parámetros suministrados.
- * \param menu t_menu* Puntero a la estructura t_menu
- * \param options[TAM][TAM] char Opciones del menú
- * \param decorator char Caracter que separa la inicial de la opción con su nombre
- * \return void
- *
- */
-void init_menu(t_menu * menu, char options[TAM][TAM],char decorator);
-
-
-
-/** \brief
- *  Permite reimprimir el menú.
- * \param menu t_menu* Puntero aal menú
- * \return void
- *
- */
+/**
+    Imprime el menú en la pantalla
+*/
 void show_menu(t_menu * menu);
 
-
-
-/** \brief
- *  Permite pedirle una opción al usuario.
- * \param menu t_menu* Puntero al menú
- * \return char Opción seleccionada por el usuario.
- *
- */
+/**
+    Devuelve y valida la opción seleccionada por el usuario
+    @return un char con la opción seleccionada
+*/
 char get_option(t_menu * menu);
 
 #endif // MENU_H_INCLUDED

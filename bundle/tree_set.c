@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "tree_set.h"
 #include <string.h>
-#include <list_g.h>
+//#include <list_g.h>
 
 
 void init_tree_set (t_tree_set *t)
@@ -17,7 +17,7 @@ int is_empty_tree_set(const t_tree_set *t)
 
 int is_full_tree_set(const t_tree_set *t)
 {
-    return !malloc(sizeof(t_node_list));
+    return !malloc(sizeof(t_node_tree_set));
 }
 
 int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp)

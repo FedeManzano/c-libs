@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <menu.h>
-#include <selection.h>
-#include <date.h>
+#include "menu.h"
 
 int main()
 {
@@ -36,9 +34,6 @@ int main()
             printf("Esta es la pagina principal\n");
             system("pause");
             break;
-        case '2': system("cls");
-                printf("\n\n\t\t\t%s\n",date_to_string(add_days( date_now(),-2),yyyy_MM_dd));
-                system("pause");
         }
     }while(o != 'S');
 

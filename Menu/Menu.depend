@@ -16,3 +16,18 @@
 
 1722331133 c:\users\feder\onedrive\escritorio\test\menu\menu.h
 
+1723300577 source:c:\users\feder\onedrive\escritorio\libs\menu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"menu.h"
+
+1722361823 source:c:\users\feder\onedrive\escritorio\libs\menu\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"./menu.h"
+
+1723300659 c:\users\feder\onedrive\escritorio\libs\menu\menu.h
+

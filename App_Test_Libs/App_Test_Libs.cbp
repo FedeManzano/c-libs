@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="App_Test_Libs" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/App_Test_Libs" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/App_Test_Libs" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="date_module/date_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="date_module/date_module.h" />
+		<Unit filename="init_app/init_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="init_app/init_app.h" />
+		<Unit filename="libs/date.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/date.h" />
+		<Unit filename="libs/list_g.h" />
+		<Unit filename="libs/list_gg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/menu.h" />
+		<Unit filename="libs/queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/queue.h" />
+		<Unit filename="libs/quicksort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/quicksort.h" />
+		<Unit filename="libs/selection_sort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/selection_sort.h" />
+		<Unit filename="libs/stack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/stack.h" />
+		<Unit filename="libs/tree_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/tree_set.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utils/utils.h" />
+		<Unit filename="utils/utils_date.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

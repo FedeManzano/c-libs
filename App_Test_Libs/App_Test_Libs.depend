@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1723300890 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+
+1722692266 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\date.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"./date.h"
+
+1723202952 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\date.h
+
+1723253380 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\list_gg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list_g.h"
+
+1723250410 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\list_g.h
+
+1722361823 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"./menu.h"
+
+1722339897 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\menu.h
+
+1723046877 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\queue.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+	<string.h>
+
+1723046899 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\queue.h
+
+1722356317 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./quicksort.h"
+
+1723025064 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\quicksort.h
+
+1723202393 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\selection_sort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./selection_sort.h"
+
+1723202868 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\selection_sort.h
+
+1723030250 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\stack.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<string.h>
+
+1723031379 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\stack.h
+
+1723300216 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./init_app/init_app.h"
+
+1723299028 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_date.c
+
+1723300368 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_set.h"
+	<string.h>
+
+1723299147 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\tree_set.h
+
+1723300949 c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.h
+
+1723301864 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\date_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/date.h"
+	"../libs/menu.h"
+

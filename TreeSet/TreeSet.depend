@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1723198909 source:c:\users\feder\onedrive\escritorio\libs\treeset\main.c
+1723292348 source:c:\users\feder\onedrive\escritorio\libs\treeset\main.c
 	<stdio.h>
 	<stdlib.h>
 	"tree_set.h"
@@ -15,7 +15,7 @@
 1723292251 c:\users\feder\onedrive\escritorio\libs\treeset\tree_set.h
 	"./libs/list_g.h"
 
-1723151933 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\comp_info_tree_set.c
+1723292251 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\comp_info_tree_set.c
 	"comp_info_tree_set.h"
 	<string.h>
 
@@ -23,71 +23,64 @@
 	<stdio.h>
 	<stdlib.h>
 
-1723199068 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_is_empty_tree_set.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_is_empty_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
 1723198909 c:\users\feder\onedrive\escritorio\libs\treeset\test\test_tree_set.h
 
 1723145611 c:\users\feder\onedrive\escritorio\libs\treeset\libs\list_g.h
 
-1723024381 source:c:\users\feder\onedrive\escritorio\libs\treeset\libs\list_gg.c
+1723300497 source:c:\users\feder\onedrive\escritorio\libs\treeset\libs\list_gg.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"list_g.h"
 
-1723199020 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_add_tree_ser.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_add_tree_ser.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
-1723199051 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_find_tree_set.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_find_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
-1723199020 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_count_tree_set.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_count_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
-1723199051 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_height_tree_set.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_height_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
-1723199078 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_level_tree_set.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_level_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
-1723198855 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_count_left_tree_set.c
+1723292330 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_count_left_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
 	"test_tree_set.h"
 	"comp_info_tree_set.h"
-	<it.h>
 
 1723199758 source:c:\users\feder\onedrive\escritorio\libs\treeset\test\test_level_info_tree_set.c
 	<stdio.h>
