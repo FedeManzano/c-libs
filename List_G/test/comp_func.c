@@ -1,10 +1,6 @@
 
 #include "../comp_func.h"
 
-
-
-
-
 int comp_p(const void *e1, const void *e2){
     t_producto * p1 = (t_producto *)e1;
     t_producto * p2 = (t_producto *)e2;

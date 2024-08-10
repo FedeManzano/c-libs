@@ -1,9 +1,6 @@
 #ifndef TEST_DATE_H_INCLUDED
 #define TEST_DATE_H_INCLUDED
 
-#include <pointerFn.h>
-
-
 void test_ValidarFechaDiaMalo_ResultadoPASS();
 void test_ValidarFechaMes_ResultadoPASS();
 void test_ValidarFechaAnoMalo_ResultadoPASS();

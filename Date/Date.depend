@@ -23,3 +23,26 @@
 1722545928 c:\users\feder\onedrive\escritorio\test\date\test_date.h
 	<pointerFn.h>
 
+1722692266 source:c:\users\feder\onedrive\escritorio\libs\date\date.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"./date.h"
+
+1723202952 c:\users\feder\onedrive\escritorio\libs\date\date.h
+
+1722553434 source:c:\users\feder\onedrive\escritorio\libs\date\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./date.h"
+	"test_date.h"
+
+1723325096 c:\users\feder\onedrive\escritorio\libs\date\test_date.h
+
+1722692150 source:c:\users\feder\onedrive\escritorio\libs\date\test_date.c
+	<stdio.h>
+	<stdlib.h>
+	"./date.h"
+	<it.h>
+

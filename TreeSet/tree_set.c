@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "tree_set.h"
 #include <string.h>
-//#include <list_g.h>
 
 
 void init_tree_set (t_tree_set *t)

@@ -40,17 +40,15 @@
 #ifndef IT_H_INCLUDED
 #define IT_H_INCLUDED
 
-#include "./pointerFn.h"
 #include <string.h>
 
+typedef int (*t_comp)(const void *, const void *);
 
 /**
     Permite comparar arreglos de cualquier tipo y verificar si estos son iguales
     para corrobar el buen funcionamiento de la función que se esté probando.
     Para realizar este proceso toma en uno de sus parámetros un *ptr a una función de
     comparación del tipo int (*t_comp)(const void *, const void *).
-
-    @see pointerFn.h
 */
 void it_arr(const void * expected, const void * result, const unsigned long ce, const size_t tam, t_comp comp, char * nameTest);
 
@@ -60,8 +58,6 @@ void it_arr(const void * expected, const void * result, const unsigned long ce, 
     para corrobar el buen funcionamiento de la función que se esté probando.
     Para realizar este proceso toma en uno de sus parámetros un *ptr a una función de
     comparación del tipo int (*t_comp)(const void *, const void *).
-
-    @see pointerFn.h
 */
 void it(const void *expected, const void *result, const size_t tam, t_comp comp, char * nameTest);
 

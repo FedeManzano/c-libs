@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="date.h" />
+		<Unit filename="it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="it.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

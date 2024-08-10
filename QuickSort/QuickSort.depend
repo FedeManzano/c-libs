@@ -24,3 +24,21 @@
 	<it.h>
 	"./quicksort.h"
 
+1723025094 source:c:\users\feder\onedrive\escritorio\libs\quicksort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<date.h>
+	"./quicksort.h"
+	"./test_quicksort.h"
+
+1723025064 c:\users\feder\onedrive\escritorio\libs\quicksort\quicksort.h
+
+1722358433 c:\users\feder\onedrive\escritorio\libs\quicksort\test_quicksort.h
+	<pointerFn.h>
+
+1722356317 source:c:\users\feder\onedrive\escritorio\libs\quicksort\quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./quicksort.h"
+
