@@ -14,7 +14,7 @@ void mostrar_module_date()
         "Agregar Fecha (dd/mm/aaaa)",
         "Agregar Fecha (dd/mm/aaaa hh:mm:ss)",
         "Diferencia En Dias",
-        "Diferencia en Segundos"
+        "Diferencia en Segundos",
         "Ordenar Fechas",
         "Dia de la Semana",
         "Agregar / Restar Dias a una Fecha",
@@ -43,6 +43,12 @@ void mostrar_module_date()
             case 'B': pba_agregar_time(fechas, &ce);
                 break;
             case 'C': pba_diferencia_en_dias(fechas, ce);
+                break;
+            case 'D': pba_diferencia_en_segundos(fechas, ce);
+                break;
+             case 'E': pba_ordenar_fechas(fechas, ce);
+                break;
+            case 'F': pba_dia_de_la_semana();
                 break;
         }
     }while(op != 's' && op != 'S');
