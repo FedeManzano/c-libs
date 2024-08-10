@@ -5,7 +5,6 @@
 
 void init_app()
 {
-
     char opciones [TAM_MENU][TAM_MENU] =
     {
         "FOALPCS",
@@ -25,7 +24,6 @@ void init_app()
 
     do
     {
-
         op = get_option(&menu);
 
         switch(op)
@@ -33,7 +31,6 @@ void init_app()
             case 'F': mostrar_module_date();
                 break;
         }
-
     }
     while(op != 'S' && op != 's');
 }

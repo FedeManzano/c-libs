@@ -40,9 +40,11 @@ void mostrar_module_date()
         switch(op){
             case 'A': pba_agregar_fecha(fechas, &ce);
                 break;
+            case 'B': pba_agregar_time(fechas, &ce);
+                break;
+            case 'C': pba_diferencia_en_dias(fechas, ce);
+                break;
         }
-
-
     }while(op != 's' && op != 'S');
 
 }

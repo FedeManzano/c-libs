@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1723309714 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
+1723312596 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
@@ -68,7 +68,7 @@
 	<stdlib.h>
 	"./init_app/init_app.h"
 
-1723310282 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_date.c
+1723313689 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_date.c
 	<stdio.h>
 	<stdlib.h>
 	"utils.h"
@@ -83,7 +83,7 @@
 
 1723300949 c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.h
 
-1723309767 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\date_module.c
+1723313459 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\date_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/date.h"
@@ -92,17 +92,17 @@
 
 1723301887 c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\date_module.h
 
-1723310674 c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\pba_fechas.h
+1723313435 c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\pba_fechas.h
 
 1723310155 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_all.c
 	<stdio.h>
 	<stdlib.h>
 	"utils.h"
 
-1723310214 c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils.h
+1723313283 c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils.h
 	"../libs/date.h"
 
-1723310674 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\pba_fechas.c
+1723313630 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\pba_fechas.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/date.h"
