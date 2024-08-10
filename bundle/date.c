@@ -360,8 +360,7 @@ t_date * add_minute(t_date *f){
         return NULL;
     if(f->mm == 59){
         f->mm = 0;
-        if(f->hh == 23)
-            add_hour(f);
+        add_hour(f);
     } else{
         f->mm ++;
     }

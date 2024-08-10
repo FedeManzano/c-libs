@@ -10,7 +10,7 @@ void mostrar_module_date()
 {
     char opciones [TAM_MENU][TAM_MENU] =
     {
-        "ABCDEFGHIJKS",
+        "ABCDEFGHIJKLS",
         "Agregar Fecha (dd/mm/aaaa)",
         "Agregar Fecha (dd/mm/aaaa hh:mm:ss)",
         "Diferencia En Dias",
@@ -23,7 +23,7 @@ void mostrar_module_date()
         "Agregar / Restar Segundos a una Fecha",
         "Ver Listado de Fechas",
         "Fecha Actual",
-        "salir"
+        "Salir"
     };
     t_menu menu;
     init_menu(&menu, opciones,"TDA Fechas");
@@ -49,6 +49,18 @@ void mostrar_module_date()
              case 'E': pba_ordenar_fechas(fechas, ce);
                 break;
             case 'F': pba_dia_de_la_semana();
+                break;
+            case 'G': pba_agregar_x(fechas,ce,add_days,"Agregar / Restar Dias\n\n","Ingresar la cantidad de dias(suma + / resta -): ");
+                break;
+            case 'H': pba_agregar_x(fechas,ce,add_hours,"Agregar / Restar Horas\n\n","Ingresar la cantidad de horas(suma + / resta -): ");
+                break;
+            case 'I': pba_agregar_x(fechas,ce,add_minutes,"Agregar / Restar Minutos\n\n","Ingresar la cantidad de minutos(suma + / resta -): ");
+                break;
+            case 'J': pba_agregar_x(fechas,ce,add_seconds,"Agregar / Restar Segundos\n\n","Ingresar la cantidad de segundos(suma + / resta -): ");
+                break;
+            case 'K': pba_ver_listado_fechas(fechas,ce);
+                break;
+            case 'L': pba_ver_fecha_actual();
                 break;
         }
     }while(op != 's' && op != 'S');

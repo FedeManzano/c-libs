@@ -6,6 +6,10 @@
 #include "pba_fechas.h"
 #include "../libs/quicksort.h"
 
+
+
+
+
 void pba_imprimir_titulo_listado_fechas (t_date *fechas, const int ce, const char *mje)
 {
     limpiar_mostrar_titulo(mje);
@@ -149,4 +153,53 @@ void pba_dia_de_la_semana()
         op = seleccionar_opcion("\nDesea seguir calculando ?(S/N): ");
 
     }while(op == 'S' || op == 's');
+}
+
+void pba_agregar_x(t_date *fechas, const int ce, t_agregar a, const char *mje, char *unidad)
+{
+    char op;
+
+    if(ce <= 0)
+    {
+        pba_imprimir_titulo_listado_fechas(fechas,ce,"No hay fechas cargadas\n\n");
+        pausar();
+        return;
+    }
+    do{
+        pba_imprimir_titulo_listado_fechas(fechas,ce,mje);
+
+        int sel = seleccionar_fecha_del_listado(ce);
+
+        int valor = ingresar_valor_entero(unidad);
+
+        a(&fechas[sel - 1],valor);
+
+        pba_imprimir_titulo_listado_fechas(fechas,ce,mje);
+
+        op = seleccionar_opcion("\nDesea continuar ?(S/N): ");
+
+    }while(op == 'S' || op == 's');
+}
+
+
+
+void pba_ver_listado_fechas(t_date *fechas, const int ce)
+{
+    if(ce <= 0)
+    {
+        pba_imprimir_titulo_listado_fechas(fechas,ce,"No hay fechas cargadas\n\n");
+        pausar();
+        return;
+    }
+
+    pba_imprimir_titulo_listado_fechas(fechas,ce,"Ver listado de fechas \n\n");
+    pausar();
+}
+
+
+void pba_ver_fecha_actual()
+{
+    limpiar();
+    printf("Fecha actual es: %s\n\n", date_to_string(date_now(),DESCRIPTIVE_4));
+    pausar();
 }

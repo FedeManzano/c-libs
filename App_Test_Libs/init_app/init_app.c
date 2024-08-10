@@ -14,7 +14,7 @@ void init_app()
         "Lista Doble",
         "Pila Dinamica",
         "Cola Dinamica",
-        "salir"
+        "Salir"
     };
 
     t_menu menu;
