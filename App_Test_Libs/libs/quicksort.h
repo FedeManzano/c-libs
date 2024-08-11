@@ -23,7 +23,7 @@ typedef int ( *t_comp )(const void *, const void *);
  * \return void
  *
  */
-void qs(void * arr, const int ce, const int tam, t_comp comp);
+void qs(void * arr, const int ce, const size_t tam, t_comp comp);
 
 
 #endif // QUICKSORT_H_INCLUDED

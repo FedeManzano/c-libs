@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include "utils.h"
 
-void limpiar(){
+void limpiar()
+{
     system("cls");
 }
 
-void pausar(){
+void pausar()
+{
     system("pause");
 }
 
@@ -32,4 +34,22 @@ void limpiar_mostrar_titulo(const char *mje)
 {
     limpiar();
     printf(mje);
+}
+
+void cargar_arreglo(int * arr, const int ce)
+{
+    for(int i = 0; i < ce; i++){
+        int ele = ingresar_valor_entero("Ingrese un valor entero: ");
+        *arr = ele;
+        arr ++;
+    }
+}
+
+void mostrar_arreglo(int * arr, const int ce)
+{
+    printf("Arreglo: \n");
+    for(int i = 0; i < ce; i++){
+        printf("%d ", *arr);
+        arr ++;
+    }
 }

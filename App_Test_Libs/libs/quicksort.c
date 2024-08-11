@@ -3,7 +3,7 @@
 #include <string.h>
 #include "./quicksort.h"
 
-void qsort_r(void * arr,int ini, int fin, const int tam, t_comp comp){
+void qsort_r(void * arr,int ini, int fin, const size_t tam, t_comp comp){
 
     int i = ini;
     int j = fin;
@@ -38,7 +38,7 @@ void qsort_r(void * arr,int ini, int fin, const int tam, t_comp comp){
         qsort_r(arr,j+1,fin, tam,comp);
 }
 
-void qs(void * arr, const int ce, const int tam, t_comp comp){
+void qs(void * arr, const int ce, const size_t tam, t_comp comp){
      if(!arr || ce <= 1 || tam <= 0)
         return;
     qsort_r(arr,0,ce-1,tam,comp);

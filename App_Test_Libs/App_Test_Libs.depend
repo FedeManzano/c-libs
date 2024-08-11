@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1723337731 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
+1723410765 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
 	"../date_module/date_module.h"
 	"../tree_module/tree_module.h"
+	"../sort_module/sort_module.h"
 
 1723330815 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\date.c
 	<stdio.h>
@@ -40,13 +41,13 @@
 
 1723046899 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\queue.h
 
-1722356317 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\quicksort.c
+1723411583 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\quicksort.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"./quicksort.h"
 
-1723025064 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\quicksort.h
+1723411562 c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\quicksort.h
 
 1723202393 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\selection_sort.c
 	<stdio.h>
@@ -95,12 +96,12 @@
 
 1723331580 c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\pba_fechas.h
 
-1723310155 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_all.c
+1723411992 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_all.c
 	<stdio.h>
 	<stdlib.h>
 	"utils.h"
 
-1723322715 c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils.h
+1723411986 c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils.h
 	"../libs/date.h"
 
 1723407153 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\date_module\pba_fechas.c
@@ -114,7 +115,7 @@
 
 1723337718 c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\tree_module.h
 
-1723407945 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\tree_module.c
+1723410631 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\tree_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/date.h"
@@ -126,14 +127,34 @@
 	<stdlib.h>
 	"utils.h"
 
-1723408000 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\pba_tree.c
+1723410580 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\pba_tree.c
 	<stdio.h>
 	<stdlib.h>
-	"../libs/date.h"
 	"../libs/menu.h"
 	"../utils/utils.h"
 	"pba_tree.h"
 
 1723407884 c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\pba_tree.h
 	"../libs/tree_set.h"
+
+1723412692 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\sort_module\pba_sort.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/quicksort.h"
+	"../libs/selection_sort.h"
+	"../utils/utils.h"
+	"pba_sort.h"
+	<time.h>
+
+1723412734 c:\users\feder\onedrive\escritorio\libs\app_test_libs\sort_module\pba_sort.h
+
+1723412734 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\sort_module\sort_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../libs/selection_sort.h"
+	"../libs/quicksort.h"
+	"pba_sort.h"
+
+1723410781 c:\users\feder\onedrive\escritorio\libs\app_test_libs\sort_module\sort_module.h
 

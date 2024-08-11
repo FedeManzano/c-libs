@@ -78,6 +78,14 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="sort_module/pba_sort.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sort_module/pba_sort.h" />
+		<Unit filename="sort_module/sort_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sort_module/sort_module.h" />
 		<Unit filename="tree_module/pba_tree.c">
 			<Option compilerVar="CC" />
 		</Unit>
