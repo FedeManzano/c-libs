@@ -35,8 +35,6 @@
 #ifndef TREE_SET_H_INCLUDED
 #define TREE_SET_H_INCLUDED
 
-#include "./libs/list_g.h"
-
 #define _NULL_TREE          -10
 #define _NULL_INFO          -9
 #define _ERROR_SIZE         -8
@@ -286,43 +284,6 @@ void show_level_tree_set(t_tree_set *t, int level, t_show show);
  *
  */
 void show_leaf_tree_set(t_tree_set *t, t_show show);
-
-
-
-/** \brief
- * Esta función genera un indice de un archivo binario ORDENADO por clave.
- * Obtiene uno por uno los registros de un archivo binario y guarda. En la información
- * del árbol {nroRegistro, info} el nro de registro y la información del registro.
- *
- * Ejemplo:
- * 10 - 32588877,"Nombre Apellido",FechaNac,FechaIng // Esto es un registro del archivo
- * en el arbol la info de este registro sería: nro:10 info:32588877 siendo diez el nro de registro en el archivo.
- *
- * \param t t_tree_set* Puntero al árbol
- * \param fi FILE** Archivo binario (ORDENADO POR CLAVE)
- * \param info_tree void* (Estructura que se guarda en el árbol nro,info)
- * \param size_tree const size_t (Tamaño del dato que se guarda en el árbol)
- * \param size_arch const size_t (Tamaño del registro que proviene del archivo)
- * \param comp t_comp Puntero a función de comparación
- * \param read t_read Puntero a la función que carga la estructura del árbol
-          Ej:
-          // El formato es importante tres * void en orden como se muestra
-          void read_info(const void *info, const void *ia,const void *nro)
-          {
-                int * infoArch = (int *)info; // Info que proviene del archivo
-                t_index * info_tree =(t_index *)ia; // Info que se carga en el arbol
-                long * n = (long *)nro; //Nro de registro que ocupa en el archivo
-
-                info_tree->info = *infoArch; // Carga la info del archivo
-                info_tree->nro = *n; // Carga el nro de registro
-          }
-
-    \see t_read en la parte superior de este documento.
-    \see test_archivo_arbol /la carpeta test de este proyecto
- * \return void
- *
- */
-int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
 
 
 /// Funciones para pruebas
