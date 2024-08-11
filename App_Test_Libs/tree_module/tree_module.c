@@ -10,7 +10,7 @@ void mostrar_module_tree()
 {
     char opciones [TAM_MENU][TAM_MENU] =
     {
-        "ABCDEFGHIJKLMNOS",
+        "ABCDEFGHIJKLMS",
         "Agregar Elemento",
         "Cantidad de nodos del Arbol",
         "Altura del Arbol",
@@ -23,9 +23,7 @@ void mostrar_module_tree()
         "Eliminar Elemento",
         "Mostrar Grafico del Arbol",
         "Mostrar Hojas del Arbol",
-        "Contar Hojas Del Arbol",
         "Podar Hojas",
-        "Indexar Arvhivo Binario Ordenado",
         "Salir"
     };
 
@@ -34,7 +32,7 @@ void mostrar_module_tree()
     init_tree_set(&t);
 
     t_menu menu;
-    init_menu(&menu, opciones,"TDA Fechas");
+    init_menu(&menu, opciones,"TDA Arbol Binario");
 
     char op;
 
@@ -45,6 +43,30 @@ void mostrar_module_tree()
         switch(op)
         {
             case 'A': pba_ingresar_elemento_arbol(&t);
+                break;
+            case 'B': pba_cantidad_nodos_arbol(&t);
+                break;
+            case 'C': pba_altura_arbol(&t);
+                break;
+            case 'D': pba_rec(&t,in_order_tree_set,"Recorrido En Orden\n\n");
+                break;
+            case 'E': pba_rec(&t,pre_order_tree_set,"Recorrido En Pre-Orden\n\n");
+                break;
+            case 'F': pba_rec(&t,post_order_tree_set,"Recorrido En Post-Orden\n\n");
+                break;
+            case 'G': pba_nivel_arbol(&t);
+                break;
+            case 'H': pba_niveles_info_arbol(&t);
+                break;
+            case 'I': pba_un_nivel_completo(&t);
+                break;
+            case 'J': pba_eliminar_elemento(&t);
+                break;
+            case 'K': pba_mostrar_arbol(&t);
+                break;
+            case 'L': pba_mostrar_hojas(&t);
+                break;
+            case 'M': pba_podar_hojas(&t);
                 break;
         }
 
