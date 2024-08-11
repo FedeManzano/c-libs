@@ -73,7 +73,7 @@ typedef void (*t_gra)(const void *,const int lev);
 /** \brief
 * Carga la info del arbol con la información del archivo
  */
-typedef void (*t_read)(const void *info_arch,const void *info_arbol,const void *nro_reg);
+typedef void (*t_read)(const void *info_tree,const void *info_file, const long nro_reg);
 
 
 /** \brief
@@ -287,40 +287,30 @@ void show_leaf_tree_set(t_tree_set *t, t_show show);
 
 
 
+
 /** \brief
- * Esta función genera un indice de un archivo binario ORDENADO por clave.
- * Obtiene uno por uno los registros de un archivo binario y guarda. En la información
- * del árbol {nroRegistro, info} el nro de registro y la información del registro.
+ * Permite crear un indice de un archivo binario ordenado.
+ * Es necesario pasarle la función del tipo t_read.
+ * Ej:
+ *   void lectura(const void *info_arbol, const void *info_arch, const long nreg)
+ *   {
+ *       t_ind * ia = (t_ind *)info_arbol; // Info del árbol a cargar
+ *       t_info_arch *ifile = (t_info_arch *)info_arch; // info del archivo
  *
- * Ejemplo:
- * 10 - 32588877,"Nombre Apellido",FechaNac,FechaIng // Esto es un registro del archivo
- * en el arbol la info de este registro sería: nro:10 info:32588877 siendo diez el nro de registro en el archivo.
+ *       ia->dni = ifile->dni; // carga la clave del registro del archivo
+ *       ia->nro = nreg; // carga el número de registro correpondiente a la posición en el archivo
+ *   }
  *
  * \param t t_tree_set* Puntero al árbol
- * \param fi FILE** Archivo binario (ORDENADO POR CLAVE)
- * \param info_tree void* (Estructura que se guarda en el árbol nro,info)
- * \param size_tree const size_t (Tamaño del dato que se guarda en el árbol)
- * \param size_arch const size_t (Tamaño del registro que proviene del archivo)
- * \param comp t_comp Puntero a función de comparación
- * \param read t_read Puntero a la función que carga la estructura del árbol
-          Ej:
-          // El formato es importante tres * void en orden como se muestra
-          void read_info(const void *info, const void *ia,const void *nro)
-          {
-                int * infoArch = (int *)info; // Info que proviene del archivo
-                t_index * info_tree =(t_index *)ia; // Info que se carga en el arbol
-                long * n = (long *)nro; //Nro de registro que ocupa en el archivo
-
-                info_tree->info = *infoArch; // Carga la info del archivo
-                info_tree->nro = *n; // Carga el nro de registro
-          }
-
-    \see t_read en la parte superior de este documento.
-    \see test_archivo_arbol /la carpeta test de este proyecto
+ * \param arch FILE** Puntero al archivo
+ * \param size_tree const size_t Tamaño del registro de la info del árbol
+ * \param size_file const size_t Tamaño del registro de la info del archivo
+ * \param comp t_comp Puntero a función que compara elementos del árbol
+ * \param read t_read Puntero a función que carga la estructura del arbol con la info del archivo
  * \return void
  *
  */
-int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read);
+void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const size_t size_file, t_comp comp, t_read read);
 
 
 /// Funciones para pruebas
@@ -332,5 +322,6 @@ int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,con
 //void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
 //void to_array_post_order(t_tree_set *t, void *arr, size_t size);
 ///////////////////////////////////////////////////////////////////
+
 
 #endif // TREE_SET_H_INCLUDED

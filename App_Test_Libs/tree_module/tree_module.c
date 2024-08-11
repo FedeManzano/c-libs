@@ -10,7 +10,7 @@ void mostrar_module_tree()
 {
     char opciones [TAM_MENU][TAM_MENU] =
     {
-        "ABCDEFGHIJKLMS",
+        "ABCDEFGHIJKLMOS",
         "Agregar Elemento",
         "Cantidad de nodos del Arbol",
         "Altura del Arbol",
@@ -24,6 +24,7 @@ void mostrar_module_tree()
         "Mostrar Grafico del Arbol",
         "Mostrar Hojas del Arbol",
         "Podar Hojas",
+        "Indexar archivo binario ordenado",
         "Salir"
     };
 
@@ -33,6 +34,8 @@ void mostrar_module_tree()
 
     t_menu menu;
     init_menu(&menu, opciones,"TDA Arbol Binario");
+
+    crear_archivo_prueba();
 
     char op;
 
@@ -67,6 +70,8 @@ void mostrar_module_tree()
             case 'L': pba_mostrar_hojas(&t);
                 break;
             case 'M': pba_podar_hojas(&t);
+                break;
+            case 'O': pba_crear_index_archivo();
                 break;
         }
 

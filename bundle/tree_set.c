@@ -379,3 +379,41 @@ void show_leaf_tree_set(t_tree_set *t, t_show show)
     show_leaf_tree_set(&(*t)->l,show);
     show_leaf_tree_set(&(*t)->r,show);
 }
+
+
+
+void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read) {
+
+	long med = ( inicio + end ) / 2;
+
+	void * info_file = malloc(size_file);
+	void * info_tree = malloc(size_tree);
+
+	if(!info_file || !info_tree)
+        return;
+
+    fseek(*fi,size_file * med,SEEK_CUR);
+    fread(info_file,size_file, 1, *fi);
+	fseek(*fi,0L,SEEK_SET);
+
+	read(info_tree, info_file, med);
+
+
+	add_tree_set(t,info_tree,size_tree,comp);
+
+	free(info_file);
+	free(info_tree);
+
+	if(inicio < med)
+		file_to_tree_set_rec(t, fi,size_tree,size_file, inicio , med - 1,comp, read);
+	if(end > med)
+		file_to_tree_set_rec(t, fi,size_tree,size_file, med + 1, end, comp, read);
+
+}
+
+void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const size_t size_file, t_comp comp, t_read read) {
+	fseek(*arch, 0L, SEEK_END);
+	long regs = ftell(*arch) / size_file;
+	fseek(*arch, 0L, SEEK_SET);
+    file_to_tree_set_rec(t,arch,size_tree,size_file, 0,regs-1, comp, read);
+}

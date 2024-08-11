@@ -31,4 +31,5 @@ void pba_eliminar_elemento(t_tree_set *t);
 void pba_mostrar_arbol(t_tree_set *t);
 void pba_mostrar_hojas(t_tree_set *t);
 void pba_podar_hojas(t_tree_set *t);
+void pba_crear_index_archivo();
 #endif // PBA_TREE_H_INCLUDED

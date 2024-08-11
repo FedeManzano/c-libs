@@ -38,7 +38,6 @@ int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp)
             return 2;
     }
 
-
     t_node_tree_set  * n = (t_node_tree_set *)malloc(sizeof(t_node_tree_set));
 
     if(!n)
@@ -53,7 +52,6 @@ int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp)
     n->l = NULL;
     n->r = NULL;
     *t = n;
-
     return _OK;
 }
 
@@ -382,57 +380,40 @@ void show_leaf_tree_set(t_tree_set *t, t_show show)
     show_leaf_tree_set(&(*t)->r,show);
 }
 
-void file_binary_to_tree_set_rec(
-    t_tree_set *t, FILE **fi,void *info_tree ,void *info,const size_t size_tree, const size_t size_arch,int start, int end, t_comp comp,t_read read)
-{
-    long med = ( start + end ) / 2;
 
-    fseek(*fi, size_arch * med, SEEK_CUR);
 
-	fread(info, size_arch, 1, *fi);
+void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read) {
 
-	fseek(*fi, 0L, SEEK_SET);
+	long med = ( inicio + end ) / 2;
 
-	read(info,info_tree,&med);
+	void * info_file = malloc(size_file);
+	void * info_tree = malloc(size_tree);
 
-    add_tree_set(t,info_tree,size_tree,comp);
+	if(!info_file || !info_tree)
+        return;
 
-	if(start < med)
-    {
+    fseek(*fi,size_file * med,SEEK_CUR);
+    fread(info_file,size_file, 1, *fi);
+	fseek(*fi,0L,SEEK_SET);
 
-       file_binary_to_tree_set_rec(t, fi, info,info_tree,size_tree,size_arch, start, med - 1,comp, read);
-	}
+	read(info_tree, info_file, med);
 
-	if(end > med){
 
-        file_binary_to_tree_set_rec(t, fi, info,info_tree,size_tree,size_arch, med + 1, end, comp,read);
-	}
+	add_tree_set(t,info_tree,size_tree,comp);
+
+	free(info_file);
+	free(info_tree);
+
+	if(inicio < med)
+		file_to_tree_set_rec(t, fi,size_tree,size_file, inicio , med - 1,comp, read);
+	if(end > med)
+		file_to_tree_set_rec(t, fi,size_tree,size_file, med + 1, end, comp, read);
+
 }
 
-int file_binary_to_tree_set(t_tree_set *t, FILE **fi, const size_t size_tree,const size_t size_arch, t_comp comp, t_read read)
-{
-    if(!t)
-        return _NULL_TREE;
-    if(!*fi)
-        return _NULL_FILE;
-    if(size_arch <= 0)
-        return _ERROR_SIZE;
-    if(size_tree <= 0)
-        return _ERROR_SIZE;
-
-
-    fseek(*fi,0L,SEEK_END);
-    size_t size_a = ftell(*fi) / size_arch;
-    fseek(*fi,0L,SEEK_SET);
-
-    void *info = malloc(size_arch);
-    void *info_tree = malloc(size_tree);
-
-    if(!info || !info_tree)
-        return _FULL_TREE;
-
-    file_binary_to_tree_set_rec(t,fi,info_tree,info,size_tree,size_arch,0,size_a,comp,read);
-    free(info);
-    free(info_tree);
-    return _OK;
+void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const size_t size_file, t_comp comp, t_read read) {
+	fseek(*arch, 0L, SEEK_END);
+	long regs = ftell(*arch) / size_file;
+	fseek(*arch, 0L, SEEK_SET);
+    file_to_tree_set_rec(t,arch,size_tree,size_file, 0,regs-1, comp, read);
 }

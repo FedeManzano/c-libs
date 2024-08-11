@@ -73,7 +73,7 @@ typedef void (*t_gra)(const void *,const int lev);
 /** \brief
 * Carga la info del arbol con la información del archivo
  */
-typedef void (*t_read)(const void *info_arch,const void *info_arbol,const void *nro_reg);
+typedef void (*t_read)(const void *info_tree,const void *info_file, const long nro_reg);
 
 
 /** \brief
@@ -286,6 +286,33 @@ void show_level_tree_set(t_tree_set *t, int level, t_show show);
 void show_leaf_tree_set(t_tree_set *t, t_show show);
 
 
+
+
+/** \brief
+ * Permite crear un indice de un archivo binario ordenado.
+ * Es necesario pasarle la función del tipo t_read.
+ * Ej:
+ *   void lectura(const void *info_arbol, const void *info_arch, const long nreg)
+ *   {
+ *       t_ind * ia = (t_ind *)info_arbol; // Info del árbol a cargar
+ *       t_info_arch *ifile = (t_info_arch *)info_arch; // info del archivo
+ *
+ *       ia->dni = ifile->dni; // carga la clave del registro del archivo
+ *       ia->nro = nreg; // carga el número de registro correpondiente a la posición en el archivo
+ *   }
+ *
+ * \param t t_tree_set* Puntero al árbol
+ * \param arch FILE** Puntero al archivo
+ * \param size_tree const size_t Tamaño del registro de la info del árbol
+ * \param size_file const size_t Tamaño del registro de la info del archivo
+ * \param comp t_comp Puntero a función que compara elementos del árbol
+ * \param read t_read Puntero a función que carga la estructura del arbol con la info del archivo
+ * \return void
+ *
+ */
+void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const size_t size_file, t_comp comp, t_read read);
+
+
 /// Funciones para pruebas
 /// Solo pueden ser utilizadas si disponemos de la lista doble
 /// Agregada en este proyecto.
@@ -295,5 +322,6 @@ void show_leaf_tree_set(t_tree_set *t, t_show show);
 //void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
 //void to_array_post_order(t_tree_set *t, void *arr, size_t size);
 ///////////////////////////////////////////////////////////////////
+
 
 #endif // TREE_SET_H_INCLUDED

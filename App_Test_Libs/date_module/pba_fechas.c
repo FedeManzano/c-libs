@@ -7,9 +7,6 @@
 #include "../libs/quicksort.h"
 
 
-
-
-
 void pba_imprimir_titulo_listado_fechas (t_date *fechas, const int ce, const char *mje)
 {
     limpiar_mostrar_titulo(mje);
