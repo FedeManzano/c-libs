@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1723312596 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
+1723337731 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\init_app\init_app.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
 	"../date_module/date_module.h"
+	"../tree_module/tree_module.h"
 
 1723330815 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\libs\date.c
 	<stdio.h>
@@ -110,4 +111,29 @@
 	"../utils/utils.h"
 	"pba_fechas.h"
 	"../libs/quicksort.h"
+
+1723337718 c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\tree_module.h
+
+1723338786 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\tree_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/date.h"
+	"../libs/menu.h"
+	"pba_tree.h"
+
+1723337978 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\utils\utils_tree.c
+	<stdio.h>
+	<stdlib.h>
+	"utils.h"
+
+1723339315 source:c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\pba_tree.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/date.h"
+	"../libs/menu.h"
+	"../utils/utils.h"
+	"pba_tree.h"
+
+1723338805 c:\users\feder\onedrive\escritorio\libs\app_test_libs\tree_module\pba_tree.h
+	"../libs/tree_set.h"
 

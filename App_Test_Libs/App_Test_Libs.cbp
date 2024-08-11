@@ -78,11 +78,22 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="tree_module/pba_tree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tree_module/pba_tree.h" />
+		<Unit filename="tree_module/tree_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tree_module/tree_module.h" />
 		<Unit filename="utils/utils.h" />
 		<Unit filename="utils/utils_all.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="utils/utils_date.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utils/utils_tree.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

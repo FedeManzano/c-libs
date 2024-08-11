@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../libs/menu.h"
 #include "../date_module/date_module.h"
-
+#include "../tree_module/tree_module.h"
 void init_app()
 {
     char opciones [TAM_MENU][TAM_MENU] =
@@ -29,6 +29,8 @@ void init_app()
         switch(op)
         {
             case 'F': mostrar_module_date();
+                break;
+            case 'A': mostrar_module_tree();
                 break;
         }
     }
