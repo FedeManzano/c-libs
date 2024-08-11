@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "../libs/date.h"
 #include "../libs/menu.h"
+#include "../utils/utils.h"
 #include "pba_tree.h"
 
 
@@ -73,6 +74,14 @@ void mostrar_module_tree()
                 break;
             case 'O': pba_crear_index_archivo();
                 break;
+        }
+
+        if(count_tree_set(&t) > 0 && (op == 'S' || op == 's'))
+        {
+            printf("\n\nHay elementos guardadas. Si sale pierde lo realizado.\n");
+            char o = seleccionar_opcion("Desea salir y perder los cambios ? (S/N)");
+            if(o != 's' && o != 'S')
+                op = '\0';
         }
 
     }while(op != 's' && op != 'S');

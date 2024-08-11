@@ -75,6 +75,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/tree_set.h" />
+		<Unit filename="list_module/list_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="list_module/list_module.h" />
+		<Unit filename="list_module/pba_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="list_module/pba_list.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

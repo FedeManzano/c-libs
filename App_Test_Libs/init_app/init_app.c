@@ -4,6 +4,9 @@
 #include "../date_module/date_module.h"
 #include "../tree_module/tree_module.h"
 #include "../sort_module/sort_module.h"
+#include "../list_module/list_module.h"
+
+
 void init_app()
 {
     char opciones [TAM_MENU][TAM_MENU] =
@@ -34,6 +37,8 @@ void init_app()
             case 'O': mostrar_module_sort();;
                 break;
             case 'A': mostrar_module_tree();
+                break;
+            case 'L': mostrar_module_list();
                 break;
         }
     }

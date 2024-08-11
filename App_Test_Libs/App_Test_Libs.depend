@@ -158,3 +158,183 @@
 
 1723410781 c:\users\feder\onedrive\escritorio\libs\app_test_libs\sort_module\sort_module.h
 
+1723414415 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\date_module\date_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/date.h"
+	"../libs/menu.h"
+	"../utils/utils.h"
+	"pba_fechas.h"
+
+1723202952 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\date.h
+
+1722339897 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\menu.h
+
+1723331580 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\date_module\pba_fechas.h
+
+1723407153 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\date_module\pba_fechas.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/date.h"
+	"../libs/menu.h"
+	"../utils/utils.h"
+	"pba_fechas.h"
+	"../libs/quicksort.h"
+
+1723415178 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils.h
+	"../libs/date.h"
+	"../tree_module/pba_tree.h"
+
+1723411562 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\quicksort.h
+
+1723417395 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\init_app\init_app.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../date_module/date_module.h"
+	"../tree_module/tree_module.h"
+	"../sort_module/sort_module.h"
+	"../list_module/list_module.h"
+
+1723301887 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\date_module\date_module.h
+
+1723337718 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\tree_module.h
+
+1723410781 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\sort_module\sort_module.h
+
+1723330815 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\date.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"./date.h"
+
+1723253380 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\list_gg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list_g.h"
+
+1723250410 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\list_g.h
+
+1722361823 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"./menu.h"
+
+1723046877 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\queue.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+	<string.h>
+
+1723046899 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\queue.h
+
+1723411583 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./quicksort.h"
+
+1723202393 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\selection_sort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./selection_sort.h"
+
+1723202868 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\selection_sort.h
+
+1723030250 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\stack.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<string.h>
+
+1723031379 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\stack.h
+
+1723406990 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_set.h"
+	<string.h>
+
+1723407019 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\tree_set.h
+
+1723300216 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./init_app/init_app.h"
+
+1723300949 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\init_app\init_app.h
+
+1723412903 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\sort_module\pba_sort.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/quicksort.h"
+	"../libs/selection_sort.h"
+	"../utils/utils.h"
+	"pba_sort.h"
+	<time.h>
+
+1723412734 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\sort_module\pba_sort.h
+
+1723412734 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\sort_module\sort_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../libs/selection_sort.h"
+	"../libs/quicksort.h"
+	"pba_sort.h"
+
+1723415635 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\pba_tree.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../utils/utils.h"
+	"pba_tree.h"
+
+1723407884 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\pba_tree.h
+	"../libs/tree_set.h"
+
+1723414538 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\tree_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/date.h"
+	"../libs/menu.h"
+	"../utils/utils.h"
+	"pba_tree.h"
+
+1723411992 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils_all.c
+	<stdio.h>
+	<stdlib.h>
+	"utils.h"
+
+1723313689 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils_date.c
+	<stdio.h>
+	<stdlib.h>
+	"utils.h"
+
+1723415104 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils_tree.c
+	<stdio.h>
+	<stdlib.h>
+	"utils.h"
+
+1723418350 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../libs/list_g.h"
+
+1723417366 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.h
+
+1723418537 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../utils/utils.h"
+	"pba_list.h"
+
+1723418568 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.h
+	"../libs/list_g.h"
+
