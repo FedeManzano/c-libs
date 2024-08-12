@@ -5,6 +5,7 @@
 #include "../tree_module/tree_module.h"
 #include "../sort_module/sort_module.h"
 #include "../list_module/list_module.h"
+#include "../queue_module/queue_module.h"
 #include "../stack_module/module_stack.h"
 
 void init_app()
@@ -23,7 +24,7 @@ void init_app()
 
     t_menu menu;
 
-    init_menu(&menu,opciones,"Test de Librerias");
+    init_menu(&menu,opciones,"Test de Librerias (Fechas, ABB, Lista Doble, Ord, Pila, Cola)");
     char op;
 
     do

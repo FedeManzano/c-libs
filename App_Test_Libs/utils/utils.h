@@ -1,6 +1,7 @@
 #ifndef UTILS_H_INCLUDED
 #define UTILS_H_INCLUDED
 #include "../libs/date.h"
+#include "../libs/list_g.h"
 #include "../tree_module/pba_tree.h"
 
 int ingresar_valor_entero(const char *mje);

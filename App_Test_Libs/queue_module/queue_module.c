@@ -21,9 +21,15 @@ void mostrar_module_queue()
 
     t_queue q;
     t_menu menu;
+    t_list l;
+
+    char op;
+
     init_menu(&menu, opciones,"TDA Cola");
     init_queue(&q);
-    char op;
+    init_list(&l);
+
+
 
     do{
 
@@ -31,7 +37,14 @@ void mostrar_module_queue()
 
         switch(op)
         {
-
+            case 'A': pba_agregar_elemento_cola(&q,&l);
+                break;
+            case 'B': pba_sacar_elemento_a_cola(&q,&l);
+                break;
+            case 'C': pba_ver_tope_cola(&q,&l);
+                break;
+            case 'D': pba_vaciar_cola(&q,&l);
+                break;
         }
 
         if(!is_empty_queue(&q) && (op == 'S' || op == 's'))
