@@ -187,7 +187,7 @@
 
 1723411562 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\quicksort.h
 
-1723458697 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\init_app\init_app.c
+1723464795 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\init_app\init_app.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
@@ -299,7 +299,7 @@
 1723407884 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\pba_tree.h
 	"../libs/tree_set.h"
 
-1723457722 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\tree_module.c
+1723464407 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\tree_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/date.h"
@@ -322,7 +322,7 @@
 	<stdlib.h>
 	"utils.h"
 
-1723458199 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.c
+1723464383 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
@@ -341,7 +341,7 @@
 1723458067 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.h
 	"../libs/list_g.h"
 
-1723460289 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\stack_module.c
+1723464377 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\stack_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
@@ -352,13 +352,26 @@
 
 1723458651 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\module_stack.h
 
-1723460260 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\pba_stack.c
+1723464128 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\pba_stack.c
 	<stdio.h>
 	<stdlib.h>
 	"../utils/utils.h"
 	"pba_stack.h"
 
-1723459954 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\pba_stack.h
+1723464033 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\pba_stack.h
 	"../libs/stack.h"
 	"../libs/list_g.h"
+
+1723464714 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\queue_module\pba_queue.c
+
+1723464856 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\queue_module\queue_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../libs/list_g.h"
+	"../libs/queue.h"
+	"../utils/utils.h"
+	"pba_queue.h"
+
+1723464795 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\queue_module\pba_queue.h
 

@@ -42,6 +42,8 @@ void init_app()
                 break;
             case 'P': mostrar_module_stack();
                 break;
+            case 'C': mostrar_module_queue();
+                break;
         }
     }
     while(op != 'S' && op != 's');

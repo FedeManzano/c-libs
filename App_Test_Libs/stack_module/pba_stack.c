@@ -50,7 +50,7 @@ void pba_sacar_elemento_a_pila(t_stack *s, t_list *l)
     int val;
 
     do {
-        pba_limpiar_y_mostrar_encabezado("Agregar Elemento a la Pila", l);
+        pba_limpiar_y_mostrar_encabezado("Sacar elemento de la pila", l);
 
         o = seleccionar_opcion("Desea extraer un elemento? (S/N): ");
         if(o == 'S' || o == 's')
@@ -63,8 +63,39 @@ void pba_sacar_elemento_a_pila(t_stack *s, t_list *l)
             pausar();
         }
 
-        pba_limpiar_y_mostrar_encabezado("Agregar Elemento a la Pila", l);
+        pba_limpiar_y_mostrar_encabezado("Sacar elemento de la pila", l);
 
         op = seleccionar_opcion("Desea seguir sacando elementos(S/N): ");
     }while(op == 'S' || op == 's');
+}
+
+
+void pba_ver_tope_pila(t_stack *s, t_list *l)
+{
+    int val;
+    pba_limpiar_y_mostrar_encabezado("Ver tope de pila", l);
+
+    if(!is_empty_stack(s)){
+        top_stack(s,&val,sizeof(int));
+        printf("El tope de pila es: %d",val);
+    } else printf("La pila esta vacia");
+
+    saltos();
+    pausar();
+}
+
+
+void pba_vaciar_pila(t_stack *s, t_list *l)
+{
+    char op;
+    pba_limpiar_y_mostrar_encabezado("Vaciar Pila", l);
+
+    op = seleccionar_opcion("Desea vaciar la pila(S/N): ");
+    if(op == 's' || op == 'S'){
+        clear_stack(s);
+        clear_list(l);
+    }
+
+    pba_limpiar_y_mostrar_encabezado("Vaciar Pila", l);
+    pausar();
 }

@@ -86,6 +86,14 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="queue_module/pba_queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="queue_module/pba_queue.h" />
+		<Unit filename="queue_module/queue_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="queue_module/queue_module.h" />
 		<Unit filename="sort_module/pba_sort.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -76,10 +76,10 @@ void mostrar_module_tree()
                 break;
         }
 
-        if(count_tree_set(&t) > 0 && (op == 'S' || op == 's'))
+        if(!is_empty_tree_set(&t) && (op == 'S' || op == 's'))
         {
             printf("\n\nHay elementos guardadas. Si sale pierde lo realizado.\n");
-            char o = seleccionar_opcion("Desea salir y perder los cambios ? (S/N)");
+            char o = seleccionar_opcion("Desea salir y perder los cambios ? (S/N): ");
             if(o != 's' && o != 'S')
                 op = '\0';
         } else if(op == 'S' || op == 's')
