@@ -12,6 +12,10 @@ void pausar()
     system("pause");
 }
 
+void saltos(){
+    printf("\n\n");
+}
+
 int ingresar_valor_entero(const char *mje)
 {
     int valor = 0;

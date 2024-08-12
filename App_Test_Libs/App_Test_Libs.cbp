@@ -94,6 +94,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="sort_module/sort_module.h" />
+		<Unit filename="stack_module/module_stack.h" />
+		<Unit filename="stack_module/pba_stack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stack_module/pba_stack.h" />
+		<Unit filename="stack_module/stack_module.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="tree_module/pba_tree.c">
 			<Option compilerVar="CC" />
 		</Unit>

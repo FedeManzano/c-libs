@@ -3,9 +3,7 @@
 #include "../libs/menu.h"
 #include "../libs/list_g.h"
 #include "pba_list.h"
-
-
-//#include "pba_sort.h"
+#include "../utils/utils.h"
 
 
 
@@ -13,18 +11,16 @@ void mostrar_module_list()
 {
     char opciones [TAM_MENU][TAM_MENU] =
     {
-        "ABCDEFGHIJKS",
+        "ABCDEFGHIS",
         "Agregar Elementos",
         "Agregar Elementos al Principio",
         "Agregar en Orden (Sin Duplicados)",
-        "Agregar en Orden con Reemplazo (Sin Duplicados)",
         "Insertar Elemento en un Index",
         "Insertar un Rango de Elementos desde un Index",
         "Eliminar Elemento",
         "Eliminar Elemento y sus Duplicados",
         "Ordenar Seleccion",
         "Ordenar Seleccion intercambiando Direcciones",
-        "Var Listado",
         "Salir"
     };
     t_list l;
@@ -46,7 +42,27 @@ void mostrar_module_list()
                 break;
             case 'C': pba_agregar_a_lista_en_orden(&l);
                 break;
+            case 'D': pba_insertar_elemento(&l);
+                break;
+            case 'E': pba_insertar_elementos(&l);
+                break;
+            case 'F': pba_eliminar_elemento_lista(&l);
+                break;
+            case 'G': pba_eliminar_elementos_lista(&l);
+                break;
+            case 'H': pba_ordenar_lista(&l);
+                break;
+            case 'I': pba_ordenar_por_enlaces_lista(&l);
+                break;
         }
+        if(len_list(&l) > 0 && (op == 'S' || op == 's'))
+        {
+            printf("\n\nHay elementos guardadas. Si sale pierde lo realizado.\n");
+            char o = seleccionar_opcion("Desea salir y perder los cambios ? (S/N)");
+            if(o != 's' && o != 'S')
+                op = '\0';
+        } else if(op == 'S' || op == 's')
+            clear_list(&l);
 
     }while(op != 's' && op != 'S');
 

@@ -22,7 +22,7 @@ void lectura(const void *info_arbol, const void *info_arch, const long nreg);
 void show_ele(const void * ele);
 void leer_archivo();
 void crear_archivo_prueba();
-
+void saltos();
 
 
 #endif // UTILS_H_INCLUDED

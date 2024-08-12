@@ -82,7 +82,8 @@ void mostrar_module_tree()
             char o = seleccionar_opcion("Desea salir y perder los cambios ? (S/N)");
             if(o != 's' && o != 'S')
                 op = '\0';
-        }
+        } else if(op == 'S' || op == 's')
+            clear_tree_set(&t);
 
     }while(op != 's' && op != 'S');
 

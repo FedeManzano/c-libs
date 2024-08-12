@@ -181,13 +181,13 @@
 	"pba_fechas.h"
 	"../libs/quicksort.h"
 
-1723415178 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils.h
+1723423526 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils.h
 	"../libs/date.h"
 	"../tree_module/pba_tree.h"
 
 1723411562 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\libs\quicksort.h
 
-1723417395 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\init_app\init_app.c
+1723458697 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\init_app\init_app.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
@@ -195,6 +195,7 @@
 	"../tree_module/tree_module.h"
 	"../sort_module/sort_module.h"
 	"../list_module/list_module.h"
+	"../stack_module/module_stack.h"
 
 1723301887 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\date_module\date_module.h
 
@@ -298,7 +299,7 @@
 1723407884 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\pba_tree.h
 	"../libs/tree_set.h"
 
-1723414538 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\tree_module.c
+1723457722 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\tree_module\tree_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/date.h"
@@ -306,7 +307,7 @@
 	"../utils/utils.h"
 	"pba_tree.h"
 
-1723411992 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils_all.c
+1723423483 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\utils\utils_all.c
 	<stdio.h>
 	<stdlib.h>
 	"utils.h"
@@ -321,20 +322,43 @@
 	<stdlib.h>
 	"utils.h"
 
-1723418350 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.c
+1723458199 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.c
 	<stdio.h>
 	<stdlib.h>
 	"../libs/menu.h"
 	"../libs/list_g.h"
+	"pba_list.h"
+	"../utils/utils.h"
 
 1723417366 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\list_module.h
 
-1723418537 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.c
+1723458374 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../utils/utils.h"
 	"pba_list.h"
 
-1723418568 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.h
+1723458067 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\list_module\pba_list.h
+	"../libs/list_g.h"
+
+1723460289 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\stack_module.c
+	<stdio.h>
+	<stdlib.h>
+	"../libs/menu.h"
+	"../libs/list_g.h"
+	"../libs/stack.h"
+	"../utils/utils.h"
+	"pba_stack.h"
+
+1723458651 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\module_stack.h
+
+1723460260 source:c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\pba_stack.c
+	<stdio.h>
+	<stdlib.h>
+	"../utils/utils.h"
+	"pba_stack.h"
+
+1723459954 c:\users\feder\onedrive\documentos\proyc\libs\app_test_libs\stack_module\pba_stack.h
+	"../libs/stack.h"
 	"../libs/list_g.h"
 

@@ -5,7 +5,7 @@
 #include "../tree_module/tree_module.h"
 #include "../sort_module/sort_module.h"
 #include "../list_module/list_module.h"
-
+#include "../stack_module/module_stack.h"
 
 void init_app()
 {
@@ -39,6 +39,8 @@ void init_app()
             case 'A': mostrar_module_tree();
                 break;
             case 'L': mostrar_module_list();
+                break;
+            case 'P': mostrar_module_stack();
                 break;
         }
     }
