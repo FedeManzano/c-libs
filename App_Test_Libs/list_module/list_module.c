@@ -25,7 +25,7 @@ void mostrar_module_list()
     };
     t_list l;
     t_menu menu;
-    init_menu(&menu, opciones,"TDA Ordenamiento");
+    init_menu(&menu, opciones,"TDA Lista Doble");
 
     init_list(&l);
     char op;
