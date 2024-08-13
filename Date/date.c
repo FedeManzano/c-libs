@@ -114,7 +114,7 @@ long difference_days(t_date *d1, t_date *d2){
         return DATE_ERROR;
 
     long diff = days_transcurred(d1) - days_transcurred(d2);
-    return diff < 0 ? (diff * -1) - 1: diff > 0 ? diff:0;
+    return diff < 0 ? diff * -1: diff > 0 ? diff:0;
 }
 
 double difference_time(t_date *d1, t_date *d2){

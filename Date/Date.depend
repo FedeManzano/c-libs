@@ -46,3 +46,27 @@
 	"./date.h"
 	<it.h>
 
+1723197887 source:c:\users\feder\onedrive\documentos\proyc\libs\date\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723324857 c:\users\feder\onedrive\documentos\proyc\libs\date\it.h
+	<string.h>
+
+1722553434 source:c:\users\feder\onedrive\documentos\proyc\libs\date\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./date.h"
+	"test_date.h"
+
+1723202952 c:\users\feder\onedrive\documentos\proyc\libs\date\date.h
+
+1723325096 c:\users\feder\onedrive\documentos\proyc\libs\date\test_date.h
+
+1723325160 source:c:\users\feder\onedrive\documentos\proyc\libs\date\test_date.c
+	<stdio.h>
+	<stdlib.h>
+	"./date.h"
+	"it.h"
+
