@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "it.h"
+#include "../bundle/it.h"
 #include "./quicksort.h"
 
 int comp_integer (const void *e1, const void *e2){

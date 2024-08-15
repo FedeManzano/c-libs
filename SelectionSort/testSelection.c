@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "selection_sort.h"
 #include <time.h>
-#include <it.h>
+#include "../bundle/it.h"
 
 
 int comp_integer (const void *e1, const void *e2){

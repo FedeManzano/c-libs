@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../bundle/it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../bundle/it.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -35,6 +35,9 @@
 #ifndef TREE_SET_H_INCLUDED
 #define TREE_SET_H_INCLUDED
 
+
+#include "../bundle/list_g.h"
+
 #define _NULL_TREE          -10
 #define _NULL_INFO          -9
 #define _ERROR_SIZE         -8
@@ -318,9 +321,9 @@ void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const 
 /// Agregada en este proyecto.
 /// @see /libs/list_gg.c
 ///////////////////////////////////////////////////////////////////
-//void to_array_in_order(t_tree_set *t, void *arr, size_t size);
-//void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
-//void to_array_post_order(t_tree_set *t, void *arr, size_t size);
+void to_array_in_order(t_tree_set *t, void *arr, size_t size);
+void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
+void to_array_post_order(t_tree_set *t, void *arr, size_t size);
 ///////////////////////////////////////////////////////////////////
 
 

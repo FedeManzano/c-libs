@@ -3,9 +3,9 @@
 #include "../tree_set.h"
 #include "test_tree_set.h"
 #include "comp_info_tree_set.h"
-//#include <it.h>
+#include "../../bundle/it.h"
 
-/*
+
 void test_ContarHojas_HojasDistintoCero_Resultado_Pass()
 {
     t_tree_set t;
@@ -36,4 +36,4 @@ void test_ContarHojas_ArbolNulo_Resultado_Pass()
     it(&exp,&res,sizeof(int),comp_i,"(16)-> test_ContarHojas_HojasCero_Resultado_Pass");
     clear_tree_set(&t);
 }
-*/
+

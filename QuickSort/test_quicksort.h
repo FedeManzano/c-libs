@@ -1,7 +1,6 @@
 #ifndef TEST_QUICKSORT_H_INCLUDED
 #define TEST_QUICKSORT_H_INCLUDED
 
-#include <pointerFn.h>
 
 
 void test_OrdenarArregloDeEnteros_ResultadoPASS();

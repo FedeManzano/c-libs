@@ -88,3 +88,100 @@
 	"comp_info_tree_set.h"
 	<it.h>
 
+1723197887 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1723292251 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\comp_info_tree_set.c
+	"comp_info_tree_set.h"
+	<string.h>
+
+1723198421 c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\comp_info_tree_set.h
+	<stdio.h>
+	<stdlib.h>
+
+1723684672 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_add_tree_ser.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723684952 c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.h
+	"../bundle/list_g.h"
+
+1723198909 c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_tree_set.h
+
+1723684686 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_count_left_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723684700 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_count_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723684712 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_find_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723684743 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_height_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723684734 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_is_empty_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723684676 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_level_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1723253380 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_gg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list_g.h"
+
+1723250410 c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_g.h
+
+1723684838 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\main.c
+	<stdio.h>
+	<stdlib.h>
+	"tree_set.h"
+	"test/test_tree_set.h"
+
+1723684952 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tree_set.h"
+

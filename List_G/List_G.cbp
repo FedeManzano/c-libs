@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../bundle/it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../bundle/it.h" />
 		<Unit filename="comp_func.h" />
 		<Unit filename="list_g.h" />
 		<Unit filename="list_gg.c">
@@ -42,10 +46,6 @@
 		<Unit filename="test/comp_func.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="test/it.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="test/it.h" />
 		<Unit filename="test/test_add_first_list.c">
 			<Option compilerVar="CC" />
 		</Unit>

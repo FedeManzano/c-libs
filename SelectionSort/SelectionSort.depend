@@ -44,3 +44,34 @@
 
 1723202287 c:\users\feder\onedrive\escritorio\libs\selectionsort\selection_sort.h
 
+1723197887 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1723202393 source:c:\users\feder\onedrive\documentos\proyc\libs\selectionsort\selection_sort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./selection_sort.h"
+
+1723202868 c:\users\feder\onedrive\documentos\proyc\libs\selectionsort\selection_sort.h
+
+1723685324 source:c:\users\feder\onedrive\documentos\proyc\libs\selectionsort\testselection.c
+	<stdio.h>
+	<stdlib.h>
+	"selection_sort.h"
+	<time.h>
+	"../bundle/it.h"
+
+1723685343 source:c:\users\feder\onedrive\documentos\proyc\libs\selectionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"./testSelection.h"
+
+1722335596 c:\users\feder\onedrive\documentos\proyc\libs\selectionsort\testselection.h
+

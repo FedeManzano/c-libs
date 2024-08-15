@@ -1,7 +1,7 @@
 #include "comp_info_tree_set.h"
 #include <string.h>
 
-/*
+
 void dibujar(const void  *info, const int niv) {
 	int * in = (int *)info;
 	int i;
@@ -56,4 +56,4 @@ void read_info(const void *info, const void *ia,const void *nro){
     info_tree->info = *infoArch;
     info_tree->nro = *n;
 }
-*/
+

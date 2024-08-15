@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <selection.h>
 #include <time.h>
 #include "./testSelection.h"
 

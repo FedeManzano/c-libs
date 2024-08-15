@@ -42,3 +42,26 @@
 	<string.h>
 	"./quicksort.h"
 
+1723197887 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1722356317 source:c:\users\feder\onedrive\documentos\proyc\libs\quicksort\quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"./quicksort.h"
+
+1723025064 c:\users\feder\onedrive\documentos\proyc\libs\quicksort\quicksort.h
+
+1723685543 source:c:\users\feder\onedrive\documentos\proyc\libs\quicksort\test_quicksort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../bundle/it.h"
+	"./quicksort.h"
+
