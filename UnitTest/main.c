@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <it.h>
+#include "it.h"
 
 
 int comp_int_test(const void *e1, const void *e2 ){
@@ -16,7 +16,7 @@ int main()
     int arr2[15] = {1,2,3,4,5,6,7,8,9,10};
 
 
-    it_arr(NULL,arr2,10,sizeof(int),comp_int_test, "1- Test IT");
+    it_arr(NULL,NULL,10,0,comp_int_test, "1- Test IT");
     it_arr(arr1,arr2,10,sizeof(int),comp_int_test, "2- Test IT");
 
 

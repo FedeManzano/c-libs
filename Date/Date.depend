@@ -64,9 +64,24 @@
 
 1723325096 c:\users\feder\onedrive\documentos\proyc\libs\date\test_date.h
 
-1723325160 source:c:\users\feder\onedrive\documentos\proyc\libs\date\test_date.c
+1723843853 source:c:\users\feder\onedrive\documentos\proyc\libs\date\test_date.c
 	<stdio.h>
 	<stdlib.h>
 	"./date.h"
-	"it.h"
+	"../bundle/it.h"
+
+1723581633 source:c:\users\feder\onedrive\documentos\proyc\libs\date\date.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"./date.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1723843464 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
 

@@ -26,3 +26,16 @@
 1723324857 c:\users\feder\onedrive\escritorio\libs\unittest\it.h
 	<string.h>
 
+1723843463 source:c:\users\feder\onedrive\documentos\proyc\libs\unittest\main.c
+	<stdio.h>
+	<stdlib.h>
+	"it.h"
+
+1723843464 source:c:\users\feder\onedrive\documentos\proyc\libs\unittest\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\unittest\it.h
+	<string.h>
+

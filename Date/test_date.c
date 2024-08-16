@@ -146,7 +146,7 @@ void test_DiferenciaEntreFechasFechasInvalidas_ResultadoPASS(){
 void test_DiferenciaEntreFechas30DiasDeDiferencia_ResultadoPASS(){
     t_date f1 = {1,1,2023};
     t_date f2 = {1,2,2023};
-    int expected = 30;
+    int expected = 31;
     int result = difference_days(&f1,&f2);
     it(&expected,&result,sizeof(int),comp_integer,"19 - test_DiferenciaEntreFechas30DiasDeDiferencia_ResultadoPASS");
 }
