@@ -35,6 +35,11 @@
 #ifndef TREE_SET_H_INCLUDED
 #define TREE_SET_H_INCLUDED
 
+
+#include "../bundle/list_g.h"
+#include "../bundle/queue.h"
+
+
 #define _NULL_TREE          -10
 #define _NULL_INFO          -9
 #define _ERROR_SIZE         -8
@@ -240,6 +245,13 @@ void pre_order_tree_set(t_tree_set *t, t_show show);
 void post_order_tree_set(t_tree_set *t, t_show show);
 
 
+/** \brief
+ *  Recorre el arbol en (Amplitud) nivel por nivel.
+ * \param a t_tree_set* Puntero al árbol
+ * \param show t_show Puntero a función para mostrar los nodos.
+ * \return void
+ */
+void amplitude_tree_set(t_tree_set *t, t_show show);
 
 /** \brief
  * Permite genera un grafico esquemático del árbol por pantalla.
@@ -318,9 +330,9 @@ void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const 
 /// Agregada en este proyecto.
 /// @see /libs/list_gg.c
 ///////////////////////////////////////////////////////////////////
-//void to_array_in_order(t_tree_set *t, void *arr, size_t size);
-//void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
-//void to_array_post_order(t_tree_set *t, void *arr, size_t size);
+void to_array_in_order(t_tree_set *t, void *arr, size_t size);
+void to_array_pre_order(t_tree_set *t, void *arr, size_t size);
+void to_array_post_order(t_tree_set *t, void *arr, size_t size);
 ///////////////////////////////////////////////////////////////////
 
 

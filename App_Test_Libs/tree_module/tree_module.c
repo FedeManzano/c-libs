@@ -11,7 +11,7 @@ void mostrar_module_tree()
 {
     char opciones [TAM_MENU][TAM_MENU] =
     {
-        "ABCDEFGHIJKLMOS",
+        "ABCDEFGHIJKLMOPS",
         "Agregar Elemento",
         "Cantidad de nodos del Arbol",
         "Altura del Arbol",
@@ -26,6 +26,7 @@ void mostrar_module_tree()
         "Mostrar Hojas del Arbol",
         "Podar Hojas",
         "Indexar archivo binario ordenado",
+        "Recorrer En Amplitud",
         "Salir"
     };
 
@@ -73,6 +74,8 @@ void mostrar_module_tree()
             case 'M': pba_podar_hojas(&t);
                 break;
             case 'O': pba_crear_index_archivo();
+                break;
+            case 'P': pba_rec(&t,amplitude_tree_set,"Recorrido En Amplitud\n\n");
                 break;
         }
 

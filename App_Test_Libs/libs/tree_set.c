@@ -143,6 +143,14 @@ void post_order_tree_set(t_tree_set *t, t_show show)
     show((*t)->info);
 }
 
+void amplitude_tree_set(t_tree_set *t, t_show show)
+{
+    int levels = level_tree_set(t);
+    for(int i = 0; i <= levels; i ++ )
+        show_level_tree_set(t,i,show);
+}
+
+
 void show_graph_tree_set_rec(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp)
 {
     if(!t)

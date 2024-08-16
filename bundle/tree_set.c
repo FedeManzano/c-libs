@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tree_set.h"
 #include <string.h>
+#include "tree_set.h"
+
 
 
 void init_tree_set (t_tree_set *t)
@@ -84,6 +85,13 @@ void show_level_tree_set(t_tree_set *t, int level, t_show show)
         show((*t)->info);
     show_level_tree_set(&(*t)->l,level - 1, show);
     show_level_tree_set(&(*t)->r,level - 1, show);
+}
+
+void amplitude_tree_set(t_tree_set *t, t_show show)
+{
+    int levels = level_tree_set(t);
+    for(int i = 0; i <= levels; i ++ )
+        show_level_tree_set(t,i,show);
 }
 
 int level_info_tree_set_rec(t_tree_set *t,void *info, t_comp comp, int level)
@@ -243,7 +251,7 @@ int find_tree_set(t_tree_set *t, void *info, size_t size, t_comp comp)
     return _NO_FIND_ELE;
 }
 
-/*void to_array_in_order_rec(t_tree_set *t, t_list *l, size_t size)
+void to_array_in_order_rec(t_tree_set *t, t_list *l, size_t size)
 {
     if(!*t)
         return;
@@ -316,8 +324,6 @@ void to_array_post_order(t_tree_set *t, void *arr, size_t size)
     to_array_post_order_rec(t,&l,sizeof(int));
     to_array_list(&l,arr,sizeof(int));
 }
-*/
-
 
 int count_tree_set(const t_tree_set *t)
 {
@@ -379,7 +385,6 @@ void show_leaf_tree_set(t_tree_set *t, t_show show)
     show_leaf_tree_set(&(*t)->l,show);
     show_leaf_tree_set(&(*t)->r,show);
 }
-
 
 
 void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read) {

@@ -20,6 +20,7 @@
     void pre_order_tree_set(t_tree_set *t, t_show show);
     void post_order_tree_set(t_tree_set *t, t_show show);
     void show_graph_tree_set(t_tree_set *t, t_gra dib, t_comp comp);
+    void amplitude_tree_set(t_tree_set *t, t_show show)
     void show_level_tree_set(t_tree_set *t, int level, t_show show);
     void show_leaf_tree_set(t_tree_set *t, t_show show);
 
@@ -239,7 +240,13 @@ void pre_order_tree_set(t_tree_set *t, t_show show);
  */
 void post_order_tree_set(t_tree_set *t, t_show show);
 
-
+/** \brief
+ *  Recorre el arbol (en amplitud) y muestra sus nodos.
+ * \param a t_tree_set* Puntero al árbol
+ * \param show t_show Puntero a función para mostrar los nodos.
+ * \return void
+ */
+void amplitude_tree_set(t_tree_set *t, t_show show);
 
 /** \brief
  * Permite genera un grafico esquemático del árbol por pantalla.
