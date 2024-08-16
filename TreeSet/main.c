@@ -25,5 +25,7 @@ int main()
     test_NivelDelArbol_ArbolNulo_Resultado_Pass();
     test_ContarHojas_HojasDistintoCero_Resultado_Pass();
     test_ContarHojas_ArbolNulo_Resultado_Pass();
+     test_Amplitude_Recorrido_Resultado_Pass();
+    //test_Aplitude_RecorridoEnAlplitud_ResultadoPass ();
     return 0;
 }

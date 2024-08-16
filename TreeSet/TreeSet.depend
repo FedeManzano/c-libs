@@ -96,7 +96,7 @@
 1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
 	<string.h>
 
-1723292251 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\comp_info_tree_set.c
+1723684975 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\comp_info_tree_set.c
 	"comp_info_tree_set.h"
 	<string.h>
 
@@ -112,10 +112,11 @@
 	"comp_info_tree_set.h"
 	"../../bundle/it.h"
 
-1723684952 c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.h
+1723770070 c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.h
 	"../bundle/list_g.h"
+	"../bundle/queue.h"
 
-1723198909 c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_tree_set.h
+1723770070 c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_tree_set.h
 
 1723684686 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_count_left_tree_set.c
 	<stdio.h>
@@ -157,7 +158,7 @@
 	"comp_info_tree_set.h"
 	"../../bundle/it.h"
 
-1723684676 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_level_tree_set.c
+1723770070 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_level_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"
@@ -173,15 +174,31 @@
 
 1723250410 c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_g.h
 
-1723684838 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\main.c
+1723770070 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\main.c
 	<stdio.h>
 	<stdlib.h>
 	"tree_set.h"
 	"test/test_tree_set.h"
 
-1723684952 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
+1723769659 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"tree_set.h"
+
+1723046899 c:\users\feder\onedrive\documentos\proyc\libs\bundle\queue.h
+
+1723046877 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\queue.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+	<string.h>
+
+1723767973 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_amplitude_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
 

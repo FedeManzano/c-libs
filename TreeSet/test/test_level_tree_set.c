@@ -39,3 +39,17 @@ void test_NivelDelArbol_ArbolNulo_Resultado_Pass()
 }
 
 
+void test_Amplitude_Recorrido_Resultado_Pass()
+{
+    t_tree_set t;
+    init_tree_set(&t);
+
+    int arr[10] = {5,2,7,3,6,10,8,9,4,1};
+
+    for(int i = 0; i < 10; i ++)
+        if(!is_full_tree_set(&t))
+            add_tree_set(&t,&arr[i],sizeof(int),comp_i);
+
+    amplitude_tree_set(&t,show_i);
+}
+

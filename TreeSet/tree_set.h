@@ -37,6 +37,8 @@
 
 
 #include "../bundle/list_g.h"
+#include "../bundle/queue.h"
+
 
 #define _NULL_TREE          -10
 #define _NULL_INFO          -9
@@ -243,6 +245,13 @@ void pre_order_tree_set(t_tree_set *t, t_show show);
 void post_order_tree_set(t_tree_set *t, t_show show);
 
 
+/** \brief
+ *  Recorre el arbol en (Amplitud) nivel por nivel.
+ * \param a t_tree_set* Puntero al árbol
+ * \param show t_show Puntero a función para mostrar los nodos.
+ * \return void
+ */
+void amplitude_tree_set(t_tree_set *t, t_show show);
 
 /** \brief
  * Permite genera un grafico esquemático del árbol por pantalla.

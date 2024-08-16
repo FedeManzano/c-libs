@@ -87,6 +87,13 @@ void show_level_tree_set(t_tree_set *t, int level, t_show show)
     show_level_tree_set(&(*t)->r,level - 1, show);
 }
 
+void amplitude_tree_set(t_tree_set *t, t_show show)
+{
+    int levels = level_tree_set(t);
+    for(int i = 0; i <= levels; i ++ )
+        show_level_tree_set(t,i,show);
+}
+
 int level_info_tree_set_rec(t_tree_set *t,void *info, t_comp comp, int level)
 {
     if(!t)
@@ -317,8 +324,6 @@ void to_array_post_order(t_tree_set *t, void *arr, size_t size)
     to_array_post_order_rec(t,&l,sizeof(int));
     to_array_list(&l,arr,sizeof(int));
 }
-
-
 
 int count_tree_set(const t_tree_set *t)
 {
