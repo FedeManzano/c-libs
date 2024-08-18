@@ -2,14 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="test\test_utils.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="115" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="287" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\test_utils.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="29" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="..\bundle\it.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,29 +17,51 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="simple_list.h" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11034" topLine="143" />
+		</Cursor>
+	</File>
+	<File name="test\test_utils.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="29" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="test\test_is_empty_simple_list.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="397" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="simple_list.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9867" topLine="46" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="12" />
+			<Collapse line="17" />
+			<Collapse line="22" />
+			<Collapse line="53" />
+			<Collapse line="78" />
+			<Collapse line="134" />
+			<Collapse line="147" />
+			<Collapse line="182" />
+			<Collapse line="225" />
+			<Collapse line="269" />
+			<Collapse line="313" />
+			<Collapse line="332" />
+			<Collapse line="360" />
+			<Collapse line="373" />
+			<Collapse line="400" />
+			<Collapse line="422" />
+			<Collapse line="428" />
+			<Collapse line="447" />
+			<Collapse line="468" />
+		</Folding>
+	</File>
 	<File name="test\test_simple_list.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="197" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="simple_list.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="9869" topLine="465" />
-		</Cursor>
-	</File>
-	<File name="test\test_utils.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="115" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="simple_list.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7716" topLine="181" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
