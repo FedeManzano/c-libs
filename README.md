@@ -122,6 +122,45 @@ Algunos TDA para aprender programación e C.
 *   @author Federico Manzano (https://github.com/FedeManzano)
 */
 ```
+### Lista Simplemente Enlazada
+```c
+/**
+    TDA Lista Simplemente Enlazada
+
+    Funciones:
+
+    void init_simple_list(t_simple_list *l);
+    int is_empty_simple_list(t_simple_list *l);
+    int is_full_simple_list(t_simple_list *l);
+    int add_simple_list(t_simple_list *l, const void *info, const size_t size);
+    int len_simple_list(t_simple_list *l);
+    int get_simple_list(t_simple_list *l, void *info, size_t size, const int index);
+    int add_simple_list_in_order(t_simple_list *l, const void *info, const size_t size, t_comp comp);
+    int add_first_simple_list(t_simple_list *l, const void *info, const size_t size);
+    int add_simple_list_in_order_sd(t_simple_list *l, const void *info, const size_t size, t_comp comp);
+    int try_add_simple_list_in_order_sd(t_simple_list *l, const void *info, const size_t size, t_comp comp);
+    int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, const size_t size, t_comp comp, t_update update);
+    int insert_simple_list(t_simple_list *l,const void *info, size_t size,const int index);
+    int insert_range_simple_list(t_simple_list *l,const void *arr, size_t size,const int ce, int index);
+    void sort_simple_list(t_simple_list *l, size_t size, t_comp comp);
+    int delete_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
+    int delete_all_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
+    int find_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
+    int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
+    void clear_simple_list(t_simple_list *l);
+
+    ADV:
+
+    Los tipos de datos agregados a este TDA son genéricos,
+    por lo tanto, en cada lista creada es responsabilidad del
+    programador almacer el mismo tipo de dato.
+
+    @author Federico Manzano (https://github.com/FedeManzano)
+*/
+
+```
+
+
 ### Árbol Binario
 
 ```c
