@@ -386,9 +386,8 @@ void show_leaf_tree_set(t_tree_set *t, t_show show)
     show_leaf_tree_set(&(*t)->r,show);
 }
 
-
-void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read) {
-
+void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read)
+{
 	long med = ( inicio + end ) / 2;
 
 	void * info_file = malloc(size_file);
@@ -416,8 +415,8 @@ void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const 
 
 }
 
-void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree, const size_t size_file, t_comp comp, t_read read) {
-
+void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree, const size_t size_file, t_comp comp, t_read read)
+{
     if(!t || !arch || *arch || size_file <= 0 || size_tree <= 0) {
         return;
     }

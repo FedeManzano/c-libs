@@ -150,7 +150,6 @@ void amplitude_tree_set(t_tree_set *t, t_show show)
         show_level_tree_set(t,i,show);
 }
 
-
 void show_graph_tree_set_rec(t_tree_set *t, t_tree_set *aux,t_gra dib, t_comp comp)
 {
     if(!t)
@@ -387,8 +386,6 @@ void show_leaf_tree_set(t_tree_set *t, t_show show)
     show_leaf_tree_set(&(*t)->l,show);
     show_leaf_tree_set(&(*t)->r,show);
 }
-
-
 
 void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read) {
 

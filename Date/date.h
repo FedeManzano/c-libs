@@ -102,13 +102,11 @@ int comp_time(const void *d1, const void *d2);
 int val_date(const int day, const int month, const int year);
 
 
-
 /**
     Valida la fecha y el tiempo que pertenece a la estructura
     @return si existe un error devuelve -10 caso contrario devuelve 1
 */
 int val_time(const int day,const int month, const int year, const int hour, const int minute, const int second);
-
 
 
 /**

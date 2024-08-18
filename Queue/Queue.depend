@@ -12,3 +12,16 @@
 
 1723044332 c:\users\feder\onedrive\escritorio\libs\queue\queue.h
 
+1723046957 source:c:\users\feder\onedrive\documentos\proyc\libs\queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+
+1723046899 c:\users\feder\onedrive\documentos\proyc\libs\queue\queue.h
+
+1723046877 source:c:\users\feder\onedrive\documentos\proyc\libs\queue\queue.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+	<string.h>
+

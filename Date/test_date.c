@@ -75,7 +75,6 @@ void test_CompFechasConMismoMesMismoDia_ResultadoPASS(){
     it(&expected,&result,sizeof(int),comp_integer,"8 - test_CompFechasConMismoMesMismoDia_ResultadoPASS");
 }
 
-
 void test_ObtenerDiasDelMesBisiesto29Febrero_ResultadoPASS(){
     int expected = 29;
     int result = days_of_month(2024,2);
@@ -88,14 +87,11 @@ void test_ObtenerDiasDelMesBisiesto31Enero_ResultadoPASS(){
     it(&expected,&result,sizeof(int),comp_integer,"10 - test_ObtenerDiasDelMesBisiesto31Enero_ResultadoPASS");
 }
 
-
-
 void test_ObtenerDiasDelMenorA1600_ResultadoPASS(){
     int expected = DATE_ERROR;
     int result = days_of_month(1599,1);
     it(&expected,&result,sizeof(int),comp_integer,"11 - test_ObtenerDiasDelMenorA1600_ResultadoPASS");
 }
-
 
 void test_ObtenerDiasDelMesMesMenorQue1_ResultadoPASS(){
     int expected = DATE_ERROR;
@@ -121,13 +117,11 @@ void test_ComprobarSiEsBisiestoUnAnoValido_ResultadoPASS(){
     it(&expected,&result,sizeof(int),comp_integer,"15 - test_ComprobarSiEsBisiestoUnAnoValido_ResultadoPASS");
 }
 
-
 void test_ComprobarSiEsBisiestoUnAnoBisiesto_ResultadoPASS(){
     int expected = 1;
     int result = leap(2024);
     it(&expected,&result,sizeof(int),comp_integer,"16 - test_ComprobarSiEsBisiestoUnAnoBisiesto_ResultadoPASS");
 }
-
 
 void test_DiferenciaEntreFechasFechasNulas_ResultadoPASS(){
     int expected = DATE_ERROR;
@@ -150,7 +144,6 @@ void test_DiferenciaEntreFechas30DiasDeDiferencia_ResultadoPASS(){
     int result = difference_days(&f1,&f2);
     it(&expected,&result,sizeof(int),comp_integer,"19 - test_DiferenciaEntreFechas30DiasDeDiferencia_ResultadoPASS");
 }
-
 
 void test_DiferenciaEntreFechas30DiasDeAlReves_ResultadoPASS(){
     t_date f1 = {1,1,2023};
@@ -181,7 +174,6 @@ void test_AgregarNDiasAUnaFecha_ResultadoPASS(){
     it(&expected,&result,sizeof(t_date),comp_date,"23 - test_AgregarNDiasAUnaFecha_ResultadoPASS");
 }
 
-
 void test_RestarNDiasAUnaFecha_ResultadoPASS(){
     t_date expected = {1,1,2022};
     t_date result = {1,1,2024};
@@ -204,8 +196,6 @@ void test_ToStringFormato1_ResultadoPASS(){
     it(expected,result,sizeof(char),comp_string,"26 - test_ToStringFormato1_ResultadoPASS");
 }
 
-
-
 void test_ToStringFormato2_ResultadoPASS(){
 
     t_date f = {1,1,2024};
@@ -214,7 +204,6 @@ void test_ToStringFormato2_ResultadoPASS(){
 
     it(expected,result,sizeof(char),comp_string,"27 - test_ToStringFormato2_ResultadoPASS");
 }
-
 
 void test_ToStringFormato3_ResultadoPASS(){
     t_date f = {1,1,2024};
@@ -230,7 +219,6 @@ void test_ToStringFormato4_ResultadoPASS(){
     it(expected,result,sizeof(char),comp_string,"29 - test_ToStringFormato4_ResultadoPASS");
 }
 
-
 void test_ToStringFormato5_ResultadoPASS(){
     t_date f = {3,1,1987};
     char expected[30] = {"Sabado 03 de Enero del 1987."};
@@ -245,7 +233,6 @@ void test_ToStringFormato5OtraFecha_ResultadoPASS(){
     it(expected,result,sizeof(char),comp_string,"31 - test_ToStringFormato5OtraFecha_ResultadoPASS");
 }
 
-
 void test_CompTimeConFechaYTiempoCorrecto_ResultadoPASS(){
     t_date t1 = {1,8,2024,11,50,30};
     t_date t2 = {1,8,2024,11,50,30};
@@ -253,7 +240,6 @@ void test_CompTimeConFechaYTiempoCorrecto_ResultadoPASS(){
     int result = comp_time(&t1,&t2);
     it(&expected,&result,sizeof(int),comp_integer,"32 - test_CompTimeConFechaYTiempoCorrecto_ResultadoPASS");
 }
-
 
 void test_CompTimeConFechaIgualadaYHoraDiferente_ResultadoPASS(){
     t_date t1 = {1,8,2024,10,50,30};
@@ -263,7 +249,6 @@ void test_CompTimeConFechaIgualadaYHoraDiferente_ResultadoPASS(){
     it(&expected,&result,sizeof(int),comp_integer,"33 - test_CompTimeConFechaIgualadaYHoraDiferente_ResultadoPASS");
 }
 
-
 void test_CompTimeConFechaIgualadaYHoraDiferenteMayor_ResultadoPASS(){
     t_date t1 = {1,8,2024,12,50,30};
     t_date t2 = {1,8,2024,11,50,30};
@@ -271,7 +256,6 @@ void test_CompTimeConFechaIgualadaYHoraDiferenteMayor_ResultadoPASS(){
     int result = comp_time(&t1,&t2);
     it(&expected,&result,sizeof(int),comp_integer,"34 - test_CompTimeConFechaIgualadaYHoraDiferenteMayor_ResultadoPASS");
 }
-
 
 void test_CompTimeConFechaIgualadaYMinutosDiferenteMayor_ResultadoPASS(){
     t_date t1 = {1,8,2024,11,51,30};
@@ -281,7 +265,6 @@ void test_CompTimeConFechaIgualadaYMinutosDiferenteMayor_ResultadoPASS(){
     it(&expected,&result,sizeof(int),comp_integer,"35 - test_CompTimeConFechaIgualadaYMinutosDiferenteMayor_ResultadoPASS");
 }
 
-
 void test_CompTimeConFechaIgualadaYMinutosDiferenteMenor_ResultadoPASS(){
     t_date t1 = {1,8,2024,11,49,30};
     t_date t2 = {1,8,2024,11,50,30};
@@ -290,7 +273,6 @@ void test_CompTimeConFechaIgualadaYMinutosDiferenteMenor_ResultadoPASS(){
     it(&expected,&result,sizeof(int),comp_integer,"36 - test_CompTimeConFechaIgualadaYMinutosDiferenteMenor_ResultadoPASS");
 }
 
-
 void test_AgregarUnaHoraAUnDateLimite_ResultadoPASS(){
     t_date expected = {1,1,2024,00,00,00};
     t_date result = {31,12,2023,23,00,00};
@@ -298,14 +280,12 @@ void test_AgregarUnaHoraAUnDateLimite_ResultadoPASS(){
     it(&expected,&result,sizeof(t_date),comp_time,"37 - test_AgregarUnaHoraAUnDateLimite_ResultadoPASS");
 }
 
-
 void test_AgregarUnaHoraAUnDateNoLimite_ResultadoPASS(){
     t_date expected = {3,8,2024,01,00,00};
     t_date result = {3,8,2024,0,00,00};
     result = *add_hour(&result);
     it(&expected,&result,sizeof(t_date),comp_time,"38 - test_AgregarUnaHoraAUnDateNoLimite_ResultadoPASS");
 }
-
 
 void test_SustraerUnaHoraALaFechaLimite_ResultadoPASS(){
     t_date expected = {31,12,2023,23,00,00};
@@ -320,7 +300,6 @@ void test_SustraerUnaHoraALaFechaNoLimite_ResultadoPASS(){
     result = *subtract_hour(&result);
     it(&expected,&result,sizeof(t_date),comp_time,"40 - test_SustraerUnaHoraALaFechaNoLimite_ResultadoPASS");
 }
-
 
 void test_AgregarVariasHorasAUnaFechaLimite_ResultadoPASS(){
     t_date expected = {1,1,2024,5,00,00};
@@ -356,7 +335,6 @@ void test_AgregarNMinutoAUnaFechaLimite_ResultadoPASS(){
     result = *add_minutes(&result,5);
     it(&expected,&result,sizeof(t_date),comp_time,"45 - test_AgregarNMinutoAUnaFechaLimite_ResultadoPASS");
 }
-
 
 void test_AgregarNSegundosAUnaFechaLimite_ResultadoPASS(){
     t_date expected = {1,1,2024,0,00,00};
