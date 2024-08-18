@@ -23,6 +23,8 @@
     int find_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
     int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
     void clear_simple_list(t_simple_list *l);
+    int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
+
 
     ADV:
 
@@ -297,5 +299,8 @@ int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
  *
  */
 void clear_simple_list(t_simple_list *l);
+
+
+int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
 
 #endif // SIMPLE_LIST_H_INCLUDED

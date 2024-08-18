@@ -3,28 +3,24 @@
 #include "simple_list.h"
 #include "test/test_simple_list.h"
 
-
-int comp_i(const void *e1, const void *e2)
-{
-    int * ele1 = (int *)e1;
-    int * ele2 = (int *)e2;
-
-    return *ele1 - *ele2;
-}
-
-void up(void *info_list, void *info_u)
-{
-    int * il = (int *)info_list;
-    int * iu = (int *)info_u;
-    *il += *iu;
-    printf("%d Update\n", *il);
-}
-
 int main()
 {
 
+    printf("TEST Para lista vacia\n");
     test_EstaVacia_Verdadero_Resultado_Pass();
     test_EstaVacia_False_Resultado_Pass ();
+
+    printf("\nTEST Para lista llena\n");
+    test_EstaLLena_False_Resultado_Pass();
+
+    printf("\nTEST Para agregar elementos a lista\n");
+    test_AddSimpleList_DiezElementos_Resultado_Pass();
+    test_AddSimpleList_ListaNula_Resultado_Pass ();
+    test_AddSimpleList_InfoNula_Resultado_Pass();
+    test_AddSimpleList_SizeMenorIgualCero_Resultado_Pass();
+    test_AddSimpleList_TodosRepetidos_Resultado_Pass();
+
+
 
     return 0;
 }

@@ -5,6 +5,12 @@
 
 void test_EstaVacia_Verdadero_Resultado_Pass ();
 void test_EstaVacia_False_Resultado_Pass ();
+void test_EstaLLena_False_Resultado_Pass ();
+void test_AddSimpleList_DiezElementos_Resultado_Pass();
+void test_AddSimpleList_ListaNula_Resultado_Pass ();
+void test_AddSimpleList_InfoNula_Resultado_Pass ();
+void test_AddSimpleList_SizeMenorIgualCero_Resultado_Pass();
+void test_AddSimpleList_TodosRepetidos_Resultado_Pass ();
 
 
 
