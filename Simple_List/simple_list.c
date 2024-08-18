@@ -131,7 +131,6 @@ int insert_simple_list(t_simple_list *l,const void *info, size_t size,const int 
     return _SIMPLE_LIST_NO_INSERT;
 }
 
-
 int insert_range_simple_list(t_simple_list *l,const void *arr, size_t size,const int ce, int index)
 {
     int res = _SIMPLE_LIST_NO_INSERT;
@@ -267,13 +266,11 @@ int try_add_simple_list_in_order_sd(t_simple_list *l, const void *info, const si
     return _SIMPLE_LIST_OK;
 }
 
-int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, const size_t size, t_comp comp, t_update update, const void *info_update)
+int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, const size_t size, t_comp comp, t_update update)
 {
     if(!l)
         return _SIMPLE_LIST_NULL;
     if(!info)
-        return _SIMPLE_LIST_INFO;
-    if(!info_update)
         return _SIMPLE_LIST_INFO;
 
     t_node_simple_list *n = (t_node_simple_list *)malloc(sizeof(t_node_simple_list));
@@ -297,7 +294,7 @@ int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, cons
     {
         free(n->info);
         free(n);
-        update((*l)->info, info_update);
+        update((*l)->info, info);
         return _SIMPLE_LIST_DUP;
     }
 
@@ -480,3 +477,8 @@ void clear_simple_list(t_simple_list *l)
         free(elim);
     }
 }
+
+
+
+
+
