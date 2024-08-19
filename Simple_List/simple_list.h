@@ -301,6 +301,13 @@ int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
 void clear_simple_list(t_simple_list *l);
 
 
+/** \brief
+ *  Carga un arreglo con los elementos de la lista.
+ * \param l t_simple_list* Puntero a la lista
+ * \param arr void* Puntero al arreglo a cargar
+ * \param size const size_t Tamaño de la info cargada en la lista
+ * \return int 1 Si pudo cargar el arreglo.
+ */
 int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
 
 #endif // SIMPLE_LIST_H_INCLUDED

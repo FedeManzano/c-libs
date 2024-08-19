@@ -152,6 +152,8 @@ int add_simple_list_in_order(t_simple_list *l, const void *info, const size_t si
         return _SIMPLE_LIST_NULL;
     if(!info)
         return _SIMPLE_LIST_INFO;
+    if(size <= 0)
+        return _SIMPLE_LIST_SIZE;
 
     t_node_simple_list *n = (t_node_simple_list *)malloc(sizeof(t_node_simple_list));
 
@@ -169,14 +171,7 @@ int add_simple_list_in_order(t_simple_list *l, const void *info, const size_t si
     while(*l && comp((*l)->info,info) < 0)
         l = &(*l)->next;
 
-    if(*l && comp((*l)->info,info) > 0)
-    {
-        n->next = *l;
-        *l = n;
-        return _SIMPLE_LIST_OK;
-    }
-
-    n->next = NULL;
+    n->next = *l;
     *l = n;
     return _SIMPLE_LIST_OK;
 }
@@ -212,14 +207,7 @@ int add_simple_list_in_order_sd(t_simple_list *l, const void *info, const size_t
         return _SIMPLE_LIST_DUP;
     }
 
-    if(*l && comp((*l)->info,info) > 0)
-    {
-        n->next = *l;
-        *l = n;
-        return _SIMPLE_LIST_OK;
-    }
-
-    n->next = NULL;
+    n->next = *l;
     *l = n;
     return _SIMPLE_LIST_OK;
 }
@@ -230,6 +218,8 @@ int try_add_simple_list_in_order_sd(t_simple_list *l, const void *info, const si
         return _SIMPLE_LIST_NULL;
     if(!info)
         return _SIMPLE_LIST_INFO;
+    if(size <= 0)
+        return _SIMPLE_LIST_SIZE;
 
     t_node_simple_list *n = (t_node_simple_list *)malloc(sizeof(t_node_simple_list));
 
@@ -256,14 +246,7 @@ int try_add_simple_list_in_order_sd(t_simple_list *l, const void *info, const si
         return _SIMPLE_LIST_DUP;
     }
 
-    if(*l && comp((*l)->info,info) > 0)
-    {
-        n->next = *l;
-        *l = n;
-        return _SIMPLE_LIST_OK;
-    }
-
-    n->next = NULL;
+    n->next = *l;
     *l = n;
     return _SIMPLE_LIST_OK;
 }
@@ -300,14 +283,7 @@ int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, cons
         return _SIMPLE_LIST_DUP;
     }
 
-    if(*l && comp((*l)->info,info) > 0)
-    {
-        n->next = *l;
-        *l = n;
-        return _SIMPLE_LIST_OK;
-    }
-
-    n->next = NULL;
+    n->next = *l;
     *l = n;
     return _SIMPLE_LIST_OK;
 }
@@ -479,7 +455,6 @@ void clear_simple_list(t_simple_list *l)
         free(elim);
     }
 }
-
 
 int to_array_simple_list(t_simple_list *l, void * arr, const size_t size)
 {
