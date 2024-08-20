@@ -4,6 +4,7 @@ Algunos TDA para aprender programación e C.
 
 - Algoritmos de ordenamiento
 - Lista doblemnte enlazada
+- Lista Simple
 - Pila
 - Cola
 - Arbol binario
@@ -348,5 +349,5 @@ Librería simple para realizar test unitarios en C.
 */
 ```
 ## Autor
-[FedericoManzano](https://github.com/FedericoManzano)
+[FedericoManzano](https://github.com/FedeManzano)
 
