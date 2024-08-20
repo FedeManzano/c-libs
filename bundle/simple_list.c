@@ -257,6 +257,8 @@ int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, cons
         return _SIMPLE_LIST_NULL;
     if(!info)
         return _SIMPLE_LIST_INFO;
+    if(size <= 0)
+        return _SIMPLE_LIST_SIZE;
 
     t_node_simple_list *n = (t_node_simple_list *)malloc(sizeof(t_node_simple_list));
 
@@ -290,7 +292,7 @@ int try_add_simple_list_in_order_update(t_simple_list *l, const void *info, cons
 
 int len_simple_list(t_simple_list *l)
 {
-     if(!l)
+    if(!l)
         return _SIMPLE_LIST_NULL;
     if(!*l)
         return _SIMPLE_LIST_EMPTY;
@@ -359,18 +361,23 @@ void sort_simple_list(t_simple_list *l, size_t size, t_comp comp)
 
     while(*l)
     {
+
         min = minor_simple_list(l,comp);
 
         if(min != *l)
         {
+
             t_node_simple_list *aux = (t_node_simple_list *)malloc(sizeof(t_node_simple_list));
             if(!aux)
                 return;
+            aux->info = malloc(size);
             memcpy(aux->info,(*l)->info,size);
             memcpy((*l)->info,min->info,size);
             memcpy(min->info,aux->info,size);
+            free(aux->info);
             free(aux);
         }
+
         l = &(*l)->next;
     }
 }
