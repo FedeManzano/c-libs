@@ -287,7 +287,6 @@ int find_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
  * \param info const void* Info con la clave a buscar.
  * \param comp t_comp puntero a la función de comparación
  * \return int Index del elemento. -1 si el elemento no existe en la lista.
- *
  */
 int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
 

@@ -3,6 +3,8 @@
 #include <string.h>
 #include "./quicksort.h"
 
+
+
 void qsort_r(void * arr,int ini, int fin, const size_t tam, t_comp comp){
 
     int i = ini;

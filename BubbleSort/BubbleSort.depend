@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1723851921 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1584205420 source:c:\users\feder\onedrive\documentos\proyc\libs\bubblesort\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1724178695 source:c:\users\feder\onedrive\documentos\proyc\libs\bubblesort\bubble_sort.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"bubble_sort.h"
+
+1724178695 c:\users\feder\onedrive\documentos\proyc\libs\bubblesort\bubble_sort.h
+
