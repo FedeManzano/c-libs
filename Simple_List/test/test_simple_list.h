@@ -36,5 +36,19 @@ void test_InsertSimpleList_InsertarVariosElementos_Resultado_Pass ();
 void test_InsertSimpleList_InsertarUnRangoDeElementos_Resultado_Pass ();
 void test_InsertSimpleList_InsertarUnRangoDeElementosConIndexUno_Resultado_Pass ();
 void test_SortSimpleList_OrdenarDiezElementos_Resultado_Pass();
+void test_SortSimpleList_ListaNula_Resultado_Pass();
+void test_SortSimpleList_TamMenorIgualACero_Resultado_Pass();
+void test_DeleteSimpleList_EliminarElementoListaDeDiez_Resultado_Pass ();
+void test_DeleteSimpleList_EliminarElementoDelFinal_Resultado_Pass ();
+void test_DeleteSimpleList_EliminarElementoDelInicio_Resultado_Pass ();
+void test_DeleteSimpleList_EliminarElementoYDuplicados_Resultado_Pass ();
+void test_IndexOfSimpleList_IndexDeUnElementoDentro_Resultado_Pass ();
+void test_IndexOfSimpleList_IndexDeUnNoEstaEnLaLista_Resultado_Pass ();
+void test_IndexOfSimpleList_IndexDeListaNula_Resultado_Pass ();
+void test_IndexOfSimpleList_IndexDeInfoNula_Resultado_Pass ();
+void test_FindSimpleList_ElementoEncontrado_Resultado_Pass ();
+void test_FindSimpleList_ElementoNoEncontrado_Resultado_Pass ();
+
+
 
 #endif // TEST_SIMPLE_LIST_H_INCLUDED

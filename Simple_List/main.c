@@ -57,6 +57,24 @@ int main()
 
     printf("\nTEST Ordenar Lista\n");
     test_SortSimpleList_OrdenarDiezElementos_Resultado_Pass();
+    test_SortSimpleList_ListaNula_Resultado_Pass();
+    test_SortSimpleList_TamMenorIgualACero_Resultado_Pass();
+
+    printf("\nTEST Eliminar elementos de la lista\n");
+    test_DeleteSimpleList_EliminarElementoListaDeDiez_Resultado_Pass();
+    test_DeleteSimpleList_EliminarElementoDelFinal_Resultado_Pass();
+    test_DeleteSimpleList_EliminarElementoDelInicio_Resultado_Pass ();
+    test_DeleteSimpleList_EliminarElementoYDuplicados_Resultado_Pass ();
+
+    printf("\nTEST Indice de un elemento en la lista\n");
+    test_IndexOfSimpleList_IndexDeUnElementoDentro_Resultado_Pass ();
+    test_IndexOfSimpleList_IndexDeUnNoEstaEnLaLista_Resultado_Pass ();
+    test_IndexOfSimpleList_IndexDeListaNula_Resultado_Pass();
+    test_IndexOfSimpleList_IndexDeInfoNula_Resultado_Pass ();
+
+    printf("\nTEST Encontrar elemento en lista\n");
+    test_FindSimpleList_ElementoEncontrado_Resultado_Pass ();
+    test_FindSimpleList_ElementoNoEncontrado_Resultado_Pass ();
 
 
     return 0;

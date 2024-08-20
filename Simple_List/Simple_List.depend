@@ -7,7 +7,7 @@
 
 1724019206 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.h
 
-1724161358 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\main.c
+1724164797 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\main.c
 	<stdio.h>
 	<stdlib.h>
 	"simple_list.h"
@@ -28,7 +28,7 @@
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724161358 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_simple_list.h
+1724165310 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_simple_list.h
 	"test_utils.h"
 
 1724025475 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_utils.h
@@ -77,14 +77,35 @@
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724161026 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_insert_simple_list.c
+1724163602 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_insert_simple_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../simple_list.h"
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724161465 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_sort_simple_list.c
+1724163602 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_sort_simple_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1724164123 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_delete_simple_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1724164797 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_index_of_simple_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1724165127 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_find_simple_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../simple_list.h"

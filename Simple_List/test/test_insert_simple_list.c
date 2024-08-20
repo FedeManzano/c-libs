@@ -17,7 +17,7 @@ void test_InsertSimpleList_InsertarElementoEnUnaListaVacia_Resultado_Pass ()
     int res = len_simple_list(&l);
 
     it(&exp,&res,sizeof(int),comp_integer,"27 - test_InsertSimpleList_InsertarElementoEnUnaListaVacia_Resultado_Pass");
-
+    clear_simple_list(&l);
 }
 
 
@@ -32,6 +32,7 @@ void test_InsertSimpleList_InsertarEnListaNula_Resultado_Pass ()
     int exp = _SIMPLE_LIST_NULL;
 
     it(&exp,&res,sizeof(int),comp_integer,"28 - test_InsertSimpleList_InsertarEnListaNula_Resultado_Pass");
+    clear_simple_list(&l);
 }
 
 
@@ -46,7 +47,7 @@ void test_InsertSimpleList_InsertarConInfoNula_Resultado_Pass ()
     int exp = _SIMPLE_LIST_INFO;
 
     it(&exp,&res,sizeof(int),comp_integer,"29 - test_InsertSimpleList_InsertarConInfoNula_Resultado_Pass");
-
+    clear_simple_list(&l);
 }
 
 
@@ -67,7 +68,7 @@ void test_InsertSimpleList_InsertarVariosElementos_Resultado_Pass ()
 
 
     it_arr(exp,res,10,sizeof(int),comp_integer,"30 - test_InsertSimpleList_InsertarVariosElementos_Resultado_Pass");
-
+    clear_simple_list(&l);
 }
 
 
@@ -87,7 +88,7 @@ void test_InsertSimpleList_InsertarUnRangoDeElementos_Resultado_Pass ()
 
 
     it_arr(exp,res,10,sizeof(int),comp_integer,"31 - test_InsertSimpleList_InsertarUnRangoDeElementos_Resultado_Pass");
-
+    clear_simple_list(&l);
 }
 
 void test_InsertSimpleList_InsertarUnRangoDeElementosConIndexUno_Resultado_Pass ()
@@ -106,5 +107,5 @@ void test_InsertSimpleList_InsertarUnRangoDeElementosConIndexUno_Resultado_Pass 
 
 
     it_arr(exp,res,10,sizeof(int),comp_integer,"32 - test_InsertSimpleList_InsertarUnRangoDeElementosConIndexUno_Resultado_Pass");
-
+    clear_simple_list(&l);
 }
