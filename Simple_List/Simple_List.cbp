@@ -51,10 +51,19 @@
 		<Unit filename="test/test_add_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_insert_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_is_empty_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_len_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_simple_list.h" />
+		<Unit filename="test/test_sort_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_try_add_in_order_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>

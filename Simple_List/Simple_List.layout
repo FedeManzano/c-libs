@@ -2,42 +2,42 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="test\test_try_add_list_update_simple_list.c" open="1" top="1" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1467" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="test\test_simple_list.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1263" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="test\test_utils.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="172" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\test_is_empty_simple_list.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\test_add_simple_list.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="529" topLine="56" />
-		</Cursor>
-	</File>
 	<File name="test\test_utils.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="163" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="test\test_try_add_in_order_simple_list.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_insert_simple_list.c" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2367" topLine="56" />
+			<Cursor1 position="2278" topLine="85" />
 		</Cursor>
 	</File>
-	<File name="..\bundle\it.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_is_empty_simple_list.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="20" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="test\test_len_simple_list.c" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="932" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="test\is_full_simple_list.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\test_simple_list.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2233" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="test\test_add_simple_list.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\test_try_add_in_order_simple_list.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
@@ -47,14 +47,14 @@
 			<Cursor1 position="336" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="simple_list.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_try_add_list_update_simple_list.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5571" topLine="289" />
+			<Cursor1 position="1909" topLine="57" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\bundle\it.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1547" topLine="14" />
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="test\test_add_in_order_simple_list.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -62,9 +62,19 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="test\test_sort_simple_list.c" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="477" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="simple_list.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5571" topLine="174" />
+		</Cursor>
+	</File>
 	<File name="simple_list.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5909" topLine="116" />
+			<Cursor1 position="7638" topLine="52" />
 		</Cursor>
 		<Folding>
 			<Collapse line="7" />
@@ -74,22 +84,29 @@
 			<Collapse line="55" />
 			<Collapse line="80" />
 			<Collapse line="136" />
+			<Collapse line="149" />
 			<Collapse line="179" />
-			<Collapse line="291" />
-			<Collapse line="310" />
-			<Collapse line="338" />
-			<Collapse line="351" />
-			<Collapse line="378" />
-			<Collapse line="400" />
-			<Collapse line="406" />
-			<Collapse line="425" />
-			<Collapse line="446" />
-			<Collapse line="459" />
+			<Collapse line="215" />
+			<Collapse line="254" />
+			<Collapse line="293" />
+			<Collapse line="312" />
+			<Collapse line="340" />
+			<Collapse line="385" />
+			<Collapse line="407" />
+			<Collapse line="413" />
+			<Collapse line="432" />
+			<Collapse line="453" />
+			<Collapse line="466" />
 		</Folding>
 	</File>
-	<File name="test\is_full_simple_list.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="2669" topLine="37" />
+		</Cursor>
+	</File>
+	<File name="test\test_utils.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="306" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

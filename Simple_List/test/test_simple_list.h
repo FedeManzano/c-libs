@@ -22,4 +22,19 @@ void test_TryAddSimpleListEnOrden_InfoNula_Resultado_Pass ();
 void test_TryAddSimpleListEnOrden_SizeMenorIgualCero_Resultado_Pass ();
 void test_TryAddSimpleListEnOrden_TodosRepetidos_Resultado_Pass ();
 void test_tryAddUpdateSimpleListInOrderUpdate_DiezElementos_Resultado_Pass ();
+void test_TryAddSimpleListEnOrdenUpdate_ListaNula_Resultado_Pass ();
+void test_TryAddSimpleListEnOrdenUpdate_InfoNula_Resultado_Pass ();
+void test_TryAddSimpleListEnOrdenUpdate_SizeMenorIgualCero_Resultado_Pass ();
+void test_TryAddSimpleListEnOrdenUpdate_TodosRepetidos_Resultado_Pass ();
+void test_LenSinpleList_ListaVacia_Resultado_Pass () ;
+void test_LenSinpleList_ListaNula_Resultado_Pass ();
+void test_LenSinpleList_UnElemento_Resultado_Pass ();
+void test_InsertSimpleList_InsertarElementoEnUnaListaVacia_Resultado_Pass ();
+void test_InsertSimpleList_InsertarEnListaNula_Resultado_Pass ();
+void test_InsertSimpleList_InsertarConInfoNula_Resultado_Pass ();
+void test_InsertSimpleList_InsertarVariosElementos_Resultado_Pass ();
+void test_InsertSimpleList_InsertarUnRangoDeElementos_Resultado_Pass ();
+void test_InsertSimpleList_InsertarUnRangoDeElementosConIndexUno_Resultado_Pass ();
+void test_SortSimpleList_OrdenarDiezElementos_Resultado_Pass();
+
 #endif // TEST_SIMPLE_LIST_H_INCLUDED

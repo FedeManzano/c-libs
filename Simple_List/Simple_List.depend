@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1724026729 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.c
+1724161833 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -7,7 +7,7 @@
 
 1724019206 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.h
 
-1724025520 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\main.c
+1724161358 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\main.c
 	<stdio.h>
 	<stdlib.h>
 	"simple_list.h"
@@ -28,7 +28,7 @@
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724025492 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_simple_list.h
+1724161358 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_simple_list.h
 	"test_utils.h"
 
 1724025475 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_utils.h
@@ -64,7 +64,27 @@
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724025655 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_try_add_list_update_simple_list.c
+1724078070 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_try_add_list_update_simple_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1724116841 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_len_simple_list.c
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1724161026 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_insert_simple_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1724161465 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_sort_simple_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../simple_list.h"

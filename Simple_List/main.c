@@ -36,6 +36,28 @@ int main()
 
     printf("\nTEST Para agregar elementos en orden a lista con actualizacion\n");
     test_tryAddUpdateSimpleListInOrderUpdate_DiezElementos_Resultado_Pass();
+    test_TryAddSimpleListEnOrdenUpdate_ListaNula_Resultado_Pass ();
+    test_TryAddSimpleListEnOrdenUpdate_InfoNula_Resultado_Pass ();
+    test_TryAddSimpleListEnOrdenUpdate_SizeMenorIgualCero_Resultado_Pass ();
+    test_TryAddSimpleListEnOrdenUpdate_TodosRepetidos_Resultado_Pass ();
+
+
+    printf("\nTEST Cantidad de elementos de la lista\n");
+    test_LenSinpleList_ListaVacia_Resultado_Pass();
+    test_LenSinpleList_ListaNula_Resultado_Pass();
+    test_LenSinpleList_UnElemento_Resultado_Pass ();
+
+    printf("\nTEST Insertar elemento en lista\n");
+    test_InsertSimpleList_InsertarElementoEnUnaListaVacia_Resultado_Pass ();
+    test_InsertSimpleList_InsertarEnListaNula_Resultado_Pass ();
+    test_InsertSimpleList_InsertarConInfoNula_Resultado_Pass ();
+    test_InsertSimpleList_InsertarVariosElementos_Resultado_Pass();
+    test_InsertSimpleList_InsertarUnRangoDeElementos_Resultado_Pass ();
+    test_InsertSimpleList_InsertarUnRangoDeElementosConIndexUno_Resultado_Pass ();
+
+    printf("\nTEST Ordenar Lista\n");
+    test_SortSimpleList_OrdenarDiezElementos_Resultado_Pass();
+
 
     return 0;
 }
