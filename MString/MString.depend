@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1723851921 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1724253207 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\m_string.c
+	<stdio.h>
+	<stdlib.h>
+	"m_string.h"
+
+1724252684 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"m_string.h"
+	"test/test_m_string.h"
+
+1724252435 c:\users\feder\onedrive\documentos\proyc\libs\mstring\m_string.h
+
+1724252684 c:\users\feder\onedrive\documentos\proyc\libs\mstring\test\test_m_string.h
+
+1724253274 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\test\test_m_string.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../bundle/it.h"
+	"../m_string.h"
+
