@@ -81,6 +81,9 @@ int main()
     test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ();
 
 
+    printf("\nTEST m_format_title\n");
+    test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass();
+
 
     return 0;
 }

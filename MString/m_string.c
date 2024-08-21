@@ -187,17 +187,6 @@ char * m_strstr(const char *s1, const char *s2)
     return NULL;
 }
 
-int m_find_c(const char *s, const char c)
-{
-    while(*s)
-    {
-       if(*s == c)
-            return 1;
-        s ++;
-    }
-    return 0;
-}
-
 size_t m_strspn(const char *s1, const char *s2)
 {
     if(!s1 || !s2)
@@ -206,7 +195,7 @@ size_t m_strspn(const char *s1, const char *s2)
 
     while(*s1)
     {
-        if(m_find_c(s2,*s1))
+        if(m_strchr(s2,*s1))
             cant ++;
         else return cant;
         s1 ++;
@@ -222,7 +211,7 @@ size_t m_strcspn(const char *s1, const char *s2)
 
     while(*s1)
     {
-        if(!m_find_c(s2,*s1))
+        if(!m_strchr(s2,*s1))
             cant ++;
         else return cant;
         s1 ++;
@@ -230,20 +219,24 @@ size_t m_strcspn(const char *s1, const char *s2)
     return cant;
 }
 
-char * format_title(const char *s)
+char * m_format_title(const char *s)
 {
     if(!s)
         return NULL;
 
     char *desde = (char *)s;
     char *hasta = (char *)s;
+    char *ret = (char *)s;
 
     while(*hasta)
     {
         while(ES_BLANCO(*hasta))
             hasta ++;
+
+
         if(ES_MIN(*hasta))
             *hasta -= ' ';
+
         *desde = *hasta;
         desde ++;
         hasta ++;
@@ -256,13 +249,21 @@ char * format_title(const char *s)
             desde ++;
             hasta ++;
         }
-        if(ES_BLANCO(*hasta))
+
+        if(*hasta && ES_BLANCO(*hasta))
         {
             *desde = *hasta;
             desde ++;
             hasta ++;
         }
     }
-    *desde = '\0';
+
+    while(*ret)
+        ret ++;
+
+    if(ES_BLANCO(*(ret - 1)))
+        *(ret - 1) = '\0';
+    else
+        *desde = '\0';
     return (char *)s;
 }

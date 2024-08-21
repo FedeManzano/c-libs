@@ -531,3 +531,14 @@ void test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ()
 
     it_arr(exp,res,1,sizeof(exp), comp_s,"44 - test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass");
 }
+
+
+void test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass ()
+{
+    char pal1[100] = "     cUENTA   lA   HISTORIA   que    uN    Dia En   Su BOsque EnCANTADO" ;
+
+    char * exp = "Cuenta La Historia Que Un Dia En Su Bosque Encantado";
+    char * res = m_format_title(pal1);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"45 - test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass");
+}

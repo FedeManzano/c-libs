@@ -47,5 +47,7 @@ void test_Strncat_ConcatenarACadenaVacia_Resultado_Pass ();
 void test_Strncat_NNegativo_Resultado_Pass ();
 void test_Strncat_CadenaDosVacia_Resultado_Pass ();
 void test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ();
+void test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass ();
+
 
 #endif // TEST_M_STRING_H_INCLUDED
