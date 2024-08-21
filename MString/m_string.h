@@ -17,9 +17,13 @@ char * m_strcpy(char *s1, const char *s2);
 char * m_strncpy(char *s1, const char *s2, size_t n);
 
 char * m_strcat(char * s1, const char *s2);
+char * m_strncat(char *s1, const char *s2, size_t n);
 int m_strlen(const char * s);
 char * m_strchr(const char *s, const char c);
 char * m_strrchr(const char *s, const char c);
+char * m_strstr(const char *s1, const char *s2);
+size_t m_strspn(const char *s1, const char *s2);
+size_t m_strcspn(const char *s1, const char *s2);
 
 
 void * m_memcpy(void *e1, const void *e2,const size_t size);

@@ -31,7 +31,21 @@ void test_Strncmp_NNegativo_Resultado_Pass ();
 void test_Strncpy_CadenaUnoMasCorta_Resultado_Pass ();
 void test_Strncpy_NNegativo_Resultado_Pass ();
 void test_Strncpy_NCero_Resultado_Pass ();
-
-
+void test_Strstr_PalabraContenida_Resultado_Pass ();
+void test_Strstr_SegundaPalabraMasLarga_Resultado_Pass ();
+void test_Strstr_OcurrenciaAlFinal_Resultado_Pass ();
+void test_Strstr_OcurrenciaAlPrincipio_Resultado_Pass ();
+void test_Strcpn_CuartaLetraDiferente_Resultado_Pass ();
+void test_Strcpn_CadenasIguales_Resultado_Pass ();
+void test_Strcpn_CadenasMismoTamDiferenteContenido_Resultado_Pass ();
+void test_Strcpn_TestDocumentacion_Resultado_Pass ();
+void test_Strcspn_TestDocumentacion_Resultado_Pass ();
+void test_Strcspn_TestDocumentacionDos_Resultado_Pass ();
+void test_Strcspn_TestDocumentacionTres_Resultado_Pass ();
+void test_Strcspn_TestDocumentacionCuatro_Resultado_Pass ();
+void test_Strncat_ConcatenarACadenaVacia_Resultado_Pass ();
+void test_Strncat_NNegativo_Resultado_Pass ();
+void test_Strncat_CadenaDosVacia_Resultado_Pass ();
+void test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ();
 
 #endif // TEST_M_STRING_H_INCLUDED

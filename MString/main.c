@@ -55,6 +55,31 @@ int main()
     test_Strncpy_NNegativo_Resultado_Pass ();
     test_Strncpy_NCero_Resultado_Pass ();
 
+    printf("\nTEST m_strstr\n");
+    test_Strstr_PalabraContenida_Resultado_Pass ();
+    test_Strstr_SegundaPalabraMasLarga_Resultado_Pass();
+    test_Strstr_OcurrenciaAlFinal_Resultado_Pass ();
+    test_Strstr_OcurrenciaAlPrincipio_Resultado_Pass();
+
+    printf("\nTEST m_strspn\n");
+    test_Strcpn_CuartaLetraDiferente_Resultado_Pass ();
+    test_Strcpn_CadenasIguales_Resultado_Pass ();
+    test_Strcpn_CadenasMismoTamDiferenteContenido_Resultado_Pass();
+    test_Strcpn_TestDocumentacion_Resultado_Pass ();
+
+    printf("\nTEST m_strcspn\n");
+    test_Strcspn_TestDocumentacion_Resultado_Pass ();
+    test_Strcspn_TestDocumentacionDos_Resultado_Pass();
+    test_Strcspn_TestDocumentacionTres_Resultado_Pass ();
+    test_Strcspn_TestDocumentacionCuatro_Resultado_Pass();
+
+
+    printf("\nTEST m_strncat\n");
+    test_Strncat_ConcatenarACadenaVacia_Resultado_Pass();
+    test_Strncat_NNegativo_Resultado_Pass();
+    test_Strncat_CadenaDosVacia_Resultado_Pass ();
+    test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ();
+
 
 
     return 0;

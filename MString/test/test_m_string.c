@@ -337,3 +337,197 @@ void test_Strncpy_NCero_Resultado_Pass ()
 
     it(exp,res,sizeof(exp), comp_s,"28 - test_Strncpy_NCero_Resultado_Pass");
 }
+
+
+void test_Strstr_PalabraContenida_Resultado_Pass ()
+{
+    char pal1[10] = "federico";
+    char pal2[10] = "ri";
+
+    char * exp = "rico";
+    char * res = m_strstr(pal1,pal2);
+
+    it(exp,res,sizeof(exp), comp_s,"29 - test_Strstr_PalabraContenida_Resultado_Pass");
+}
+
+
+void test_Strstr_SegundaPalabraMasLarga_Resultado_Pass ()
+{
+    char pal1[10] = "fede";
+    char pal2[10] = "federico";
+
+    char * exp = NULL;
+    char * res = m_strstr(pal1,pal2);
+
+    it(exp,res,sizeof(exp), comp_s,"30 - test_Strstr_SegundaPalabraMasLarga_Resultado_Pass");
+}
+
+
+void test_Strstr_OcurrenciaAlFinal_Resultado_Pass ()
+{
+    char pal1[10] = "federico";
+    char pal2[10] = "co";
+
+    char * exp = "co";
+    char * res = m_strstr(pal1,pal2);
+
+    it(exp,res,sizeof(exp), comp_s,"31 - test_Strstr_OcurrenciaAlFinal_Resultado_Pass");
+}
+
+
+void test_Strstr_OcurrenciaAlPrincipio_Resultado_Pass ()
+{
+    char pal1[10] = "federico";
+    char pal2[10] = "fe";
+
+    char * exp = "federico";
+    char * res = m_strstr(pal1,pal2);
+
+    it(exp,res,sizeof(exp), comp_s,"32 - test_Strstr_OcurrenciaAlPrincipio_Resultado_Pass");
+}
+
+
+void test_Strcpn_CuartaLetraDiferente_Resultado_Pass ()
+{
+    char pal1[10] = "fedr";
+    char pal2[10] = "federico";
+
+    int exp = strspn(pal1,pal2);
+    int res = m_strspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"33 - test_Strcpn_CuartaLetraDiferente_Resultado_Pass");
+}
+
+
+void test_Strcpn_CadenasIguales_Resultado_Pass ()
+{
+    char pal1[10] = "federico";
+    char pal2[10] = "federico";
+
+    int exp = strspn(pal1,pal2);
+    int res = m_strspn(pal1,pal2);
+
+
+    it(&exp,&res,sizeof(int), comp_int,"34 - test_Strcpn_CadenasIguales_Resultado_Pass");
+}
+
+
+void test_Strcpn_CadenasMismoTamDiferenteContenido_Resultado_Pass ()
+{
+    char pal1[10] = "robertos";
+    char pal2[10] = "federico";
+
+    int exp = strspn(pal1,pal2);
+    int res = m_strspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"35 - test_Strcpn_CadenasMismoTamDiferenteContenido_Resultado_Pass");
+}
+
+
+void test_Strcpn_TestDocumentacion_Resultado_Pass ()
+{
+    char pal1[10] = "cabbage";
+    char pal2[10] = "abc";
+
+    int exp = strspn(pal1,pal2);
+    int res = m_strspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"36 - test_Strcpn_TestDocumentacion_Resultado_Pass");
+}
+
+
+void test_Strcspn_TestDocumentacion_Resultado_Pass ()
+{
+    char pal1[10] = "xyzbxz";
+    char pal2[10] = "abc";
+
+    int exp = strcspn(pal1,pal2);
+    int res = m_strcspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"37 - test_Strcspn_TestDocumentacion_Resultado_Pass");
+}
+
+
+void test_Strcspn_TestDocumentacionDos_Resultado_Pass ()
+{
+    char pal1[10] = "xyzbxz";
+    char pal2[10] = "xyz";
+
+    int exp = strcspn(pal1,pal2);
+    int res = m_strcspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"38 - test_Strcspn_TestDocumentacionDos_Resultado_Pass");
+}
+
+
+void test_Strcspn_TestDocumentacionTres_Resultado_Pass ()
+{
+    char pal1[10] = "xyzbxz";
+    char pal2[10] = "no match";
+
+    int exp = strcspn(pal1,pal2);
+    int res = m_strcspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"39 - test_Strcspn_TestDocumentacionTres_Resultado_Pass");
+}
+
+void test_Strcspn_TestDocumentacionCuatro_Resultado_Pass ()
+{
+    char pal1[10] = "xyzbxz";
+    char pal2[10] = "";
+
+    int exp = strcspn(pal1,pal2);
+    int res = m_strcspn(pal1,pal2);
+
+    it(&exp,&res,sizeof(int), comp_int,"40 - test_Strcspn_TestDocumentacionCuatro_Resultado_Pass");
+}
+
+
+void test_Strncat_ConcatenarACadenaVacia_Resultado_Pass ()
+{
+    char pal1[10] = "";
+    char pal2[10] = "xyzbxz";
+
+    char * exp = "xyzbxz";
+    char * res = m_strncat(pal1,pal2,15);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"41 - test_Strncat_ConcatenarACadenaVacia_Resultado_Pass");
+}
+
+
+void test_Strncat_NNegativo_Resultado_Pass ()
+{
+    char pal1[10] = "";
+    char pal2[10] = "xyzbxz";
+
+    char * exp = "";
+    char * res = m_strncat(pal1,pal2,-1);
+
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"42 - test_Strncat_NNegativo_Resultado_Pass");
+}
+
+
+
+void test_Strncat_CadenaDosVacia_Resultado_Pass ()
+{
+    char pal1[10] = "federico";
+    char pal2[10] = "";
+
+    char * exp = "federico";
+    char * res = m_strncat(pal1,pal2,10);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"43 - test_Strncat_CadenaDosVacia_Resultado_Pass");
+}
+
+
+void test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ()
+{
+    char pal1[15] = "federico";
+    char pal2[10] = " manzano";
+
+    char * exp = "federico ma";
+    char * res = m_strncat(pal1,pal2,3);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"44 - test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass");
+}
