@@ -48,6 +48,10 @@ void test_Strncat_NNegativo_Resultado_Pass ();
 void test_Strncat_CadenaDosVacia_Resultado_Pass ();
 void test_Strncat_CadenaDosMasGrandeQueElN_Resultado_Pass ();
 void test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass ();
-
+void test_FormatTitle_CadenaSoloEspacios_Resultado_Pass ();
+void test_FormatTitle_CadenaConNumeros_Resultado_Pass ();
+void test_FormatTitle_CadenaTodoMinusculas_Resultado_Pass ();
+void test_FormatTitle_CadenaTodoMayusculas_Resultado_Pass ();
+void test_FormatTitle_CadenaAlfaNumerica_Resultado_Pass ();
 
 #endif // TEST_M_STRING_H_INCLUDED

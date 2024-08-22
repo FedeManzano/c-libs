@@ -83,7 +83,10 @@ int main()
 
     printf("\nTEST m_format_title\n");
     test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass();
-
-
+    test_FormatTitle_CadenaSoloEspacios_Resultado_Pass();
+    test_FormatTitle_CadenaConNumeros_Resultado_Pass();
+    test_FormatTitle_CadenaTodoMinusculas_Resultado_Pass();
+    test_FormatTitle_CadenaTodoMayusculas_Resultado_Pass ();
+    test_FormatTitle_CadenaAlfaNumerica_Resultado_Pass ();
     return 0;
 }

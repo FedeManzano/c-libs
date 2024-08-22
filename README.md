@@ -11,6 +11,7 @@ Algunos TDA para aprender programación e C.
 - TDA menú
 - Fechas
 - Test unitarios
+- M String
 
 ## Cabeceras
 
@@ -348,6 +349,36 @@ Librería simple para realizar test unitarios en C.
     @author Federico Manzano
 */
 ```
+
+### M String
+
+```c
+/**
+    Simulación de la librería string.h
+
+    Funciones:
+
+    int m_strcmp(const char *s1,const char *s2);
+    int m_strcmpi(const char *s1,const char *s2);
+    int m_strncmp(const char *s1,const char *s2, size_t n);
+    int m_strncmpi(const char *s1, const char *s2, size_t n)
+    char * m_strcpy(char *s1, const char *s2);
+    char * m_strncpy(char *s1, const char *s2, size_t n);
+    char * m_strcat(char * s1, const char *s2);
+    char * m_strncat(char *s1, const char *s2, size_t n);
+    int m_strlen(const char * s);
+    char * m_strchr(const char *s, const char c);
+    char * m_strrchr(const char *s, const char c);
+    char * m_strstr(const char *s1, const char *s2);
+    size_t m_strspn(const char *s1, const char *s2);
+    size_t m_strcspn(const char *s1, const char *s2);
+    void * m_memcpy(void *e1, const void *e2,const size_t size);
+    char * m_format_title(const char *s);
+
+    @author Federico Manzano (https://github/FedeManzano)
+*/
+```
+
 ## Autor
 [FedericoManzano](https://github.com/FedeManzano)
 

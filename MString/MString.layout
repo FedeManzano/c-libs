@@ -2,6 +2,11 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="test\test_m_string.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14859" topLine="575" />
+		</Cursor>
+	</File>
 	<File name="..\bundle\it.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
@@ -9,48 +14,43 @@
 	</File>
 	<File name="m_string.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="824" topLine="0" />
+			<Cursor1 position="5003" topLine="149" />
 		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3030" topLine="62" />
-		</Cursor>
-	</File>
-	<File name="test\test_m_string.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2675" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="test\test_m_string.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="13490" topLine="213" />
-		</Cursor>
-	</File>
-	<File name="m_string.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3711" topLine="43" />
-		</Cursor>
-		<Folding>
-			<Collapse line="5" />
-			<Collapse line="18" />
-			<Collapse line="31" />
-			<Collapse line="47" />
-			<Collapse line="57" />
-			<Collapse line="77" />
-			<Collapse line="94" />
-			<Collapse line="114" />
-			<Collapse line="128" />
-			<Collapse line="138" />
-			<Collapse line="150" />
-			<Collapse line="169" />
-			<Collapse line="190" />
-			<Collapse line="206" />
-		</Folding>
 	</File>
 	<File name="..\bundle\it.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1025" topLine="20" />
 		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3349" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="test\test_m_string.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2986" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="m_string.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4059" topLine="83" />
+		</Cursor>
+		<Folding>
+			<Collapse line="5" />
+			<Collapse line="18" />
+			<Collapse line="47" />
+			<Collapse line="63" />
+			<Collapse line="73" />
+			<Collapse line="93" />
+			<Collapse line="110" />
+			<Collapse line="130" />
+			<Collapse line="144" />
+			<Collapse line="154" />
+			<Collapse line="166" />
+			<Collapse line="185" />
+			<Collapse line="206" />
+			<Collapse line="222" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

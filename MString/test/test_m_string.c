@@ -542,3 +542,58 @@ void test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass ()
 
     it_arr(exp,res,1,sizeof(exp), comp_s,"45 - test_FormatTitle_FormatoTituloCadenaIrregular_Resultado_Pass");
 }
+
+
+void test_FormatTitle_CadenaSoloEspacios_Resultado_Pass ()
+{
+    char pal1[100] = "                                    " ;
+
+    char * exp = "";
+    char * res = m_format_title(pal1);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"46 - test_FormatTitle_CadenaSoloEspacios_Resultado_Pass");
+}
+
+
+void test_FormatTitle_CadenaConNumeros_Resultado_Pass ()
+{
+    char pal1[100] = "123456789" ;
+
+    char * exp = "123456789";
+    char * res = m_format_title(pal1);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"47 - test_FormatTitle_CadenaConNumeros_Resultado_Pass");
+}
+
+
+void test_FormatTitle_CadenaTodoMinusculas_Resultado_Pass ()
+{
+    char pal1[100] = "esto es una cadena en minusculas" ;
+
+    char * exp = "Esto Es Una Cadena En Minusculas";
+    char * res = m_format_title(pal1);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"48 - test_FormatTitle_CadenaTodoMinusculas_Resultado_Pass");
+}
+
+
+void test_FormatTitle_CadenaTodoMayusculas_Resultado_Pass ()
+{
+    char pal1[100] = "ESTO ES UNA CADENA EN MAYUSCULAS" ;
+
+    char * exp = "Esto Es Una Cadena En Mayusculas";
+    char * res = m_format_title(pal1);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"49 - test_FormatTitle_CadenaTodoMayusculas_Resultado_Pass");
+}
+
+
+void test_FormatTitle_CadenaAlfaNumerica_Resultado_Pass ()
+{
+    char pal1[100] = "1  2  2 con numeros y letras 55 4   " ;
+
+    char * exp = "1 2 2 Con Numeros Y Letras 55 4";
+    char * res = m_format_title(pal1);
+
+    it_arr(exp,res,1,sizeof(exp), comp_s,"50 - test_FormatTitle_CadenaAlfaNumerica_Resultado_Pass");
+}

@@ -7,21 +7,21 @@
 1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
 	<string.h>
 
-1724283153 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\m_string.c
+1724337239 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\m_string.c
 	<stdio.h>
 	<stdlib.h>
 	"m_string.h"
 
-1724280625 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\main.c
+1724337311 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"m_string.h"
 	"test/test_m_string.h"
 
-1724280625 c:\users\feder\onedrive\documentos\proyc\libs\mstring\m_string.h
+1724337152 c:\users\feder\onedrive\documentos\proyc\libs\mstring\m_string.h
 
-1724280522 c:\users\feder\onedrive\documentos\proyc\libs\mstring\test\test_m_string.h
+1724337313 c:\users\feder\onedrive\documentos\proyc\libs\mstring\test\test_m_string.h
 
 1724283130 source:c:\users\feder\onedrive\documentos\proyc\libs\mstring\test\test_m_string.c
 	<stdio.h>
