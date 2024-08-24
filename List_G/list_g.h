@@ -22,6 +22,7 @@
 *   void sort_list(t_list *l,const int tam, t_comp comp);
 *   void sort_link_list(t_list *l, t_comp comp);
 *   int insert_list(t_list *l,const void * info,const int tam, const int index);
+*   t_list filter_list(t_list *l, const size_t size, t_filter filter);
 *   void clear_list(t_list *l);
 *   int to_array_list(t_list *l, void *arr, int tam);
 *
