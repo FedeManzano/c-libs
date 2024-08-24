@@ -14,3 +14,10 @@ void update(void *info_lista, const void *up)
     int *upda = (int *)up;
     *il += *upda;
 }
+
+
+int fil(const void *e)
+{
+    int *ele = (int *)e;
+    return *ele % 2 == 0;
+}

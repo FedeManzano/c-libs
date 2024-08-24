@@ -58,6 +58,7 @@
  */
 typedef int (*t_comp)(const void *,const void *);
 
+typedef int (*t_filter)(const void *);
 
 /** \brief
     Puntero a función que permite actualizar uno de los
@@ -291,11 +292,15 @@ int find_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
 int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
 
 
+
+t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter);
+
+
+
 /** \brief
  * Vacía y libera toda la información guardada en la lista.
  * \param l t_simple_list*
  * \return void
- *
  */
 void clear_simple_list(t_simple_list *l);
 

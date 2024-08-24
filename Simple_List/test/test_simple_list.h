@@ -48,7 +48,7 @@ void test_IndexOfSimpleList_IndexDeListaNula_Resultado_Pass ();
 void test_IndexOfSimpleList_IndexDeInfoNula_Resultado_Pass ();
 void test_FindSimpleList_ElementoEncontrado_Resultado_Pass ();
 void test_FindSimpleList_ElementoNoEncontrado_Resultado_Pass ();
-
+void test_FilterSimpleList_NumerosPares_Resultado_Pass ();
 
 
 #endif // TEST_SIMPLE_LIST_H_INCLUDED

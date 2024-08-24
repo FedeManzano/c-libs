@@ -450,6 +450,30 @@ int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp)
 
 }
 
+
+t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter)
+{
+    if(!l)
+        return NULL;
+    if(!*l)
+        return NULL;
+    if(size <= 0)
+        return NULL;
+
+    t_simple_list lret = (t_simple_list)malloc(sizeof(t_simple_list));
+    init_simple_list(&lret);
+
+    while(*l)
+    {
+        if(filter((*l)->info))
+            if(!is_full_simple_list(&lret))
+                add_simple_list(&lret,(*l)->info,size);
+        l = &(*l)->next;
+    }
+
+    return lret;
+}
+
 void clear_simple_list(t_simple_list *l)
 {
     t_node_simple_list *elim;

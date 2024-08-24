@@ -54,6 +54,9 @@
 		<Unit filename="test/test_delete_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_filter_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_find_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
