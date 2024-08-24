@@ -71,3 +71,23 @@ void test_AddFirstList_Agregar5DosRepetidos_OrdenInverso_ResultadoPass()
 }
 
 
+void test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass()
+{
+    t_list l;
+    init_list(&l);
+
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+
+
+    for(int i = 0; i < 10; i++)
+        add_list(&l,&arr[i],sizeof(int));
+
+    t_list lfil = filter_list(&l,sizeof(int), fil);
+    int info;
+    printf("\n");
+    for(int i = 0; i < len_list(&lfil); i ++){
+        get_info_list(&lfil,&info,sizeof(int),i);
+        printf("%d ", info);
+    }
+}
+

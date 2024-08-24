@@ -183,3 +183,96 @@
 1723324857 c:\users\feder\onedrive\escritorio\libs\list_g\test\it.h
 	<string.h>
 
+1724462048 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\main.c
+	<stdio.h>
+	<stdlib.h>
+	"test_list_g.h"
+
+1724462048 c:\users\feder\onedrive\documentos\proyc\libs\list_g\test_list_g.h
+
+1724462000 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\comp_func.c
+	"../comp_func.h"
+
+1724462017 c:\users\feder\onedrive\documentos\proyc\libs\list_g\comp_func.h
+
+1724462027 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_first_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
+	<string.h>
+
+1724461670 c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_g.h
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_list_o.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_try_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_inded_of_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_insert_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_list_empty.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_sort_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	<time.h>
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1723851921 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.c
+	<stdio.h>
+	<stdlib.h>
+	"./it.h"
+
+1724462157 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_gg.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list_g.h"
+

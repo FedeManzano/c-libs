@@ -21,3 +21,11 @@ int comp_in(const void *e1,const void *e2)
     int * cl2 = (int *)e2;
     return *cl1 - *cl2;
 }
+
+int fil(const void *ele)
+{
+    int *e = (int *)ele;
+    if(*e % 2 == 0)
+        return 1;
+    return 0;
+}

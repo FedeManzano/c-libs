@@ -556,6 +556,27 @@ int to_array_list(t_list *l, void *arr,const size_t tam)
     return OK;
 }
 
+t_list filter_list(t_list *l, const size_t size, t_filter filter)
+{
+    if(!*l)
+        return NULL;
+    if(size)
+    while(*l && (*l)->back)
+        l = &(*l)->back;
+
+    t_list lret = (t_list)malloc(sizeof(t_list));
+    init_list(&lret);
+
+    while(*l)
+    {
+        if(filter((*l)->info))
+            if(!is_full_list(&lret))
+                add_list(&lret,(*l)->info,size);
+        l = &(*l)->next;
+    }
+    return lret;
+}
+
 int index_of_list(t_list *l, const void *info,const int tam, t_comp comp)
 {
     if(!l || !*l || !info)

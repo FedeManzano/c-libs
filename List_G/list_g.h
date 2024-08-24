@@ -60,7 +60,7 @@
     @return resultado de la comparación.
 */
 typedef int (*t_comp)(const void *, const void *);
-
+typedef int (*t_filter)(const void *);
 
 typedef struct s_node_list
 {
@@ -305,6 +305,17 @@ void clear_list(t_list *l);
 int to_array_list(t_list *l, void *arr,const size_t tam);
 
 
+/** \brief
+ * Permite aplicarle un filtro a la lista.
+ * Generando un conjunto de elementos nuevo en función a una condición
+ * que viene desde un putero a una función del tipo t_filter.
+ * @see *t_filter
+ * \param l t_list* Puntero a la lista
+ * \param size const size_t
+ * \param filter t_filter Puntero a la función filtro
+ * \return t_list Lista filtrada después de aplicarle el filtro.
+ */
+t_list filter_list(t_list *l, const size_t size, t_filter filter);
 
 /** \brief
  *  Devuelve el index que tiene el elemento pasado por parámetro

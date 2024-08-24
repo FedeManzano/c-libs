@@ -43,6 +43,6 @@ int main()
     test_SortLinkList_OrdenarListaMoviendoEnlaces_ResultadoPass();
     ///test_SortLinkList_ClientesVsEnteros_ResultadoPass();
     test_SortLinkList_Productos_ResultadoPass();
-
+    test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass();
     return 0;
 }
