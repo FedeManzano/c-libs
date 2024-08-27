@@ -2,9 +2,44 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="tree_set.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_tree_set.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1693" topLine="0" />
+			<Cursor1 position="1227" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="test\test_count_left_tree_set.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="912" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="test\test_height_tree_set.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="test\test_add_tree_ser.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="222" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="tree_set.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6991" topLine="134" />
+		</Cursor>
+	</File>
+	<File name="test\comp_info_tree_set.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1314" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="test\test_is_empty_tree_set.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="tree_set.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8601" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="8" />
@@ -16,38 +51,33 @@
 			<Collapse line="76" />
 			<Collapse line="90" />
 			<Collapse line="97" />
-			<Collapse line="112" />
-			<Collapse line="117" />
-			<Collapse line="130" />
-			<Collapse line="143" />
-			<Collapse line="154" />
-			<Collapse line="166" />
-			<Collapse line="171" />
-			<Collapse line="189" />
-			<Collapse line="230" />
-			<Collapse line="254" />
-			<Collapse line="264" />
-			<Collapse line="279" />
-			<Collapse line="289" />
-			<Collapse line="304" />
-			<Collapse line="313" />
-			<Collapse line="328" />
-			<Collapse line="337" />
-			<Collapse line="347" />
-			<Collapse line="359" />
-			<Collapse line="377" />
-			<Collapse line="389" />
-			<Collapse line="418" />
+			<Collapse line="107" />
+			<Collapse line="116" />
+			<Collapse line="128" />
+			<Collapse line="140" />
+			<Collapse line="151" />
+			<Collapse line="163" />
+			<Collapse line="168" />
+			<Collapse line="186" />
+			<Collapse line="227" />
+			<Collapse line="251" />
+			<Collapse line="261" />
+			<Collapse line="276" />
+			<Collapse line="286" />
+			<Collapse line="301" />
+			<Collapse line="310" />
+			<Collapse line="325" />
+			<Collapse line="334" />
+			<Collapse line="344" />
+			<Collapse line="356" />
+			<Collapse line="374" />
+			<Collapse line="386" />
+			<Collapse line="413" />
 		</Folding>
-	</File>
-	<File name="test\test_tree_set.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1231" topLine="1" />
-		</Cursor>
 	</File>
 	<File name="..\bundle\list_gg.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="113" topLine="0" />
+			<Cursor1 position="113" topLine="54" />
 		</Cursor>
 		<Folding>
 			<Collapse line="7" />
@@ -72,56 +102,12 @@
 			<Collapse line="518" />
 			<Collapse line="537" />
 			<Collapse line="559" />
+			<Collapse line="580" />
 		</Folding>
-	</File>
-	<File name="..\bundle\it.c" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\test_height_tree_set.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\test_count_left_tree_set.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="912" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="test\comp_info_tree_set.h" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="tree_set.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6991" topLine="215" />
-		</Cursor>
-	</File>
-	<File name="test\test_is_empty_tree_set.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
 	</File>
 	<File name="..\bundle\it.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\comp_info_tree_set.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1314" topLine="35" />
-		</Cursor>
-	</File>
-	<File name="test\test_level_tree_set.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="987" topLine="31" />
-		</Cursor>
-	</File>
-	<File name="test\test_find_tree_set.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1626" topLine="50" />
 		</Cursor>
 	</File>
 	<File name="test\test_count_tree_set.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -129,19 +115,34 @@
 			<Cursor1 position="445" topLine="4" />
 		</Cursor>
 	</File>
-	<File name="test\test_add_tree_ser.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_level_tree_set.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="222" topLine="0" />
+			<Cursor1 position="987" topLine="31" />
+		</Cursor>
+	</File>
+	<File name="test\comp_info_tree_set.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="test\test_find_tree_set.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1626" topLine="50" />
 		</Cursor>
 	</File>
 	<File name="main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1142" topLine="5" />
+			<Cursor1 position="1142" topLine="8" />
 		</Cursor>
 	</File>
 	<File name="..\bundle\list_g.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2353" topLine="53" />
+			<Cursor1 position="2353" topLine="206" />
+		</Cursor>
+	</File>
+	<File name="..\bundle\it.c" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

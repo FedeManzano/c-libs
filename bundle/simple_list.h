@@ -22,6 +22,7 @@
     int delete_all_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
     int find_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
     int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
+    t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter);
     void clear_simple_list(t_simple_list *l);
     int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
 
@@ -58,6 +59,7 @@
  */
 typedef int (*t_comp)(const void *,const void *);
 
+typedef int (*t_filter)(const void *);
 
 /** \brief
     Puntero a función que permite actualizar uno de los
@@ -287,16 +289,29 @@ int find_simple_list(t_simple_list *l, void *info, size_t size, t_comp comp);
  * \param info const void* Info con la clave a buscar.
  * \param comp t_comp puntero a la función de comparación
  * \return int Index del elemento. -1 si el elemento no existe en la lista.
- *
  */
 int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp);
+
+
+
+/** \brief
+ * Permite filtrar elementos a través de una función que recibe por parámetro.
+ * La función recibida arroja un Verdadero o una falso, y a partir de este valor
+ * filtra los elementos de la lista retornando una nueva lista filtrada.
+ * \param l t_simple_list* Puntero a la lista que se desea filtrar
+ * \param size size_t Tamaño del tipo de dato guardado en la lista
+ * \param filter t_filter Puntero a la función que selecciona los elementos
+ * \see *t_filter
+ * \return t_simple_list Lista filtrada con los elementos requeridos.
+ */
+t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter);
+
 
 
 /** \brief
  * Vacía y libera toda la información guardada en la lista.
  * \param l t_simple_list*
  * \return void
- *
  */
 void clear_simple_list(t_simple_list *l);
 

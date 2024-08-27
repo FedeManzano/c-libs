@@ -450,7 +450,6 @@ int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp)
 
 }
 
-
 t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter)
 {
     if(!l)

@@ -16,9 +16,7 @@ typedef struct {
 }t_producto;
 
 int comp_p(const void *e1, const void *e2);
-
 int comp_cl(const void *e1,const void *e2);
-
 int comp_in(const void *e1,const void *e2);
 int fil(const void *ele);
 #endif // COMP_FUNC_H_INCLUDED
