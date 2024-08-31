@@ -96,11 +96,6 @@ void amplitude_tree_set(t_tree_set *t, t_show show)
 
 int level_info_tree_set_rec(t_tree_set *t,void *info, t_comp comp, int level)
 {
-    if(!t)
-        return _NULL_TREE;
-    if(!info)
-        return _NULL_INFO;
-
     if(!*t)
         return _EMPTY_TREE;
     if(comp((*t)->info, info) == 0)
@@ -111,6 +106,10 @@ int level_info_tree_set_rec(t_tree_set *t,void *info, t_comp comp, int level)
 
 int level_info_tree_set(t_tree_set *t,void *info, t_comp comp)
 {
+    if(!t)
+        return _NULL_TREE;
+    if(!info)
+        return _NULL_INFO;
     return level_info_tree_set_rec(t,info,comp,0);
 }
 
@@ -118,7 +117,6 @@ void in_order_tree_set(t_tree_set *t, t_show show)
 {
     if(!t)
         return;
-
     if(!*t)
         return;
 
@@ -131,7 +129,6 @@ void pre_order_tree_set(t_tree_set *t, t_show show)
 {
     if(!t)
         return;
-
     if(!*t)
         return;
 
@@ -386,9 +383,8 @@ void show_leaf_tree_set(t_tree_set *t, t_show show)
     show_leaf_tree_set(&(*t)->r,show);
 }
 
-
-void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read) {
-
+void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const size_t size_file, long inicio, long end, t_comp comp,t_read read)
+{
 	long med = ( inicio + end ) / 2;
 
 	void * info_file = malloc(size_file);
@@ -403,7 +399,6 @@ void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const 
 
 	read(info_tree, info_file, med);
 
-
 	add_tree_set(t,info_tree,size_tree,comp);
 
 	free(info_file);
@@ -413,12 +408,11 @@ void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const 
 		file_to_tree_set_rec(t, fi,size_tree,size_file, inicio , med - 1,comp, read);
 	if(end > med)
 		file_to_tree_set_rec(t, fi,size_tree,size_file, med + 1, end, comp, read);
-
 }
 
-void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree, const size_t size_file, t_comp comp, t_read read) {
-
-    if(!t || !arch || *arch || size_file <= 0 || size_tree <= 0) {
+void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree, const size_t size_file, t_comp comp, t_read read)
+{
+    if(!t || !arch || !*arch || size_file <= 0 || size_tree <= 0) {
         return;
     }
 

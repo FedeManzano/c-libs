@@ -412,7 +412,7 @@ void file_to_tree_set_rec(t_tree_set *t, FILE **fi,const size_t size_tree,const 
 
 void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree, const size_t size_file, t_comp comp, t_read read)
 {
-    if(!t || !arch || *arch || size_file <= 0 || size_tree <= 0) {
+    if(!t || !arch || !*arch || size_file <= 0 || size_tree <= 0) {
         return;
     }
 

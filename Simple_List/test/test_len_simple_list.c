@@ -35,6 +35,5 @@ void test_LenSinpleList_UnElemento_Resultado_Pass ()
     add_simple_list(&l,&info,sizeof(int));
     int exp = 1;
     int res = len_simple_list(&l);
-
     it(&exp,&res,sizeof(int), comp_integer,"26 - test_LenSinpleList_UnElemento_Resultado_Pass");
 }
