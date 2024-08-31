@@ -82,6 +82,11 @@ typedef void (*t_read)(const void *info_tree,const void *info_file, const long n
 
 
 /** \brief
+ Permiite actualizar la información de un nodo del árbol.
+ */
+typedef void (*t_update)(void *info_tree, const void *info_update);
+
+/** \brief
 * Sirve para mostrar un nodo del arbol cuando estamos recorriendolo.
  */
 typedef void (*t_show)(const void *);
@@ -133,6 +138,17 @@ int is_full_tree_set(const t_tree_set *);
  */
 int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp);
 
+
+/** \brief
+ * Insertar elementos al árbol. Si el elemento ya se encontraba en el árbol
+ * lo reemplaza con la nueva info que viene por parámetro.
+ * \param t t_tree_set* Puntero al arbol
+ * \param info const void* Info a ingresar al arbol
+ * \param size size_t Tamaño del dato
+ * \param comp t_comp Función de comparación
+ * \return int != 0 está vacío, 0  no lo está.
+ */
+int try_add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp);
 
 /** \brief
  * Cantidad de elementos dentro del árbol.
@@ -324,6 +340,23 @@ void show_leaf_tree_set(t_tree_set *t, t_show show);
  */
 void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree,const size_t size_file, t_comp comp, t_read read);
 
+
+/** \brief
+ *  Actualiza un nodo del árbol.
+ *  Ejemplo:
+    void update_info(void *info_arbol, const void *info_update)
+    {
+        t_info_arbol *ia = (t_info_arbol *)info_arbol;
+        t_info_arbol *iu = (t_info_arbol *)info_update;
+        *ia = *iu;
+    }
+ * \param t t_tree_set* Puntero al arbol
+ * \param info const void* Info con la información a actualizar
+ * \param comp t_comp Puntero a la función de comparación.
+ * \param update t_update Puntero a la función de actualización.
+ * \return int
+ */
+int update_tree_set(t_tree_set *t,const void *info, t_comp comp, t_update update);
 
 /// Funciones para pruebas
 /// Solo pueden ser utilizadas si disponemos de la lista doble

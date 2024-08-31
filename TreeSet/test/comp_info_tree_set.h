@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-// Indice de prueba para el arbol
+
 typedef struct {
     int nro;
     char dni[15];

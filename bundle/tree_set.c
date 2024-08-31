@@ -36,7 +36,45 @@ int add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp)
         else if(comp((*t)->info,info) < 0)
             t = &(*t)->r;
         else
-            return 2;
+            return _DUPLICATE_TREE;
+    }
+
+    t_node_tree_set  * n = (t_node_tree_set *)malloc(sizeof(t_node_tree_set));
+
+    if(!n)
+        return _FULL_TREE;
+
+    n->info = malloc(size);
+    if(!n->info)
+        return _FULL_TREE;
+
+    memcpy(n->info,info,size);
+
+    n->l = NULL;
+    n->r = NULL;
+    *t = n;
+    return _OK;
+}
+
+int try_add_tree_set(t_tree_set *t, const void *info, size_t size, t_comp comp)
+{
+    if(!t)
+        return _NULL_TREE;
+    if(!info)
+        return _NULL_INFO;
+    if(size <= 0)
+        return _ERROR_SIZE;
+
+    while(*t)
+    {
+        if(comp((*t)->info,info) > 0)
+            t = &(*t)->l;
+        else if(comp((*t)->info,info) < 0)
+            t = &(*t)->r;
+        else {
+            memcpy((*t)->info, info,size);
+            return _DUPLICATE_TREE;
+        }
     }
 
     t_node_tree_set  * n = (t_node_tree_set *)malloc(sizeof(t_node_tree_set));
@@ -420,4 +458,19 @@ void  file_to_tree_set(t_tree_set *t, FILE **arch, const size_t size_tree, const
 	long regs = ftell(*arch) / size_file;
 	fseek(*arch, 0L, SEEK_SET);
     file_to_tree_set_rec(t,arch,size_tree,size_file, 0,regs-1, comp, read);
+}
+
+int update_tree_set(t_tree_set *t,const void *info, t_comp comp, t_update update)
+{
+    if(!t)
+        return _NULL_TREE;
+    if(!*t)
+        return _EMPTY_TREE;
+    if(!comp((*t)->info,info))
+    {
+        update((*t)->info,info);
+        return _OK;
+    }
+    return update_tree_set(&(*t)->l,info,comp,update) +
+           update_tree_set(&(*t)->r,info,comp,update);
 }
