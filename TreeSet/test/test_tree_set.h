@@ -21,5 +21,9 @@ void test_ContarHojas_HojasDistintoCero_Resultado_Pass();
 void test_ContarHojas_ArbolNulo_Resultado_Pass();
 void test_Aplitude_RecorridoEnAlplitud_ResultadoPass ();
 void test_Amplitude_Recorrido_Resultado_Pass();
+void test_TryAddTreeSet_AgregarElementosConReemplazo_Resultado_Pass ();
+void test_TryAddTreeSet_AgregarElementosConReemplazoRepetidos_Resultado_Pass();
+
+
 
 #endif // TEST_TREE_SET_H_INCLUDED

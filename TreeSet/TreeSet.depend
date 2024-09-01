@@ -116,7 +116,7 @@
 	"../bundle/list_g.h"
 	"../bundle/queue.h"
 
-1724732126 c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_tree_set.h
+1725151476 c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_tree_set.h
 
 1723684686 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_count_left_tree_set.c
 	<stdio.h>
@@ -174,13 +174,13 @@
 
 1724462681 c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_g.h
 
-1723770070 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\main.c
+1725151491 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\main.c
 	<stdio.h>
 	<stdlib.h>
 	"tree_set.h"
 	"test/test_tree_set.h"
 
-1723936480 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
+1725151274 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -195,6 +195,14 @@
 	<string.h>
 
 1723767973 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_amplitude_tree_set.c
+	<stdio.h>
+	<stdlib.h>
+	"../tree_set.h"
+	"test_tree_set.h"
+	"comp_info_tree_set.h"
+	"../../bundle/it.h"
+
+1725151514 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\test\test_try_add_tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	"../tree_set.h"

@@ -27,5 +27,7 @@ int main()
     test_ContarHojas_ArbolNulo_Resultado_Pass();
      test_Amplitude_Recorrido_Resultado_Pass();
     //test_Aplitude_RecorridoEnAlplitud_ResultadoPass ();
+    test_TryAddTreeSet_AgregarElementosConReemplazo_Resultado_Pass();
+    test_TryAddTreeSet_AgregarElementosConReemplazoRepetidos_Resultado_Pass();
     return 0;
 }

@@ -68,6 +68,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/test_tree_set.h" />
+		<Unit filename="test/test_try_add_tree_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="tree_set.c">
 			<Option compilerVar="CC" />
 		</Unit>

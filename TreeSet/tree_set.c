@@ -307,8 +307,8 @@ void to_array_in_order(t_tree_set *t, void *arr, size_t size)
 
     t_list l;
     init_list(&l);
-    to_array_in_order_rec(t,&l,sizeof(int));
-    to_array_list(&l,arr,sizeof(int));
+    to_array_in_order_rec(t,&l,size);
+    to_array_list(&l,arr,size);
 }
 
 void to_array_pre_order_rec(t_tree_set *t, t_list *l, size_t size)
@@ -332,8 +332,8 @@ void to_array_pre_order(t_tree_set *t, void *arr, size_t size)
 
     t_list l;
     init_list(&l);
-    to_array_pre_order_rec(t,&l,sizeof(int));
-    to_array_list(&l,arr,sizeof(int));
+    to_array_pre_order_rec(t,&l,size);
+    to_array_list(&l,arr,size);
 }
 
 void to_array_post_order_rec(t_tree_set *t, t_list *l, size_t size)
@@ -356,8 +356,8 @@ void to_array_post_order(t_tree_set *t, void *arr, size_t size)
 
     t_list l;
     init_list(&l);
-    to_array_post_order_rec(t,&l,sizeof(int));
-    to_array_list(&l,arr,sizeof(int));
+    to_array_post_order_rec(t,&l,size);
+    to_array_list(&l,arr,size);
 }
 
 int count_tree_set(const t_tree_set *t)
