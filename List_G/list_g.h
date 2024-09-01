@@ -25,6 +25,8 @@
 *   t_list filter_list(t_list *l, const size_t size, t_filter filter);
 *   void clear_list(t_list *l);
 *   int to_array_list(t_list *l, void *arr, int tam);
+*   int update_list(t_list *l, const void *info, t_comp comp, t_update update);
+*
 *
 *   Advertencia:
 *
@@ -62,6 +64,8 @@
 */
 typedef int (*t_comp)(const void *, const void *);
 typedef int (*t_filter)(const void *);
+typedef void (*t_update)(void *info_list, const void *info_update);
+
 
 typedef struct s_node_list
 {
@@ -331,5 +335,15 @@ t_list filter_list(t_list *l, const size_t size, t_filter filter);
 int index_of_list(t_list *l, const void *info,const int tam, t_comp comp);
 
 
+/** \brief
+ * Permite actualizar un nodo de la lista con la información
+ * que ingresa por parámetro.
+ * \param l t_list* Puntero a la lista
+ * \param info const void* Puntero con la información a actualizar.
+ * \param comp t_comp Puntero al la función de comparación.
+ * \param update t_update Puntero a la función de comparación.
+ * \return int Si pudo actualizar 1 / caso contrario 0
+ */
+int update_list(t_list *l, const void *info, t_comp comp, t_update update);
 
 #endif // LIST_G_H_INCLUDED

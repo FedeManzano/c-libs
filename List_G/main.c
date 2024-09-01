@@ -44,5 +44,6 @@ int main()
     ///test_SortLinkList_ClientesVsEnteros_ResultadoPass();
     test_SortLinkList_Productos_ResultadoPass();
     test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass();
+    test_UpdateList_ActualizarElmentoDeLaLista_Resultado_Pass();
     return 0;
 }

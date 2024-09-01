@@ -70,6 +70,9 @@
 		<Unit filename="test/test_sort_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_update_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test_list_g.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -188,14 +188,14 @@
 	<stdlib.h>
 	"test_list_g.h"
 
-1724462048 c:\users\feder\onedrive\documentos\proyc\libs\list_g\test_list_g.h
+1725206262 c:\users\feder\onedrive\documentos\proyc\libs\list_g\test_list_g.h
 
-1724462000 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\comp_func.c
+1725205619 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\comp_func.c
 	"../comp_func.h"
 
-1724462017 c:\users\feder\onedrive\documentos\proyc\libs\list_g\comp_func.h
+1725206229 c:\users\feder\onedrive\documentos\proyc\libs\list_g\comp_func.h
 
-1724462027 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_first_list.c
+1724462290 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_first_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../../bundle/it.h"
@@ -206,7 +206,7 @@
 1723325409 c:\users\feder\onedrive\documentos\proyc\libs\bundle\it.h
 	<string.h>
 
-1724462681 c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_g.h
+1725205361 c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_g.h
 
 1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_add_list.c
 	<stdio.h>
@@ -270,7 +270,7 @@
 	<stdlib.h>
 	"./it.h"
 
-1724462157 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_gg.c
+1725205361 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_gg.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

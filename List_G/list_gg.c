@@ -600,5 +600,25 @@ int index_of_list(t_list *l, const void *info,const int tam, t_comp comp)
     return -1;
 }
 
+int update_list(t_list *l, const void *info, t_comp comp, t_update update)
+{
+    if(!l)
+        return LIST_NULL;
+    if(!*l)
+        return LIST_EMPTY;
+
+    while(*l && (*l)->back)
+        l = &(*l)->back;
+
+    while(*l && comp((*l)->info,info))
+        l = &(*l)->next;
+    if(*l && !comp((*l)->info,info))
+    {
+        update((*l)->info, info);
+        return OK;
+    }
+
+    return ELE_NO_FIND;
+}
 
 

@@ -29,3 +29,10 @@ int fil(const void *ele)
         return 1;
     return 0;
 }
+
+void up_prod(void *p1, const void *p2)
+{
+    t_producto * il = (t_producto *)p1;
+    t_producto * iu = (t_producto *)p2;
+    il->stock += iu->stock;
+}

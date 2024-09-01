@@ -2,35 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="test\test_list_empty.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_add_list_o.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="69" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="..\bundle\it.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\bundle\it.c" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="48" />
+			<Cursor1 position="0" topLine="47" />
 		</Cursor>
 	</File>
-	<File name="test\test_sort_list.c" open="1" top="1" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_list_empty.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1407" topLine="54" />
-		</Cursor>
-	</File>
-	<File name="test\test_add_first_list.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2576" topLine="34" />
-		</Cursor>
-		<Folding>
-			<Collapse line="9" />
-			<Collapse line="18" />
-			<Collapse line="29" />
-			<Collapse line="44" />
-		</Folding>
-	</File>
-	<File name="test\comp_func.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="69" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="test\test_insert_list.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -48,29 +32,19 @@
 			<Collapse line="150" />
 		</Folding>
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\comp_func.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2743" topLine="24" />
+			<Cursor1 position="609" topLine="15" />
 		</Cursor>
 	</File>
-	<File name="list_g.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_sort_list.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="11671" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="test\test_add_list.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1223" topLine="24" />
-		</Cursor>
-	</File>
-	<File name="test_list_g.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2683" topLine="19" />
+			<Cursor1 position="1083" topLine="44" />
 		</Cursor>
 	</File>
 	<File name="comp_func.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="471" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="test\test_inded_of_list.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -82,19 +56,14 @@
 			<Collapse line="27" />
 		</Folding>
 	</File>
-	<File name="..\bundle\it.c" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\bundle\it.h" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="47" />
-		</Cursor>
-	</File>
-	<File name="test\test_add_try_list.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="69" topLine="0" />
+			<Cursor1 position="0" topLine="46" />
 		</Cursor>
 	</File>
 	<File name="list_gg.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="10151" topLine="54" />
+			<Cursor1 position="11948" topLine="72" />
 		</Cursor>
 		<Folding>
 			<Collapse line="7" />
@@ -122,7 +91,43 @@
 			<Collapse line="580" />
 		</Folding>
 	</File>
-	<File name="test\test_add_list_o.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="test\test_add_list.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1223" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2809" topLine="25" />
+		</Cursor>
+	</File>
+	<File name="test\test_update_list.c" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="892" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="test\test_add_first_list.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2583" topLine="35" />
+		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+			<Collapse line="18" />
+			<Collapse line="29" />
+			<Collapse line="44" />
+		</Folding>
+	</File>
+	<File name="test_list_g.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2750" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="list_g.h" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12312" topLine="326" />
+		</Cursor>
+	</File>
+	<File name="test\test_add_try_list.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="69" topLine="0" />
 		</Cursor>
