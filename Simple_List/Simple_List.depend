@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1724466256 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.c
+1725312439 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"simple_list.h"
 
-1724467141 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.h
+1725310957 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\simple_list.h
 
-1724466829 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\main.c
+1725311726 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\main.c
 	<stdio.h>
 	<stdlib.h>
 	"simple_list.h"
@@ -28,10 +28,10 @@
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724466729 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_simple_list.h
+1725311726 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_simple_list.h
 	"test_utils.h"
 
-1724466755 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_utils.h
+1724786834 c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_utils.h
 
 1724466331 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_utils.c
 	"test_utils.h"
@@ -71,7 +71,7 @@
 	"../../bundle/it.h"
 	"test_simple_list.h"
 
-1724116841 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_len_simple_list.c
+1724786849 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_len_simple_list.c
 	<stdlib.h>
 	"../simple_list.h"
 	"../../bundle/it.h"
@@ -113,6 +113,13 @@
 	"test_simple_list.h"
 
 1724466697 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_filter_simple_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../simple_list.h"
+	"../../bundle/it.h"
+	"test_simple_list.h"
+
+1725312390 source:c:\users\feder\onedrive\documentos\proyc\libs\simple_list\test\test_sub_simple_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../simple_list.h"

@@ -25,7 +25,7 @@
     t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter);
     void clear_simple_list(t_simple_list *l);
     int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
-
+    t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end);
 
     ADV:
 
@@ -324,5 +324,22 @@ void clear_simple_list(t_simple_list *l);
  * \return int 1 Si pudo cargar el arreglo.
  */
 int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
+
+
+/** \brief
+ * Devuelve un sublista de la lista original limitandola con los
+ * parámetros start y end.
+ * Si dichos parámetros son validos devuelve la sublista, caso
+ * contrario devuelve NULL.
+ * Cuando la lista retornada no se utilice mas hay que liberarla.
+ * EJ: free(lista).
+ * \param l t_simple_list* Puntero a la lista.
+ * \param size const size_t Tamaño del tipo de dato guardado en la lista.
+ * \param start const int Inicio de la sublista
+ * \param end const int elemento final de la sublista.
+ * \return t_simple_list Sub lista retornada.
+ */
+t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end);
+
 
 #endif // SIMPLE_LIST_H_INCLUDED

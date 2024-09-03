@@ -26,7 +26,7 @@
 *   void clear_list(t_list *l);
 *   int to_array_list(t_list *l, void *arr, int tam);
 *   int update_list(t_list *l, const void *info, t_comp comp, t_update update);
-*
+*   t_list sub_list(t_list * l, const size_t size, const int start, const int end);
 *
 *   Advertencia:
 *
@@ -345,5 +345,21 @@ int index_of_list(t_list *l, const void *info,const int tam, t_comp comp);
  * \return int Si pudo actualizar 1 / caso contrario 0
  */
 int update_list(t_list *l, const void *info, t_comp comp, t_update update);
+
+
+/** \brief
+ * Permite obtener una sublista de la lista original
+ * estableciendo el inicio y el final de la misma a través de los parámetros start y end.
+ * Si los parámetros son inválidos la función retorna NULL.
+ * Si la lista de origen está vacía retorna NULL.
+ * \param l t_list* Puntero a la lista origen
+ * \param size const size_t Tamaño de los datos guardados.
+ * \param start const int Index de inicio de la sublista
+ * \param end const int Index del último elemento de la sublista
+ * \return t_list SubLista de retorno.
+ */
+t_list sub_list(t_list * l, const size_t size, const int start, const int end);
+
+
 
 #endif // LIST_G_H_INCLUDED

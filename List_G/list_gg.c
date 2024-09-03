@@ -621,4 +621,32 @@ int update_list(t_list *l, const void *info, t_comp comp, t_update update)
     return ELE_NO_FIND;
 }
 
+t_list sub_list(t_list * l, const size_t size, const int start, const int end)
+{
+    if(!l)
+        return NULL;
+    if(!*l)
+        return NULL;
+    if(size <= 0)
+        return NULL;
+    if(start < 0 || end < 0)
+        return NULL;
+    if(start > end)
+        return NULL;
+    void * info = malloc(size);
+    if(!info)
+        return NULL;
+
+    t_list lr;
+    init_list(&lr);
+
+    for(int i = start; i <= end; i ++)
+    {
+        get_info_list(l,info,size,i);
+        add_list(&lr,info,size);
+    }
+    return ln;
+}
+
+
 

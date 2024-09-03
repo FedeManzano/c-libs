@@ -78,6 +78,6 @@ int main()
 
     printf("\nTEST Filtrar Elementos de la Lista\n");
     test_FilterSimpleList_NumerosPares_Resultado_Pass();
-
+    test_SubSimpleList_CrearSublistaDe5Elementos_Resultado_Pass();
     return 0;
 }

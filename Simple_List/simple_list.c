@@ -506,4 +506,31 @@ int to_array_simple_list(t_simple_list *l, void * arr, const size_t size)
     return _SIMPLE_LIST_OK;
 }
 
+t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end)
+{
+    if(!l)
+        return NULL;
+    if(!*l)
+        return NULL;
 
+    if(size <= 0)
+        return NULL;
+
+    if(start < 0 || end < 0)
+        return NULL;
+
+    if(start > end)
+        return NULL;
+
+    t_simple_list ln = (t_simple_list)malloc(sizeof(t_simple_list));
+    init_simple_list(&ln);
+
+    void *info = malloc(size);
+    for(int i = start; i <= end; i ++)
+    {
+        get_simple_list(l,info,size,i);
+        add_simple_list(&ln,info,size);
+    }
+
+    return ln;
+}
