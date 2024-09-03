@@ -40,6 +40,6 @@ void test_SortLinkList_ClientesVsEnteros_ResultadoPass();
 void test_SortLinkList_Productos_ResultadoPass();
 void test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass();
 void test_UpdateList_ActualizarElmentoDeLaLista_Resultado_Pass ();
-
+void test_SubList_SubLista5Elementos_Resultado_Pass ();
 
 #endif // TEST_LIST_G_H_INCLUDED

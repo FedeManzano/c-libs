@@ -283,13 +283,19 @@ void * get_info_list(t_list *l,void *info,const size_t tam,const int index)
         aux = aux->back;
     int ind = 0;
 
-    while(aux && aux->next && ind < index)
+    while(aux && ind < index)
     {
         aux = aux->next;
         ind ++;
     }
-    memcpy(info, aux->info,tam);
-    return info;
+
+    if(aux && ind == index)
+    {
+         memcpy(info, aux->info,tam);
+         return info;
+    }
+
+    return NULL;
 }
 
 int delete_list(t_list *l, void *info,const size_t tam, t_comp comp)
@@ -642,10 +648,10 @@ t_list sub_list(t_list * l, const size_t size, const int start, const int end)
 
     for(int i = start; i <= end; i ++)
     {
-        get_info_list(l,info,size,i);
-        add_list(&lr,info,size);
+        if(get_info_list(l,info,size,i))
+            add_list(&lr,info,size);
     }
-    return ln;
+    return lr;
 }
 
 

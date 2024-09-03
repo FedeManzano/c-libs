@@ -528,8 +528,8 @@ t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int sta
     void *info = malloc(size);
     for(int i = start; i <= end; i ++)
     {
-        get_simple_list(l,info,size,i);
-        add_simple_list(&ln,info,size);
+        if(get_simple_list(l,info,size,i) != _SIMPLE_LIST_INDEX)
+            add_simple_list(&ln,info,size);
     }
 
     return ln;

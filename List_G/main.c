@@ -45,5 +45,6 @@ int main()
     test_SortLinkList_Productos_ResultadoPass();
     test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass();
     test_UpdateList_ActualizarElmentoDeLaLista_Resultado_Pass();
+    test_SubList_SubLista5Elementos_Resultado_Pass();
     return 0;
 }
