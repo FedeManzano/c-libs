@@ -568,25 +568,55 @@ int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp)
 t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp)
 {
     t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+    if(!ret)
+        return ret;
     init_simple_list(&ret);
 
     if(!l1 || !l2)
         return ret;
     if(!*l1 || !*l2)
         return ret;
-    if(!ret)
-        return ret;
+
     if(size <= 0)
         return ret;
 
     while(*l2)
     {
-        if(find_simple_list(l1,(*l2)->info,size,comp) == _SIMPLE_LIST_OK
-           && find_simple_list(&ret,(*l2)->info,size,comp) != _SIMPLE_LIST_OK)
+        if(index_of_simple_list(l1,(*l2)->info,comp) != -1
+           && index_of_simple_list(&ret,(*l2)->info,comp) == -1)
             if(!is_full_simple_list(&ret))
                 add_simple_list(&ret,(*l2)->info,size);
         l2 = &(*l2)->next;
+    }
+    return ret;
+}
 
+
+t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp)
+{
+    t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+
+    if(!ret)
+        return ret;
+
+
+    init_simple_list(&ret);
+
+    if(!l1 || !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+
+    if(size <= 0)
+        return ret;
+
+    while(*l1)
+    {
+        if(index_of_simple_list(l2, (*l1)->info,comp) == -1
+           && index_of_simple_list(&ret, (*l1)->info,comp) == -1)
+                if(!is_full_simple_list(&ret))
+                    add_simple_list(&ret,(*l1)->info,size);
+        l1 = &(*l1)->next;
     }
     return ret;
 }

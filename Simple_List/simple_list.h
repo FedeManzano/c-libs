@@ -381,4 +381,6 @@ int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
 t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp);
 
 
+t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
+
 #endif // SIMPLE_LIST_H_INCLUDED

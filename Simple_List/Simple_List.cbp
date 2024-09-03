@@ -85,6 +85,9 @@
 		<Unit filename="test/test_sub_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_substract_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_try_add_in_order_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>

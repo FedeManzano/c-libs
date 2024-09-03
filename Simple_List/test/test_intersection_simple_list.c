@@ -27,7 +27,6 @@ void test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass()
 
     to_array_simple_list(&res,re,sizeof(int));
 
-
     it_arr(exp,re,3,sizeof(int),comp_integer,"54 - test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass");
 
     clear_simple_list(&l1);
@@ -48,7 +47,7 @@ void test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass()
     int arr2[10] = {20,30,40,50,60,70,80,90,100,110};
 
     int exp[3] = {};
-    int re[3];
+    int re[3] = {};
 
     for(int i = 0; i < 10; i ++)
         add_simple_list(&l1, &arr[i],sizeof(int));
@@ -60,8 +59,7 @@ void test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass()
 
     to_array_simple_list(&res,re,sizeof(int));
 
-
-    it_arr(exp,re,0,sizeof(int),comp_integer,"55 - test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass");
+    it_arr(exp,re,3,sizeof(int),comp_integer,"55 - test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass");
 
     clear_simple_list(&l1);
     clear_simple_list(&l2);

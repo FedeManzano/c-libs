@@ -92,6 +92,8 @@ int main()
 
 
     test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass();
+    test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass();
+    test_SubstractSimpleList_RestaDeconjuntosEnLista();
 
     return 0;
 }
