@@ -83,5 +83,15 @@ int main()
     test_SubSimpleList_CrearSublistaDe5Elementos_Resultado_Pass();
     test_SubSimpleList_StartNegativo_Resultado_Pass();
     test_SubSimpleList_EndNegativo_Resultado_Pass();
+
+    printf("\nTEST Equals Son iguales\n");
+    test_EqualsList_CompararDosListasIguales_Resultado_Pass();
+    test_EqualsList_CompararDosListasDistintoElUltimo_Resultado_Pass();
+    test_EqualsList_CompararDosListasDistintoElPrimero_Resultado_Pass();
+    test_EqualsList_CompararDosListasDistintoTamano_Resultado_Pass();
+
+
+    test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass();
+
     return 0;
 }

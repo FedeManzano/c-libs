@@ -54,6 +54,9 @@
 		<Unit filename="test/test_delete_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_equals_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_filter_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -64,6 +67,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/test_insert_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/test_intersection_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/test_is_empty_simple_list.c">

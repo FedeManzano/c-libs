@@ -424,3 +424,8 @@ t_date * add_seconds(t_date *f,  const int secs){
     }
     return f;
 }
+
+int equals_date(const t_date *d1, const t_date *d2)
+{
+    return comp_time(d1,d2) == 0;
+}

@@ -26,6 +26,8 @@
     void clear_simple_list(t_simple_list *l);
     int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
     t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end);
+    int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
+    t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp);
 
     ADV:
 
@@ -52,6 +54,9 @@
 #define _SIMPLE_LIST_NO_DELETE -1
 #define _SIMPLE_LIST_NO_FIND -1
 #define _SIMPLE_LIST_OK 1
+#define _SIMPLE_LIST_EQUALS 1
+#define _SIMPLE_LIST_NO_EQUALS 0
+#define _SIMPLE_NO_INTERSECTION 0
 
 
 /** \brief
@@ -340,6 +345,40 @@ int to_array_simple_list(t_simple_list *l, void * arr, const size_t size);
  * \return t_simple_list Sub lista retornada.
  */
 t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end);
+
+
+
+/** \brief
+ * Compara si dos listas simples son iguales.
+ * \param l1 t_simple_list* Puntero a la lista 1
+ * \param l2 t_simple_list* Puntero a la lista 2
+ * \param comp t_comp Puntero a la función de comparación
+ * \return int 1 si son iguales 0 si no lo son.
+ */
+int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
+
+
+/** \brief
+ * Devulve el conjunto intersección de elementos de la lista 1 y la lista 2.
+ * Devulve una lista vacía si no hay elementos en común.
+ * La lista resultado se crea dinámicamente, por esta razón hay que liberarla.
+ * free(intersección); // Cuando se termine de utilizar.
+ * Ejemplo:
+ *
+ * t_simple_list intersection = intersection_simple_list(&l1, &l2,sizeof(int),comp_int);
+ * while(!is_empty_simple_list(&intersection))
+ * {
+ *     /// Procesar lista intersección
+ * }
+ * // Ya procesada
+ * free(interseccion); // Libera el recurso
+ * \param l1 t_simple_list* Puntero a la lista 1
+ * \param l2 t_simple_list* Puntero a la lista 2
+ * \param size const size_t Tamaño del topo de dato
+ * \param comp t_comp Puntero a la función de comparación
+ * \return t_simple_list Lista intersección.
+ */
+t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp);
 
 
 #endif // SIMPLE_LIST_H_INCLUDED

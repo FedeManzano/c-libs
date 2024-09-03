@@ -534,3 +534,59 @@ t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int sta
 
     return ln;
 }
+
+int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp)
+{
+    if(!l1 && !l2)
+        return _SIMPLE_LIST_EQUALS;
+    if(l1 && !l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(!l1 && l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(!*l1 && !*l2)
+        return _SIMPLE_LIST_EQUALS;
+    if(*l1 && !*l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(!*l1 && *l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(len_simple_list(l1) != len_simple_list(l2))
+        return _SIMPLE_LIST_NO_EQUALS;
+
+    while(*l1 && *l2)
+    {
+        if(comp((*l1)->info,(*l2)->info))
+            return _SIMPLE_LIST_NO_EQUALS;
+        l1 = &(*l1)->next;
+        l2 = &(*l2)->next;
+    }
+
+    if(!*l1 && !*l2)
+        return _SIMPLE_LIST_EQUALS;
+    return _SIMPLE_LIST_NO_EQUALS;
+}
+
+t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp)
+{
+    t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+    init_simple_list(&ret);
+
+    if(!l1 || !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+    if(!ret)
+        return ret;
+    if(size <= 0)
+        return ret;
+
+    while(*l2)
+    {
+        if(find_simple_list(l1,(*l2)->info,size,comp) == _SIMPLE_LIST_OK
+           && find_simple_list(&ret,(*l2)->info,size,comp) != _SIMPLE_LIST_OK)
+            if(!is_full_simple_list(&ret))
+                add_simple_list(&ret,(*l2)->info,size);
+        l2 = &(*l2)->next;
+
+    }
+    return ret;
+}

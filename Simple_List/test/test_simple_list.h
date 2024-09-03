@@ -52,4 +52,10 @@ void test_FilterSimpleList_NumerosPares_Resultado_Pass ();
 void test_SubSimpleList_CrearSublistaDe5Elementos_Resultado_Pass();
 void test_SubSimpleList_StartNegativo_Resultado_Pass();
 void test_SubSimpleList_EndNegativo_Resultado_Pass();
+void test_EqualsList_CompararDosListasIguales_Resultado_Pass();
+void test_EqualsList_CompararDosListasDistintoElUltimo_Resultado_Pass();
+void test_EqualsList_CompararDosListasDistintoElPrimero_Resultado_Pass();
+void test_EqualsList_CompararDosListasDistintoTamano_Resultado_Pass();
+void test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass();
+
 #endif // TEST_SIMPLE_LIST_H_INCLUDED

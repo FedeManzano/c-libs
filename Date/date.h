@@ -29,6 +29,8 @@
     t_date * add_second(t_date *)
     t_date * subtract_second(t_date *)
     t_date * add_seconds(t_date *, const int)
+    int equals_date(const t_date *d1, const t_date *d2);
+
 
     ACLARACIÓN:
     Todas las funciones de añadir o sustraer (Dias, Horas, Minutos, Segundos)
@@ -288,5 +290,10 @@ t_date * subtract_second(t_date *d);
 t_date * add_seconds(t_date *f,  const int secs);
 
 
+/**
+    Compara dos fechas y devulve verdadero si son iguales.
+    @return != 0 si son iguales, 0 si no lo son.
+*/
+int equals_date(const t_date *d1, const t_date *d2);
 
 #endif // DATE_H_INCLUDED
