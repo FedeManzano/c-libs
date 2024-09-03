@@ -28,6 +28,8 @@
     t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end);
     int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
     t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp);
+    t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
+
 
     ADV:
 
@@ -381,6 +383,14 @@ int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
 t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp);
 
 
+/** \brief
+ * Resta la lista l2 a la l1.
+ * \param l1 t_simple_list* Puntero a la lista 1
+ * \param l2 t_simple_list* Puntero a la lista 2
+ * \param size const size_t Tamaño de la info almacenada
+ * \param comp t_comp Puntero a función de comparación
+ * \return t_simple_list Lista restada l1 - l2
+ */
 t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
 
 #endif // SIMPLE_LIST_H_INCLUDED
