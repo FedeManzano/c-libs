@@ -283,13 +283,19 @@ void * get_info_list(t_list *l,void *info,const size_t tam,const int index)
         aux = aux->back;
     int ind = 0;
 
-    while(aux && aux->next && ind < index)
+    while(aux && ind < index)
     {
         aux = aux->next;
         ind ++;
     }
-    memcpy(info, aux->info,tam);
-    return info;
+
+    if(aux && ind == index)
+    {
+         memcpy(info, aux->info,tam);
+         return info;
+    }
+
+    return NULL;
 }
 
 int delete_list(t_list *l, void *info,const size_t tam, t_comp comp)
@@ -598,6 +604,54 @@ int index_of_list(t_list *l, const void *info,const int tam, t_comp comp)
         return ind;
     }
     return -1;
+}
+
+int update_list(t_list *l, const void *info, t_comp comp, t_update update)
+{
+    if(!l)
+        return LIST_NULL;
+    if(!*l)
+        return LIST_EMPTY;
+
+    while(*l && (*l)->back)
+        l = &(*l)->back;
+
+    while(*l && comp((*l)->info,info))
+        l = &(*l)->next;
+    if(*l && !comp((*l)->info,info))
+    {
+        update((*l)->info, info);
+        return OK;
+    }
+
+    return ELE_NO_FIND;
+}
+
+t_list sub_list(t_list * l, const size_t size, const int start, const int end)
+{
+    if(!l)
+        return NULL;
+    if(!*l)
+        return NULL;
+    if(size <= 0)
+        return NULL;
+    if(start < 0 || end < 0)
+        return NULL;
+    if(start > end)
+        return NULL;
+    void * info = malloc(size);
+    if(!info)
+        return NULL;
+
+    t_list lr;
+    init_list(&lr);
+
+    for(int i = start; i <= end; i ++)
+    {
+        if(get_info_list(l,info,size,i))
+            add_list(&lr,info,size);
+    }
+    return lr;
 }
 
 

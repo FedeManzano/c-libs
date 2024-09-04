@@ -29,7 +29,9 @@
     int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
     t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp);
     t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
-
+    t_simple_list union_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
+    int file_to_list(t_simple_list *l, const char *path, const size_t size);
+    int list_to_file(t_simple_list *l, const char * path, const size_t size);
 
     ADV:
 
@@ -44,21 +46,21 @@
 #define SIMPLE_LIST_H_INCLUDED
 
 
-#define _SIMPLE_LIST_NULL -10
-#define _SIMPLE_LIST_INFO -9
-#define _SIMPLE_LIST_SIZE -8
-#define _SIMPLE_LIST_INDEX -7
+#define _SIMPLE_LIST_NULL   -10
+#define _SIMPLE_LIST_INFO   -9
+#define _SIMPLE_LIST_SIZE   -8
+#define _SIMPLE_LIST_INDEX  -7
 
-#define _SIMPLE_LIST_EMPTY 0
-#define _SIMPLE_LIST_FULL  0
-#define _SIMPLE_LIST_DUP 2
-#define _SIMPLE_LIST_NO_INSERT -1
-#define _SIMPLE_LIST_NO_DELETE -1
-#define _SIMPLE_LIST_NO_FIND -1
-#define _SIMPLE_LIST_OK 1
-#define _SIMPLE_LIST_EQUALS 1
-#define _SIMPLE_LIST_NO_EQUALS 0
-#define _SIMPLE_NO_INTERSECTION 0
+#define _SIMPLE_LIST_EMPTY  0
+#define _SIMPLE_LIST_FULL   0
+#define _SIMPLE_LIST_DUP    2
+#define _SIMPLE_LIST_NO_INSERT  -1
+#define _SIMPLE_LIST_NO_DELETE  -1
+#define _SIMPLE_LIST_NO_FIND    -1
+#define _SIMPLE_LIST_OK          1
+#define _SIMPLE_LIST_EQUALS      1
+#define _SIMPLE_LIST_NO_EQUALS   0
+#define _SIMPLE_NO_INTERSECTION  0
 
 
 /** \brief
@@ -364,6 +366,7 @@ int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp);
  * Devulve el conjunto intersección de elementos de la lista 1 y la lista 2.
  * Devulve una lista vacía si no hay elementos en común.
  * La lista resultado se crea dinámicamente, por esta razón hay que liberarla.
+ * No conserva los DUPLICADOS.
  * free(intersección); // Cuando se termine de utilizar.
  * Ejemplo:
  *
@@ -385,6 +388,7 @@ t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,cons
 
 /** \brief
  * Resta la lista l2 a la l1.
+ * No conserva los duplicados.
  * \param l1 t_simple_list* Puntero a la lista 1
  * \param l2 t_simple_list* Puntero a la lista 2
  * \param size const size_t Tamaño de la info almacenada
@@ -392,5 +396,40 @@ t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,cons
  * \return t_simple_list Lista restada l1 - l2
  */
 t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
+
+
+/** \brief
+ * Devuelve una lista con todos los elementos de la lista 1 y la lista 2.
+ * No carga elementos DUPLICADOS.
+ * \param l1 t_simple_list* Puntero a la lista 1
+ * \param l2 t_simple_list* Puntero a la lista 2
+ * \param size const size_t Tamaño de la info almacenada
+ * \param comp t_comp Puntero a función de comparación
+ * \return t_simple_list Lista restada l1 - l2
+ */
+t_simple_list union_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp);
+
+
+/** \brief
+ * Pasa el contenido de un archivo .dat a una lista.
+ * \param l t_simple_list* Puntero a la lista
+ * \param path const char* Path del archivo.
+ * \param size const size_t Tamaño del tipo de dato.
+ * \return int 1 Si pudo pasar el archivo, 0 sino pudo.
+ */
+int file_to_list(t_simple_list *l, const char *path, const size_t size);
+
+
+/** \brief
+ * Pasa una lista a un archivo.
+ * El archivo se sobreescribe por lo tanto tiene que ser un archivo vacio.
+ * Si el archivo no existe lo crea.
+ * \param l t_simple_list* Puntero a la lista.
+ * \param path const char* Path del archivo.
+ * \param size const size_t Tamaño del tipo de dato.
+ * \return int 1 Si la pudo pasar, 0 sino pudo.
+ */
+int list_to_file(t_simple_list *l, const char * path, const size_t size);
+
 
 #endif // SIMPLE_LIST_H_INCLUDED

@@ -5,7 +5,6 @@
 
 int main()
 {
-
     printf("TEST Para lista vacia\n");
     test_EstaVacia_Verdadero_Resultado_Pass();
     test_EstaVacia_False_Resultado_Pass ();
@@ -91,8 +90,11 @@ int main()
     test_EqualsList_CompararDosListasDistintoTamano_Resultado_Pass();
 
 
+    printf("\nTEST Intersección de dos listas\n");
     test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass();
     test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass();
+
+    printf("\nTEST Resta de listas\n");
     test_SubstractSimpleList_RestaDeconjuntosEnLista();
 
     return 0;

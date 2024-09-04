@@ -450,7 +450,6 @@ int index_of_simple_list(t_simple_list *l, const void *info, t_comp comp)
 
 }
 
-
 t_simple_list filter_simple_list(t_simple_list *l, size_t size, t_filter filter)
 {
     if(!l)
@@ -507,4 +506,191 @@ int to_array_simple_list(t_simple_list *l, void * arr, const size_t size)
     return _SIMPLE_LIST_OK;
 }
 
+t_simple_list sub_simple_list(t_simple_list *l, const size_t size, const int start, const int end)
+{
+    if(!l)
+        return NULL;
+    if(!*l)
+        return NULL;
 
+    if(size <= 0)
+        return NULL;
+
+    if(start < 0 || end < 0)
+        return NULL;
+
+    if(start > end)
+        return NULL;
+
+    t_simple_list ln = (t_simple_list)malloc(sizeof(t_simple_list));
+    init_simple_list(&ln);
+
+    void *info = malloc(size);
+    for(int i = start; i <= end; i ++)
+    {
+        if(get_simple_list(l,info,size,i) != _SIMPLE_LIST_INDEX)
+            add_simple_list(&ln,info,size);
+    }
+
+    return ln;
+}
+
+int equals_simple_list(t_simple_list *l1, t_simple_list *l2, t_comp comp)
+{
+    if(!l1 && !l2)
+        return _SIMPLE_LIST_EQUALS;
+    if(l1 && !l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(!l1 && l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(!*l1 && !*l2)
+        return _SIMPLE_LIST_EQUALS;
+    if(*l1 && !*l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(!*l1 && *l2)
+        return _SIMPLE_LIST_NO_EQUALS;
+    if(len_simple_list(l1) != len_simple_list(l2))
+        return _SIMPLE_LIST_NO_EQUALS;
+
+    while(*l1 && *l2)
+    {
+        if(comp((*l1)->info,(*l2)->info))
+            return _SIMPLE_LIST_NO_EQUALS;
+        l1 = &(*l1)->next;
+        l2 = &(*l2)->next;
+    }
+
+    if(!*l1 && !*l2)
+        return _SIMPLE_LIST_EQUALS;
+    return _SIMPLE_LIST_NO_EQUALS;
+}
+
+t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,const size_t size, t_comp comp)
+{
+    t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+    if(!ret)
+        return ret;
+    init_simple_list(&ret);
+
+    if(!l1 || !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+
+    if(size <= 0)
+        return ret;
+
+    while(*l2)
+    {
+        if(index_of_simple_list(l1,(*l2)->info,comp) != -1
+           && index_of_simple_list(&ret,(*l2)->info,comp) == -1)
+            if(!is_full_simple_list(&ret))
+                add_simple_list(&ret,(*l2)->info,size);
+        l2 = &(*l2)->next;
+    }
+    return ret;
+}
+
+t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp)
+{
+    t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+
+    if(!ret)
+        return ret;
+
+
+    init_simple_list(&ret);
+
+    if(!l1 || !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+
+    if(size <= 0)
+        return ret;
+
+    while(*l1)
+    {
+        if(index_of_simple_list(l2, (*l1)->info,comp) == -1
+           && index_of_simple_list(&ret, (*l1)->info,comp) == -1)
+                if(!is_full_simple_list(&ret))
+                    add_simple_list(&ret,(*l1)->info,size);
+        l1 = &(*l1)->next;
+    }
+    return ret;
+}
+
+t_simple_list union_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp)
+{
+    t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+
+    if(!ret)
+        return ret;
+    init_simple_list(&ret);
+
+    if(!l1 || !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+
+    if(size <= 0)
+        return ret;
+
+    while(*l1 || *l2)
+    {
+        if(index_of_simple_list(&ret,(*l1)->info,comp) == -1)
+            if(!is_full_simple_list(&ret))
+                add_first_simple_list(&ret,(*l1)->info,size);
+        if(index_of_simple_list(&ret,(*l2)->info,comp) == -1)
+            if(!is_full_simple_list(&ret))
+                add_first_simple_list(&ret,(*l2)->info,size);
+        if(*l1)
+            l1 = &(*l1)->next;
+        if(*l2)
+            l2 = &(*l2)->next;
+    }
+    return ret;
+}
+
+int file_to_list(t_simple_list *l, const char *path, const size_t size)
+{
+    FILE *file = fopen(path,"rb");
+    if(!file)
+        return 0;
+    void *aux = malloc(size);
+    if(!aux)
+        return 0;
+
+    clear_simple_list(l);
+    fread(aux,size,1,file);
+    while(!feof(file))
+    {
+        add_simple_list(l,aux,size);
+        fread(aux,size,1,file);
+    }
+    fclose(file);
+    return 1;
+}
+
+int list_to_file(t_simple_list *l, const char * path, const size_t size)
+{
+    if(!l)
+        return 0;
+    if(!*l)
+        return 0;
+    FILE * file = fopen(path, "wb");
+    if(!file)
+        return 0;
+    void *info = malloc(size);
+    if(!info)
+        return 0;
+    int len = len_simple_list(l);
+
+    for(int i = 0; i < len; i ++)
+    {
+        get_simple_list(l,info,size,i);
+        fwrite(info,size,1,file);
+    }
+    fclose(file);
+    return 1;
+}

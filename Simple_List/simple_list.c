@@ -591,7 +591,6 @@ t_simple_list intersection_simple_list(t_simple_list *l1, t_simple_list *l2,cons
     return ret;
 }
 
-
 t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp)
 {
     t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
@@ -619,4 +618,79 @@ t_simple_list subtract_simple_list(t_simple_list *l1, t_simple_list *l2, const s
         l1 = &(*l1)->next;
     }
     return ret;
+}
+
+t_simple_list union_simple_list(t_simple_list *l1, t_simple_list *l2, const size_t size, t_comp comp)
+{
+    t_simple_list ret = (t_simple_list)malloc(sizeof(t_simple_list));
+
+    if(!ret)
+        return ret;
+    init_simple_list(&ret);
+
+    if(!l1 || !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+
+    if(size <= 0)
+        return ret;
+
+    while(*l1 || *l2)
+    {
+        if(index_of_simple_list(&ret,(*l1)->info,comp) == -1)
+            if(!is_full_simple_list(&ret))
+                add_first_simple_list(&ret,(*l1)->info,size);
+        if(index_of_simple_list(&ret,(*l2)->info,comp) == -1)
+            if(!is_full_simple_list(&ret))
+                add_first_simple_list(&ret,(*l2)->info,size);
+        if(*l1)
+            l1 = &(*l1)->next;
+        if(*l2)
+            l2 = &(*l2)->next;
+    }
+    return ret;
+}
+
+int file_to_list(t_simple_list *l, const char *path, const size_t size)
+{
+    FILE *file = fopen(path,"rb");
+    if(!file)
+        return 0;
+    void *aux = malloc(size);
+    if(!aux)
+        return 0;
+
+    clear_simple_list(l);
+    fread(aux,size,1,file);
+    while(!feof(file))
+    {
+        add_simple_list(l,aux,size);
+        fread(aux,size,1,file);
+    }
+    fclose(file);
+    return 1;
+}
+
+int list_to_file(t_simple_list *l, const char * path, const size_t size)
+{
+    if(!l)
+        return 0;
+    if(!*l)
+        return 0;
+    FILE * file = fopen(path, "wb");
+    if(!file)
+        return 0;
+    void *info = malloc(size);
+    if(!info)
+        return 0;
+    int len = len_simple_list(l);
+
+    for(int i = 0; i < len; i ++)
+    {
+        get_simple_list(l,info,size,i);
+        fwrite(info,size,1,file);
+    }
+    fclose(file);
+    return 1;
 }
