@@ -417,7 +417,7 @@ t_simple_list union_simple_list(t_simple_list *l1, t_simple_list *l2, const size
  * \param size const size_t Tamaño del tipo de dato.
  * \return int 1 Si pudo pasar el archivo, 0 sino pudo.
  */
-int file_to_list(t_simple_list *l, const char *path, const size_t size);
+int file_to_simple_list(t_simple_list *l, const char *path, const size_t size);
 
 
 /** \brief
@@ -429,7 +429,7 @@ int file_to_list(t_simple_list *l, const char *path, const size_t size);
  * \param size const size_t Tamaño del tipo de dato.
  * \return int 1 Si la pudo pasar, 0 sino pudo.
  */
-int list_to_file(t_simple_list *l, const char * path, const size_t size);
+int simple_list_to_file(t_simple_list *l, const char * path, const size_t size);
 
 
 #endif // SIMPLE_LIST_H_INCLUDED

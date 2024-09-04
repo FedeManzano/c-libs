@@ -652,11 +652,12 @@ t_simple_list union_simple_list(t_simple_list *l1, t_simple_list *l2, const size
     return ret;
 }
 
-int file_to_list(t_simple_list *l, const char *path, const size_t size)
+int file_to_simple_list(t_simple_list *l, const char *path, const size_t size)
 {
     FILE *file = fopen(path,"rb");
     if(!file)
         return 0;
+
     void *aux = malloc(size);
     if(!aux)
         return 0;
@@ -672,7 +673,7 @@ int file_to_list(t_simple_list *l, const char *path, const size_t size)
     return 1;
 }
 
-int list_to_file(t_simple_list *l, const char * path, const size_t size)
+int simple_list_to_file(t_simple_list *l, const char * path, const size_t size)
 {
     if(!l)
         return 0;

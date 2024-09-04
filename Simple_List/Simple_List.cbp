@@ -57,6 +57,9 @@
 		<Unit filename="test/test_equals_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_file_to_simple_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_filter_simple_list.c">
 			<Option compilerVar="CC" />
 		</Unit>

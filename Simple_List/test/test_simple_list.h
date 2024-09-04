@@ -59,4 +59,10 @@ void test_EqualsList_CompararDosListasDistintoTamano_Resultado_Pass();
 void test_IntersectionSimpleList_InterseccionTresElementos_Resultado_Pass();
 void test_IntersectionSimpleList_InterseccionNingunElemento_Resultado_Pass();
 void test_SubstractSimpleList_RestaDeconjuntosEnLista();
+void test_FileToSimpleList_CargarListaConNumerosEnteros_Resultado_Pass();
+void test_FileToSimpleList_LlenarArchivoConEnteros_Resultado_Pass();
+
+
+
+
 #endif // TEST_SIMPLE_LIST_H_INCLUDED

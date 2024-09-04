@@ -97,5 +97,8 @@ int main()
     printf("\nTEST Resta de listas\n");
     test_SubstractSimpleList_RestaDeconjuntosEnLista();
 
+    printf("\nTEST Archivos \n");
+    test_FileToSimpleList_CargarListaConNumerosEnteros_Resultado_Pass();
+    test_FileToSimpleList_LlenarArchivoConEnteros_Resultado_Pass();
     return 0;
 }
