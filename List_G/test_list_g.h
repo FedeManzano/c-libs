@@ -41,5 +41,9 @@ void test_SortLinkList_Productos_ResultadoPass();
 void test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass();
 void test_UpdateList_ActualizarElmentoDeLaLista_Resultado_Pass ();
 void test_SubList_SubLista5Elementos_Resultado_Pass ();
+void test_EqualsList_DosListadosIguales_Resultado_Pass();
+void test_EqualsList_DosListasMismoTamanoDistintoContenido_Resultado_Pass();
+void test_EqualsList_DosListasMismoTamanoDiferenciaPrimerElemento_Resultado_Pass();
+
 
 #endif // TEST_LIST_G_H_INCLUDED

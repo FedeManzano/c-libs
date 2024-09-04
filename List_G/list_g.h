@@ -27,6 +27,7 @@
 *   int to_array_list(t_list *l, void *arr, int tam);
 *   int update_list(t_list *l, const void *info, t_comp comp, t_update update);
 *   t_list sub_list(t_list * l, const size_t size, const int start, const int end);
+*   int equals_list(t_list *l1, t_list *l2, t_comp comp);
 *
 *   Advertencia:
 *
@@ -53,7 +54,8 @@
 #define ERROR_IMP       -1
 #define INDEX_BOUNDS    -8
 #define OK              1
-
+#define EQUALS          1
+#define NO_EQUALS       0
 
 
 
@@ -361,5 +363,13 @@ int update_list(t_list *l, const void *info, t_comp comp, t_update update);
 t_list sub_list(t_list * l, const size_t size, const int start, const int end);
 
 
+/** \brief
+ * Compara dos listas y determina si son iguales.
+ * \param l1 t_list* Puntero a la lista 1
+ * \param l2 t_list* Puntero a la lista 2
+ * \param comp t_comp Puntero a la función de comparación
+ * \return int 1 si son iguales / 0 sino lo son
+ */
+int equals_list(t_list *l1, t_list *l2, t_comp comp);
 
 #endif // LIST_G_H_INCLUDED

@@ -41,10 +41,13 @@ int main()
     test_InsertRangeList_InsertaUnRangoDe5Elementos_Resultado_Pass();
     test_InsertRangeList_InsertaUnRangoDe2Elementos_Resultado_Pass();
     test_SortLinkList_OrdenarListaMoviendoEnlaces_ResultadoPass();
-    ///test_SortLinkList_ClientesVsEnteros_ResultadoPass();
     test_SortLinkList_Productos_ResultadoPass();
     test_AddFilterList_FiltrarLosEnterosPares_ResultadoPass();
     test_UpdateList_ActualizarElmentoDeLaLista_Resultado_Pass();
     test_SubList_SubLista5Elementos_Resultado_Pass();
+    test_EqualsList_DosListadosIguales_Resultado_Pass();
+    test_EqualsList_DosListasMismoTamanoDistintoContenido_Resultado_Pass();
+    test_EqualsList_DosListasMismoTamanoDiferenciaPrimerElemento_Resultado_Pass();
+
     return 0;
 }

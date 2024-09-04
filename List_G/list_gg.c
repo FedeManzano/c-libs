@@ -655,4 +655,34 @@ t_list sub_list(t_list * l, const size_t size, const int start, const int end)
 }
 
 
+int equals_list(t_list *l1, t_list *l2, t_comp comp)
+{
+    if(!l1 && !l2)
+        return 1;
+    if(!*l1 && !*l2)
+        return 1;
+    if(!*l1 && *l2)
+        return 0;
+    if(*l1 && !*l2)
+        return 0;
 
+    while(*l1 && (*l1)->back)
+        l1 = &(*l1)->back;
+    while(*l2 && (*l2)->back)
+        l2 = &(*l2)->back;
+
+    if(len_list(l1) != len_list(l2))
+        return NO_EQUALS;
+
+    while(*l1 && *l2)
+    {
+        if(comp((*l1)->info,(*l2)->info))
+            return NO_EQUALS;
+        l1 = &(*l1)->next;
+        l2 = &(*l2)->next;
+    }
+
+    if(!*l1 && !*l2)
+        return EQUALS;
+    return NO_EQUALS;
+}
