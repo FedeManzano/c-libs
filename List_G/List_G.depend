@@ -183,12 +183,12 @@
 1723324857 c:\users\feder\onedrive\escritorio\libs\list_g\test\it.h
 	<string.h>
 
-1725479641 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\main.c
+1725566419 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\main.c
 	<stdio.h>
 	<stdlib.h>
 	"test_list_g.h"
 
-1725479622 c:\users\feder\onedrive\documentos\proyc\libs\list_g\test_list_g.h
+1725566419 c:\users\feder\onedrive\documentos\proyc\libs\list_g\test_list_g.h
 
 1725205619 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\comp_func.c
 	"../comp_func.h"
@@ -232,7 +232,7 @@
 	"../test_list_g.h"
 	"../comp_func.h"
 
-1723685240 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_inded_of_list.c
+1725502218 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_inded_of_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../../bundle/it.h"
@@ -270,7 +270,7 @@
 	<stdlib.h>
 	"./it.h"
 
-1725502202 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_gg.c
+1725566849 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\list_gg.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -295,6 +295,14 @@
 	"../comp_func.h"
 
 1725479613 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_equals_list.c
+	<stdio.h>
+	<stdlib.h>
+	"../../bundle/it.h"
+	"../list_g.h"
+	"../test_list_g.h"
+	"../comp_func.h"
+
+1725567001 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_intersection_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../../bundle/it.h"

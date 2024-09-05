@@ -48,6 +48,9 @@ int main()
     test_EqualsList_DosListadosIguales_Resultado_Pass();
     test_EqualsList_DosListasMismoTamanoDistintoContenido_Resultado_Pass();
     test_EqualsList_DosListasMismoTamanoDiferenciaPrimerElemento_Resultado_Pass();
+    test_IntersectionList_TresElementosEnComun_Resultado_Pass();
+    test_IntersectionList_SinElementosEnComun_Resultado_Pass();
+
 
     return 0;
 }

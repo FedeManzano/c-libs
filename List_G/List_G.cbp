@@ -67,6 +67,9 @@
 		<Unit filename="test/test_insert_list.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="test/test_intersection_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="test/test_list_empty.c">
 			<Option compilerVar="CC" />
 		</Unit>

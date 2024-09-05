@@ -654,7 +654,6 @@ t_list sub_list(t_list * l, const size_t size, const int start, const int end)
     return lr;
 }
 
-
 int equals_list(t_list *l1, t_list *l2, t_comp comp)
 {
     if(!l1 && !l2)
@@ -689,22 +688,26 @@ int equals_list(t_list *l1, t_list *l2, t_comp comp)
 
 t_list intersection_list(t_list *l1, t_list *l2, const size_t size, t_comp comp)
 {
-    if(!l1 || !l2)
-        return NULL;
-    if(!*l1 || !*l2)
-        return NULL;
-    if(!*l1 && *l2)
-        return NULL;
-    if(*l1 && !*l2)
-        return NULL;
-
     t_list ret = (t_list)malloc(sizeof(t_list));
     if(!ret)
-        return NULL;
+        return ret;
     init_list(&ret);
+    if(!l1 || !l2)
+        return ret;
+    if(!l1 && l2)
+        return ret;
+    if(l1 && !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+    if(*l1 && !*l2)
+        return ret;
+    if(!*l1 && *l2)
+        return ret;
 
     while(*l2 && (*l2)->back)
         l2 = &(*l2)->back;
+
 
     while(*l2)
     {
@@ -717,4 +720,35 @@ t_list intersection_list(t_list *l1, t_list *l2, const size_t size, t_comp comp)
     return ret;
 }
 
+t_list substrac_list(t_list *l1, t_list *l2, const size_t size, t_comp comp)
+{
+    t_list ret = (t_list)malloc(sizeof(t_list));
+    if(!ret)
+        return ret;
+    init_list(&ret);
+    if(!l1 || !l2)
+        return ret;
+    if(!l1 && l2)
+        return ret;
+    if(l1 && !l2)
+        return ret;
+    if(!*l1 || !*l2)
+        return ret;
+    if(*l1 && !*l2)
+        return ret;
+    if(!*l1 && *l2)
+        return ret;
 
+    while(*l1 && (*l1)->back)
+        l1 = &(*l1)->back;
+
+    while(*l1)
+    {
+        if(index_of_list(l2,(*l1)->info,comp) == -1 &&
+           index_of_list(&ret,(*l1)->info,comp) == -1)
+            if(!is_empty_list(&ret))
+                add_list(&ret,(*l1)->info,size);
+        l1 = &(*l1)->next;
+    }
+    return ret;
+}
