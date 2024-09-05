@@ -28,6 +28,8 @@
 *   int update_list(t_list *l, const void *info, t_comp comp, t_update update);
 *   t_list sub_list(t_list * l, const size_t size, const int start, const int end);
 *   int equals_list(t_list *l1, t_list *l2, t_comp comp);
+*   t_list intersection_list(t_list *l1, t_list *l2, const size_t size, t_comp comp);
+*
 *
 *   Advertencia:
 *
@@ -334,7 +336,7 @@ t_list filter_list(t_list *l, const size_t size, t_filter filter);
  * \return int index si el elemento existe o -1 si no existe.
  *
  */
-int index_of_list(t_list *l, const void *info,const int tam, t_comp comp);
+int index_of_list(t_list *l, const void *info, t_comp comp);
 
 
 /** \brief
@@ -371,5 +373,16 @@ t_list sub_list(t_list * l, const size_t size, const int start, const int end);
  * \return int 1 si son iguales / 0 sino lo son
  */
 int equals_list(t_list *l1, t_list *l2, t_comp comp);
+
+
+/** \brief
+ * Devuelve una lista intersección entre la lista 1 y la lista 2.
+ * \param l1 t_list* Puntero a la lista 1
+ * \param l2 t_list* Puntero a la lista 2
+ * \param size const size_t Tamaño del tipo de dato almacenado
+ * \param comp t_comp Puntero de la función comp
+ * \return t_list Lista intersección
+ */
+t_list intersection_list(t_list *l1, t_list *l2, const size_t size, t_comp comp);
 
 #endif // LIST_G_H_INCLUDED

@@ -17,7 +17,7 @@ void test_IndexOfList_BuscarIndexDeElementoExistente_resultado_Pass()
     for(int i = 0; i < 5; i++)
         add_list(&l,&arr[i],sizeof(int));
 
-    res = index_of_list(&l,&info,sizeof(int),comp_in);
+    res = index_of_list(&l,&info,comp_in);
 
     it(&exp,&res,sizeof(int),comp_in,"(30)-> test_IndexOfList_BuscarIndexDeElementoExistente_resultado_Pass");
     clear_list(&l);
@@ -35,7 +35,7 @@ void test_IndexOfList_BuscarIndexDeElementoNoExistente_resultado_Pass()
     for(int i = 0; i < 5; i++)
         add_list(&l,&arr[i],sizeof(int));
 
-    res = index_of_list(&l,&info,sizeof(int),comp_in);
+    res = index_of_list(&l,&info,comp_in);
 
     it(&exp,&res,sizeof(int),comp_in,"(31)-> test_IndexOfList_BuscarIndexDeElementoNoExistente_resultado_Pass");
     clear_list(&l);

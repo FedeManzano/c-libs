@@ -583,7 +583,7 @@ t_list filter_list(t_list *l, const size_t size, t_filter filter)
     return lret;
 }
 
-int index_of_list(t_list *l, const void *info,const int tam, t_comp comp)
+int index_of_list(t_list *l, const void *info, t_comp comp)
 {
     if(!l || !*l || !info)
         return -1;
@@ -686,3 +686,35 @@ int equals_list(t_list *l1, t_list *l2, t_comp comp)
         return EQUALS;
     return NO_EQUALS;
 }
+
+t_list intersection_list(t_list *l1, t_list *l2, const size_t size, t_comp comp)
+{
+    if(!l1 || !l2)
+        return NULL;
+    if(!*l1 || !*l2)
+        return NULL;
+    if(!*l1 && *l2)
+        return NULL;
+    if(*l1 && !*l2)
+        return NULL;
+
+    t_list ret = (t_list)malloc(sizeof(t_list));
+    if(!ret)
+        return NULL;
+    init_list(&ret);
+
+    while(*l2 && (*l2)->back)
+        l2 = &(*l2)->back;
+
+    while(*l2)
+    {
+        if(index_of_list(l1,(*l2)->info,comp) != -1 &&
+           index_of_list(&ret,(*l2)->info,comp) == -1)
+            if(!is_full_list(&ret))
+                add_list(&ret,(*l2)->info,size);
+        l2 = &(*l2)->next;
+    }
+    return ret;
+}
+
+
