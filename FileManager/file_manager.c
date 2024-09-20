@@ -60,7 +60,7 @@ int show_file_(t_file *file, t_show_record record,const size_t size)
     return 1;
 }
 
-long file_bytes_ (t_file *file)
+long file_bytes_(t_file *file)
 {
     if(!*file)
         return 0;
@@ -88,7 +88,7 @@ long file_records_ (t_file *file, size_t size)
     return file_bytes_(file) / size;
 }
 
-long file_records (const char *path, size_t size)
+long file_records(const char *path, size_t size)
 {
     if(size <= 0)
         return 0;

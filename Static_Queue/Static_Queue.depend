@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1726814598 source:c:\users\feder\onedrive\documentos\proyc\static_queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"static_queue.h"
+
+1726807447 c:\users\feder\onedrive\documentos\proyc\static_queue\static_queue.h
+
+1726814656 source:c:\users\feder\onedrive\documentos\proyc\static_queue\static_queue.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"static_queue.h"
+
