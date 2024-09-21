@@ -15,8 +15,10 @@
 #define STATIC_QUEUE_H_INCLUDED
 
 
-#define _TAM_STATIC_QUEUE 10
-
+#define _TAM_STATIC_QUEUE 100
+#define _STATIC_QUEUE_EMPTY 0
+#define _STATIC_QUEUE_FULL 0
+#define _STATIC_QUEUE_OK 1
 
 typedef struct
 {
