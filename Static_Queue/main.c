@@ -22,21 +22,25 @@ int main()
     pop_static_queue(&q,&info,sizeof(int));
     pop_static_queue(&q,&info,sizeof(int));
 
-   // printf("F: %d \n",q.last);
+    printf("F: %d \n",q.last);
 
     info = 0;
     push_static_queue(&q,&info,sizeof(int));
+    info ++;
     push_static_queue(&q,&info,sizeof(int));
+    info ++;
     push_static_queue(&q,&info,sizeof(int));
 
-    pop_static_queue(&q,&info,sizeof(int));
-    pop_static_queue(&q,&info,sizeof(int));
+   // pop_static_queue(&q,&info,sizeof(int));
+    //pop_static_queue(&q,&info,sizeof(int));
 
     while(!is_empty_static_queue(&q))
     {
         pop_static_queue(&q,&info,sizeof(int));
         printf("%d ",info);
     }
+
+    clear_static_queue(&q);
 
     return 0;
 }

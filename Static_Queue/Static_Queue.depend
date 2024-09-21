@@ -12,3 +12,16 @@
 	<string.h>
 	"static_queue.h"
 
+1726877012 source:c:\users\feder\onedrive\documentos\proyc\libs\static_queue\static_queue.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"static_queue.h"
+
+1726876871 c:\users\feder\onedrive\documentos\proyc\libs\static_queue\static_queue.h
+
+1726877025 source:c:\users\feder\onedrive\documentos\proyc\libs\static_queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"static_queue.h"
+
