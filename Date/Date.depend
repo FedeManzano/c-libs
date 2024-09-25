@@ -70,7 +70,7 @@
 	"./date.h"
 	"../bundle/it.h"
 
-1723581633 source:c:\users\feder\onedrive\documentos\proyc\libs\date\date.c
+1725379489 source:c:\users\feder\onedrive\documentos\proyc\libs\date\date.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

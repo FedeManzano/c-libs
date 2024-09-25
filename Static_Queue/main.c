@@ -18,11 +18,10 @@ int main()
     int info = 0;
 
 
-    pop_static_queue(&q,&info,sizeof(int));
-    pop_static_queue(&q,&info,sizeof(int));
-    pop_static_queue(&q,&info,sizeof(int));
+//    pop_static_queue(&q,&info,sizeof(int));
+  //  pop_static_queue(&q,&info,sizeof(int));
+    //pop_static_queue(&q,&info,sizeof(int));
 
-    printf("F: %d \n",q.last);
 
     info = 0;
     push_static_queue(&q,&info,sizeof(int));
@@ -31,7 +30,7 @@ int main()
     info ++;
     push_static_queue(&q,&info,sizeof(int));
 
-   // pop_static_queue(&q,&info,sizeof(int));
+    //pop_static_queue(&q,&info,sizeof(int));
     //pop_static_queue(&q,&info,sizeof(int));
 
     while(!is_empty_static_queue(&q))

@@ -55,6 +55,7 @@ int pop_static_queue(t_static_queue *q, void *info, const size_t size)
     if(q->count == 0)
         return _STATIC_QUEUE_EMPTY;
     memcpy(info,q->info[q->first],size);
+
     if(q->first == (_TAM_STATIC_QUEUE - 1))
         q->first = (q->first % (_TAM_STATIC_QUEUE - 1));
     else
