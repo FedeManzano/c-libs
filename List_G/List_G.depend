@@ -302,7 +302,7 @@
 	"../test_list_g.h"
 	"../comp_func.h"
 
-1725567001 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_intersection_list.c
+1725567026 source:c:\users\feder\onedrive\documentos\proyc\libs\list_g\test\test_intersection_list.c
 	<stdio.h>
 	<stdlib.h>
 	"../../bundle/it.h"

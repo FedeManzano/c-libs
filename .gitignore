@@ -1,0 +1,36 @@
+# Ignore build output directories
+bin/
+obj/
+Debug/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Ignore Code::Blocks project files
+*.depend
+*.layout
+*.cbp
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userprefs
+*.log
+*.tmp
+~*
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore backup files
+*~
+*.bak
+*.swp

@@ -166,13 +166,13 @@
 	"comp_info_tree_set.h"
 	"../../bundle/it.h"
 
-1724462459 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_gg.c
+1725567072 source:c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_gg.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"list_g.h"
 
-1724462681 c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_g.h
+1725502194 c:\users\feder\onedrive\documentos\proyc\libs\bundle\list_g.h
 
 1725151491 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\main.c
 	<stdio.h>
@@ -180,7 +180,7 @@
 	"tree_set.h"
 	"test/test_tree_set.h"
 
-1725151274 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
+1725151571 source:c:\users\feder\onedrive\documentos\proyc\libs\treeset\tree_set.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
