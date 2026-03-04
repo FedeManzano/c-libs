@@ -1,19 +1,424 @@
-# Bibliotecas en lenguaje C
+# Estructuras de Datos en C (TDA Library)
 
-Algunos TDA para aprender programación e C.
+Una colección educativa completa de **Tipos de Datos Abstractos (TDA)** y algoritmos implementados en **C puro**.  
+Este repositorio está diseñado para que estudiantes y desarrolladores aprendan los fundamentos de las estructuras de datos, algoritmos de ordenamiento y programación genérica en C.
 
-- Algoritmos de ordenamiento
-- Lista doblemnte enlazada
-- Lista Simple
-- Pila
-- Cola
-- Arbol binario
-- TDA menú
-- Fechas
-- Test unitarios
-- M String
+## 📋 Tabla de Contenidos
 
-## Cabeceras
+- [Características](#características)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Requisitos](#requisitos)
+- [Instalación y Compilación](#instalación-y-compilación)
+- [Módulos Disponibles](#módulos-disponibles)
+- [Ejemplos de Uso](#ejemplos-de-uso)
+- [Características Técnicas](#características-técnicas)
+- [Contribuir](#contribuir)
+- [Autor](#autor)
+
+## ✨ Características
+
+- **Genéricos en C**: Uso de punteros `void*` para permitir reutilización de código con cualquier tipo de dato
+- **9+ Estructuras de Datos**: Listas, Pilas, Colas, Árboles, y más
+- **Algoritmos de Ordenamiento**: Quick Sort, Selection Sort, Bubble Sort
+- **Bien Documentados**: Código fuente con comentarios detallados y documentación Doxygen
+- **Test Unitarios**: Ejemplos de casos de prueba para validar funcionalidad
+- **Modular**: Cada módulo es independiente y reutilizable
+- **Educativo**: Ideal para aprender estructuras de datos y algoritmos
+
+## 📁 Estructura del Proyecto
+
+```
+.
+├── BubbleSort/              # Implementación de Bubble Sort
+├── QuickSort/               # Implementación de Quick Sort
+├── SelectionSort/           # Implementación de Selection Sort
+├── Stack/                   # TDA Pila Dinámica
+├── Queue/                   # TDA Cola Dinámica
+├── Static_Queue/            # TDA Cola Estática
+├── Simple_List/             # TDA Lista Simplemente Enlazada
+├── List_G/                  # TDA Lista Doblemente Enlazada (Genérica)
+├── TreeSet/                 # TDA Árbol Binario
+├── Date/                    # TDA para manejo de fechas y horas
+├── MString/                 # Implementación de funciones string.h
+├── Menu/                    # TDA para menús en consola
+├── FileManager/             # Utilidades para manejo de archivos
+├── UnitTest/                # Framework para tests unitarios
+├── App_Test_Libs/           # Aplicación integradora que usa todos los TDA
+├── bundle/                  # Versión compilada de todos los módulos
+└── README.md                # Este archivo
+```
+
+## 🔧 Requisitos
+
+- **Compilador GCC/Clang** (compatible con C99 o superior)
+- **Code::Blocks** (opcional, para usar archivos `.cbp`)
+- **Make** (opcional, para compilación automatizada)
+- **Sistema Operativo**: Windows, Linux, macOS
+
+Verificar que tienes GCC instalado:
+```bash
+gcc --version
+```
+
+## 📦 Instalación y Compilación
+
+### Opción 1: Compilar módulos individuales
+
+Cada módulo contiene un archivo `main.c` que sirve como ejemplo:
+
+```bash
+cd Stack/
+gcc -o stack_demo main.c stack.c
+./stack_demo
+```
+
+### Opción 2: Usar Code::Blocks
+
+Si tienes Code::Blocks instalado, abre cualquier archivo `.cbp`:
+
+```bash
+# En Windows
+start Stack/Stack.cbp
+
+# En Linux
+codeblocks Stack/Stack.cbp
+```
+
+### Opción 3: Compilar la aplicación integrada
+
+```bash
+cd App_Test_Libs/
+gcc -o app_test main.c ../Stack/stack.c ../Queue/queue.c ...
+./app_test
+```
+
+## 📚 Módulos Disponibles
+
+### 1. **Algoritmos de Ordenamiento**
+
+#### Quick Sort
+```c
+// Complejidad: O(n log n) promedio, O(n²) peor caso
+void qs(void *arr, int cantidad_elementos, int tam_elemento, t_comp comp);
+```
+
+**Ejemplo:**
+```c
+int arr[] = {5, 2, 8, 1, 9};
+qs(arr, 5, sizeof(int), comp_int);  // arr ahora está ordenado
+```
+
+#### Selection Sort
+```c
+// Complejidad: O(n²)
+void selection_sort(void *arr, int ce, int tam, t_comp comp);
+```
+
+#### Bubble Sort
+```c
+// Complejidad: O(n²)
+void bubble_sort(void *arr, int ce, int tam, t_comp comp);
+```
+
+### 2. **Pila (Stack) Dinámica**
+
+```c
+typedef t_node_stack * t_stack;
+
+void init_stack(t_stack *s);                    // Inicializar pila
+int is_empty_stack(const t_stack *s);           // Verificar si está vacía
+int push_stack(t_stack *s, void *info, int sz); // Insertar elemento
+int pop_stack(t_stack *s, void *info, int sz);  // Extraer elemento
+void clear_stack(t_stack *s);                    // Limpiar pila
+```
+
+**Ejemplo de uso:**
+```c
+t_stack pila;
+init_stack(&pila);
+
+int valor = 42;
+push_stack(&pila, &valor, sizeof(int));
+pop_stack(&pila, &valor, sizeof(int));
+```
+
+### 3. **Cola (Queue) Dinámica**
+
+```c
+typedef t_node_q * t_queue;
+
+void init_queue(t_queue *q);                      // Inicializar cola
+int enqueue(t_queue *q, void *info, int sz);     // Encolar
+int dequeue(t_queue *q, void *info, int sz);     // Desencolar
+int is_empty_queue(const t_queue *q);            // Verificar si está vacía
+```
+
+**Ejemplo de uso:**
+```c
+t_queue cola;
+init_queue(&cola);
+
+int valor = 10;
+enqueue(&cola, &valor, sizeof(int));
+dequeue(&cola, &valor, sizeof(int));
+```
+
+### 4. **Lista Simplemente Enlazada**
+
+```c
+void init_simple_list(t_simple_list *l);
+int add_simple_list(t_simple_list *l, const void *info, size_t sz);
+int add_first_simple_list(t_simple_list *l, const void *info, size_t sz);
+int get_simple_list(t_simple_list *l, void *info, size_t sz, int index);
+int delete_simple_list(t_simple_list *l, void *info, size_t sz, t_comp comp);
+void sort_simple_list(t_simple_list *l, size_t sz, t_comp comp);
+```
+
+**Características:**
+- Inserción al inicio O(1)
+- Acceso a elemento O(n)
+- Búsqueda con comparador personalizado
+- Ordenamiento integrado
+
+### 5. **Lista Doblemente Enlazada (Genérica)**
+
+```c
+void init_list(t_list *l);
+int add_list(t_list *l, const void *info, int tam);
+int add_first_list(t_list *l, const void *info, int tam);
+int add_list_o(t_list *l, const void *info, int tam, t_comp comp);  // Ordenada
+int delete_list(t_list *l, void *info, int tam, t_comp comp);
+int get_key_list(t_list *l, void *info, int tam, t_comp comp);
+t_list filter_list(t_list *l, size_t sz, t_filter filter);
+void sort_list(t_list *l, int tam, t_comp comp);
+```
+
+### 6. **Árbol Binario (Tree Set)**
+
+```c
+void init_tree_set(t_tree_set *t);
+int add_tree_set(t_tree_set *t, const void *info, size_t sz, t_comp comp);
+int find_tree_set(t_tree_set *t, void *info, size_t sz, t_comp comp);
+int count_tree_set(const t_tree_set *t);        // Contar nodos
+int height_tree_set(t_tree_set *t);             // Altura del árbol
+int count_leaf_tree_set(t_tree_set *t);         // Contar hojas
+void in_order_tree_set(t_tree_set *t, t_show fn);      // Recorrido in-order
+void pre_order_tree_set(t_tree_set *t, t_show fn);     // Recorrido pre-order
+void post_order_tree_set(t_tree_set *t, t_show fn);    // Recorrido post-order
+```
+
+### 7. **Manejo de Fechas (Date)**
+
+```c
+// Estructuras y funciones
+int val_date(int dia, int mes, int año);           // Validar fecha
+int leap(int año);                                  // ¿Año bisiesto?
+long days_transcurred(t_date *d);                  // Días transcurridos
+long difference_days(t_date *d1, t_date *d2);      // Diferencia en días
+t_date * add_days(t_date *d, int días);            // Sumar días
+t_date * subtract_days(t_date *d, int días);       // Restar días
+char * date_to_string(t_date *d, int formato);    // Convertir a string
+char * day_of_week(t_date *d);                     // Día de la semana
+```
+
+### 8. **Strings Personalizados (MString)**
+
+```c
+int m_strcmp(const char *s1, const char *s2);          // Comparar strings
+int m_strcmpi(const char *s1, const char *s2);         // Comparar sin case
+char * m_strcpy(char *s1, const char *s2);            // Copiar string
+char * m_strcat(char *s1, const char *s2);            // Concatenar
+int m_strlen(const char *s);                           // Longitud
+char * m_strchr(const char *s, char c);               // Buscar carácter
+char * m_strstr(const char *s1, const char *s2);      // Buscar substring
+void * m_memcpy(void *d, const void *s, size_t sz);   // Copiar memoria
+```
+
+### 9. **Menú en Consola**
+
+```c
+void init_menu(t_menu *m, char options[][TAM_MENU], char *titulo);
+char get_option();
+```
+
+**Ejemplo:**
+```c
+char opciones[7][20] = {
+    "ABC",           // Índices del menú
+    "Crear",
+    "Leer",
+    "Actualizar",
+    "Eliminar",
+    "Buscar",
+    "Salir"
+};
+
+t_menu menu;
+init_menu(&menu, opciones, "Menú Principal");
+char op = get_option();
+```
+
+### 10. **Tests Unitarios**
+
+```c
+// Comparación de arrays
+void it_arr(const void *expected, const void *result, int size, 
+            int sz, t_comp comp, char *msg);
+
+// Comparación de elementos
+void it(const void *expected, const void *result, 
+        int sz, t_comp comp, char *msg);
+
+// Mensajes de estado
+void message(const char *title, const char *status);
+```
+
+**Ejemplo:**
+```c
+void test_OrdenarArreglo() {
+    int expected[] = {1, 2, 3, 4, 5};
+    int result[] = {5, 4, 3, 2, 1};
+    
+    qs(result, 5, sizeof(int), comp_int);
+    
+    it_arr(expected, result, 5, sizeof(int), comp_int, 
+           "Ordenar arreglo con QuickSort");
+}
+```
+
+## 💻 Ejemplos de Uso
+
+### Ejemplo 1: Ordenar un arreglo de estructura personalizada
+
+```c
+#include "quicksort.h"
+#include "stdio.h"
+
+typedef struct {
+    int id;
+    char nombre[50];
+    int edad;
+} Persona;
+
+int comp_persona(const void *p1, const void *p2) {
+    Persona *a = (Persona *)p1;
+    Persona *b = (Persona *)p2;
+    return a->edad - b->edad;  // Ordenar por edad
+}
+
+int main() {
+    Persona personas[] = {
+        {1, "Ana", 25},
+        {2, "Bruno", 30},
+        {3, "Carlos", 22}
+    };
+    
+    qs(personas, 3, sizeof(Persona), comp_persona);
+    
+    for (int i = 0; i < 3; i++) {
+        printf("%s: %d años\n", personas[i].nombre, personas[i].edad);
+    }
+    return 0;
+}
+```
+
+### Ejemplo 2: Usar una Pila para invertir un arreglo
+
+```c
+#include "stack.h"
+
+int main() {
+    t_stack pila;
+    init_stack(&pila);
+    
+    int arr[] = {1, 2, 3, 4, 5};
+    
+    // Apilar elementos
+    for (int i = 0; i < 5; i++) {
+        push_stack(&pila, &arr[i], sizeof(int));
+    }
+    
+    // Desapilar (resultado invertido)
+    int resultado[5];
+    for (int i = 0; i < 5; i++) {
+        pop_stack(&pila, &resultado[i], sizeof(int));
+    }
+    
+    return 0;
+}
+```
+
+## 🎓 Características Técnicas
+
+### Programación Genérica en C
+
+Este proyecto demuestra cómo usar `void*` para crear estructuras y funciones **polimórficas**:
+
+```c
+int add_list(t_list *list, const void *info, const int tam) {
+    // 'info' puede ser cualquier tipo de dato
+    // 'tam' especifica su tamaño en bytes
+}
+```
+
+### Funciones Comparadoras
+
+Patrón estándar para comparación similar a `qsort()`:
+
+```c
+typedef int (*t_comp)(const void *, const void *);
+
+int comp_int(const void *a, const void *b) {
+    return *(int*)a - *(int*)b;
+}
+
+int comp_string(const void *a, const void *b) {
+    return strcmp((char*)a, (char*)b);
+}
+```
+
+### Gestión de Memoria
+
+- Cada estructura usa **nodos dinámicos** con `malloc()`
+- Es **responsabilidad del usuario** liberar memoria con las funciones `clear_*()` o `delete_*()`
+
+## ⚠️ Notas Importantes
+
+1. **Tipos de Datos Uniformes**: No mezcles tipos de datos en una misma estructura
+2. **Búferes**: Asegúrate de que los búferes tengan suficiente espacio
+3. **Validación de Índices**: Las funciones pueden no validar límites, sé cauteloso
+4. **Memory Leaks**: Siempre libera memoria al terminar
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Si encuentras bugs o tienes mejoras:
+
+1. Fork el repositorio
+2. Crea una rama (`git checkout -b feature/mejora`)
+3. Commit cambios (`git commit -am 'Añade mejora'`)
+4. Push a la rama (`git push origin feature/mejora`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está disponible bajo licencia MIT. Ver detalles en el archivo LICENSE.
+
+## 👤 Autor
+
+**Federico Manzano**  
+GitHub: [@FedeManzano](https://github.com/FedeManzano)
+
+---
+
+## 📖 Recursos Adicionales
+
+- **Documentación Doxygen**: Disponible en los directorios individuales (`doxygen/`)
+- **Test Cases**: Revisa `UnitTest/` para ver ejemplos de testing
+- **Ejemplos Integrados**: `App_Test_Libs/` muestra cómo combinar múltiples módulos
+
+---
+
+## Cabeceras Disponibles
 
 ### Algoritmos de ordenammiento
 
